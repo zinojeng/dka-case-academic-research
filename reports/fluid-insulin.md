@@ -1,7 +1,23 @@
 # QA4 Fluids／QA5 Insulin stop 與 SC basal transition — fluid-insulin-specialist 報告
 
 > Owner：fluid-insulin-specialist（DKA fluid insulin Opus55）｜研究日期：2026-10-28｜資料來源：只讀 `.private/case-brief.md`（去識別，Day0/1/2）
-> 用途：學術討論與會診思路整理，**不是個人化醫囑**。缺 weight、vitals、I/O、urine output、mental status、MAR、最新 Cr/BOHB，以下所有劑量皆為「原則與條件」，不可直接轉成 order。
+> 用途：學術討論與會診思路整理，**不是個人化醫囑**。Supplement v2 已補上體重 104.5 kg、vitals、部分 I/O、insulin 配方與輸液／K／Ca 醫囑（見 §S）；仍缺 mental status、完整 MAR、最新 Cr/BOHB、ionized Ca、Na ISE 方法。以下所有劑量皆為「原則、條件與算術核對」，不可直接轉成 order。
+
+## S. Supplement v2 更新（2026-10-28，取代下文相衝突的舊敘述）
+
+| 項目 | 新資料 | 影響 |
+|---|---|---|
+| 體重 | 175 cm、104.5 kg、BMI 34.1（Day1 17:00） | 可做 U/kg/h 算術（§3.3）；不再寫「weight 未知」 |
+| Insulin 配方 | 使用者確認 50 U 加入 500 mL 輸液 → **0.1 U/mL**；曾 20–30 mL/h（**2–3 U/h**），目前 **2 U/h** | 2 U/h = **0.0191 U/kg/h**；3 U/h = **0.0287 U/kg/h**；0.05 U/kg/h 參考 = 5.225 U/h，只是指引算術 |
+| Insulin 產品 | 醫囑顯示 NovoRapid FlexPen 300 IU，50 IU STAT 加入點滴瓶 | EU SmPC：IV 用 vial；需核對實際製劑與藥局配製，不能由顯示名稱逕判錯誤（§10） |
+| 輸液醫囑 | LR 500 mL × 4 瓶 QD（2 L/day order）；0.9% NaCl 500 mL QD；另一袋 0.9% NaCl 500 mL STAT；KCl in NS 20 mEq/500 mL STAT drip | 加上 insulin vehicle 480–720 mL/day 一起討論（§4.4）；醫囑沒有開立時間，不放進特定 Day |
+| Dextrose | 使用者貼出的醫囑片段中**未見**含 dextrose 液 | Glucose <250 時 2024 建議加 5–10% dextrose；病人已進食，需核對完整醫囑與碳水化合物來源，不能逕判未給 |
+| Vitals | Day1 17:00–Day2 09:01 每 2 h；最新 BP 149/86、HR 85、RR 18 | 相對穩定，**不等於 resolved** |
+| 進食 | Day1 18:00、Day2 07:24 有固體進食 | 影響 transition 方案與 dextrose 需求，但不是轉 SC 的絕對條件 |
+| 部分 I/O | 條件式：IV 2386＋口服液體 560＝2946 mL；尿 2050 mL；片段差 +896 mL | 不稱 24 h、不算 mL/kg/h；IV 1000 mL 是輸入容量不是 mL/h；RI 177／IV 209 mL 不能換算成 U 或逕對應到 insulin 袋 |
+| 血酮分析物 | Blood Ketone Quantitative Test，參考 0–0.6 mmol/L | 很可能是 BOHB，但分析物待檢驗科確認；最後一筆仍是 Day1 05:53 的 4.2 |
+
+仍待核對：mental status、完整 MAR（insulin 起訖、hang time、K／Ca 實際給量）、最新 Cr／BOHB、ionized Ca、Na ISE 方法、gas 檢體類型、insulin vehicle 液體種類與袋材。
 
 ---
 
@@ -9,12 +25,13 @@
 
 1. **目前不能宣告 DKA resolved。** 2024 consensus 的 resolution 定義是 **plasma ketone (β-hydroxybutyrate, BOHB) <0.6 mmol/L 且（venous pH ≥7.3 或 HCO3⁻ ≥18 mmol/L）**，理想上 glucose <200 mg/dL。本案最新 gas（Day2 04:25）pH 7.329、HCO3⁻ 21.6 雖已滿足 acid–base 部分，但**最後一筆 BOHB 是 Day1 05:53 的 4.2 mmol/L**，之後無 ketone 資料；Day2 glucose 211–234 mg/dL 也未達 <200 的理想值。→ **先抽 BOHB（及同時段 chemistry Na/Cl/HCO3⁻、K、Cr）再判斷。**
 2. **Glucose 211–234 不是停 IV insulin 的理由。** 2024 consensus（S02 §4 Insulin）：glucose <250 mg/dL 時加 5–10% dextrose、insulin 降至 0.05 U/kg/h，之後**依 glucose（目標約 200 mg/dL）調整 insulin**，並持續到 ketoacidosis 緩解。前提是 K 安全（§6）。
-3. **Weight 未知 → 不給固定速率建議。** 「3→2 U/h」在 0.05 U/kg/h 的換算下，只相當於 60 kg→40 kg 的人。這只是說明性算術（§3.3），**不代表劑量偏低或不足**；目前劑量是否足夠，要看 K、ketone、glucose 的反應，而 weight 與 MAR 都缺。
-4. **K 3.2（nadir）/3.4（latest chem）是嚴重限制條件。** 優先在監測下補 K，並由臨床醫師審視 insulin 速率；2024 原文「K 升至 >3.5 前延後 insulin」（意譯）是在入院 K <3.5 的情境寫的。若 infusion 當時正在使用（無 MAR，屬假設），是否暫停或調整屬臨床判斷；但若當前 K 經確認 <3.5，臨床團隊須立即依低 K／DKA 流程處理，不能只沿用既有速率（見 §6、§8）。
-5. **Fluid：** 0.9% saline 與 balanced crystalloid（Ringer's lactate、Plasma-Lyte 148）都是 2024 consensus 允許的初始液體；balanced 證據多為 biochemical（較快 acidosis/DKA resolution、較少 hyperchloremia），**無 mortality/AKI 等硬終點優勢的確證**。**現有資料不足以建立 0.45% saline 的適應症**；但 measured osmolality 318 與 osmolal gap 尚未釐清、labs 不完整，需等同時段經驗證的 direct-ISE Na／tonicity 與 fluid balance 才能判斷。「不符合 HHS」本身並不能證明所有低張液的適應症都不存在（見 §4.4）。實際給了什麼液體、多少量，**無 MAR/I/O 無法判斷**。
+3. **體重 104.5 kg → 目前 2 U/h = 0.019 U/kg/h（3 U/h = 0.029）。** 低於 2024 在 glucose <250 時的 0.05 U/kg/h 參考（約 5.2 U/h），但**不能據此直接建議上調**：K 3.4 仍 <3.5、最新 BOHB 未知，glucose 211–234 且已進食。先補 BOHB 並處理 K，再由團隊依 K、BOHB、glucose 反應決定速率（§3.3）。
+4. **K 3.2（nadir）/3.4（latest chem）是嚴重限制條件。** 優先在監測下補 K，並由臨床醫師審視 insulin 速率；2024 原文「K 升至 >3.5 前延後 insulin」（意譯）是在入院 K <3.5 的情境寫的。使用者已確認 infusion 正在使用（目前 2 U/h），是否暫停或調整屬臨床判斷；但若當前 K 經確認 <3.5，臨床團隊須立即依低 K／DKA 流程處理，不能只沿用既有速率（見 §6、§8）。
+5. **Fluid：** 0.9% saline 與 balanced crystalloid（Ringer's lactate、Plasma-Lyte 148）都是 2024 consensus 允許的初始液體；balanced 證據多為 biochemical（較快 acidosis/DKA resolution、較少 hyperchloremia），**無 mortality/AKI 等硬終點優勢的確證**。**現有資料不足以建立 0.45% saline 的適應症**；但 measured osmolality 318 與 osmolal gap 尚未釐清、labs 不完整，需等同時段經驗證的 direct-ISE Na／tonicity 與 fluid balance 才能判斷。「不符合 HHS」本身並不能證明所有低張液的適應症都不存在（見 §4.4）。醫囑面有 LR 與 NS（加上 insulin vehicle 480–720 mL/day），但實際給量**需 MAR 與完整 I/O**；目前 I/O 只是片段（+896 mL）。
 6. **Overlap 時間有出入：** 2024 consensus = SC basal 在停 IV 前 **1–2 h**；ADA 2026 Ch16 一般段落 = **2 h**，DKA/HHS 段落 = **2–4 h**（同一章內不一致）。
 7. **Toujeo（insulin glargine U300）不能直接套「常規 1–2 h overlap」：** US PI：注射後作用約在 6 h 內逐漸出現，steady state 至少需 5 天；EU SmPC：steady state 3–4 天；2024 consensus 明言目前沒有轉換到 ultra-long-acting insulin（如 degludec、glargine U300）的研究（原句見 §5.1）。
-8. **NovoRapid（insulin aspart）IV**：EU SmPC 允許在特定條件下 IV（vial、0.05–1.0 U/mL、指定稀釋液、polypropylene bag、醫護執行並監測），但它不是 regular human insulin；文件與 protocol 不應把兩者混寫（§10）。
+8. **NovoRapid（insulin aspart）IV**：EU SmPC 允許在特定條件下 IV（vial、0.05–1.0 U/mL、指定稀釋液、polypropylene bag、醫護執行並監測），但它不是 regular human insulin；文件與 protocol 不應把兩者混寫。本例醫囑顯示 FlexPen，需向藥局核對實際製劑與配製；500 mL 以 20 mL/h 需 25 h，超過仿單 24 h 穩定期的可能性需以實際 hang time 與換袋規定確認，不是宣告已超時（§10）。
+9. **總輸液要包含 insulin vehicle（20–30 mL/h = 480–720 mL/day）**，同時避免重複計算；I/O 只是片段（+896 mL），不是 24 h 平衡（§4.4）。
 
 ---
 
@@ -30,10 +47,12 @@
 | Day1 15:03 | 281 | 133 / **3.2** | 7.357 / 15.2 / 139 / 3.4 | |
 | Day1 17:31 | — | Cl 102（無同時 chem Na） | 7.401 / 17.0 / 138 / 3.7 | **TG 1950**；amylase 57；lactate 0.60 |
 | Day1 22:39 | — | — | 7.386 / 17.2 / 138 / 3.8 | |
-| Day2 04:25 | — | 135 / **3.4** | **7.329 / 21.6** / 139 / 3.5（pCO2 40.7） | phosphate 1.6（單位未列）；Mg 1.9 |
+| Day2 04:25 | — | 135 / **3.4** | **7.329 / 21.6** / 139 / 3.5（pCO2 40.7） | phosphate 1.6 mg/dL（0.52 mmol/L）；Mg 1.9 |
 | Day2 POC | 181（01:00）、211、216、214、234（09:04） | | | |
 
-**缺漏（不可補造）：** body weight/height/BMI、vitals、urine output、I/O、mental status、MAR（insulin 種類/速率、fluid 種類/速率/總量、K/P/Ca 補充）、Day2 BOHB、最新 Cr、Day2 Cl、gas 為 arterial 或 venous、Na 測定方法（direct vs indirect ISE）、C-peptide、islet autoantibodies。QA 中「IV insulin 3→2 U/h」「Toujeo 約 10 U」是**提問內容，不是已確認的給藥紀錄**。
+**已知（supplement v2，見 §S）：** 體重／身高／BMI、Day1–2 vitals、部分 I/O 與尿量、進食、insulin 配方與目前速率（使用者確認）、輸液／K／Ca 醫囑（無開立時間）。
+
+**仍缺（不可補造）：** mental status、完整 MAR（insulin 實際起訖與 hang time、dextrose、K/Ca 實際給量）、完整 I/O、Day2 BOHB、最新 Cr、Day2 Cl、gas 為 arterial 或 venous、Na 測定方法（direct vs indirect ISE）、C-peptide、islet autoantibodies。「Toujeo 約 10 U」仍是**提問內容，不是已確認的給藥紀錄**。
 
 ---
 
@@ -56,10 +75,10 @@ Day2 glucose 211–234 mg/dL、pH 7.329、HCO3⁻ 21.6，可以停 insulin infus
 - **Urine ketone：** 如上，nitroprusside 不測 BOHB，且治療中後期會高估；尿液亦受 renal handling 與時間延遲影響。
 
 ### 2.4 個案應用
-- **Acid–base 部分：** Day2 04:25 pH 7.329（≥7.3）且 HCO3⁻ 21.6（≥18）→ 已符合。但注意 "OR" 規則的陷阱：Day1 01:58 pH 7.385 時 HCO3⁻ 只有 13.4、Day1 17:31 pH 7.401 時 HCO3⁻ 17.0；若只看 pH，會過早「符合」acid–base 條件。gas 是 arterial 或 venous 未記載，而共識寫的是 **venous pH**。
-- **Day2 pCO2 40.7、HCO3⁻ 21.6、pH 7.329：** 與 Day1 22:39（pH 7.386、HCO3⁻ 17.2；pCO2 未列，以 Henderson–Hasselbalch 推算約 30 mmHg，屬推算值）相比，**pH 下降的同時 HCO3⁻ 上升、pCO2 上升**。這不能解讀為 metabolic acidosis 惡化；較可能是呼吸成分改變，或兩次檢體的動脈／靜脈來源不同。gas 檢體類型未記載，因此 pH 單一數值的解讀要保留，應以 HCO3⁻ 加 BOHB 為主。HCO3⁻ 21.6 仍略低，可能是殘餘 ketoacid，也可能是 hyperchloremic NAGMA；**沒有 BOHB 和同時段 Cl，無法區分**，這正是 BOHB 必須補抽的原因。
+- **Acid–base 部分：** Day2 04:25 pH 7.329（≥7.3）且 HCO3⁻ 21.6（≥18）→ 已符合。注意 OR 規則的意義：Day1 01:58 pH 7.385（HCO3⁻ 13.4）與 Day1 17:31 pH 7.401（HCO3⁻ 17.0）的 pH 都已符合 OR 規則中的 pH 條件，但 HCO3⁻ 仍低，且沒有同時 ketone，**acid–base 條件成立不等於 DKA resolution**。gas 是 arterial 或 venous 未記載，而共識寫的是 **venous pH**。
+- **Day2 pCO2 40.7、HCO3⁻ 21.6、pH 7.329：** 與 Day1 22:39（pH 7.386、HCO3⁻ 17.2、pCO2 28.4 mmHg；pCO2 經 Codex 原始紀錄核對，去識別 brief 原未列）相比，**pH 下降的同時 HCO3⁻ 上升、pCO2 上升**。這不能解讀為 metabolic acidosis 惡化；較可能是呼吸成分改變，或兩次檢體的動脈／靜脈來源不同。gas 檢體類型未記載，因此 pH 單一數值的解讀要保留，應以 HCO3⁻ 加 BOHB 為主。HCO3⁻ 21.6 仍略低，可能是殘餘 ketoacid，也可能是 hyperchloremic NAGMA；**沒有 BOHB 和同時段 Cl，無法區分**，這正是 BOHB 必須補抽的原因。
 - **Ketone：** 最後一筆 BOHB 4.2 是 Day1 05:53（比 Day0 5.6 只降約 25%），之後約 22 小時沒有 ketone 數據。**不能推定已 <0.6。**
-- **Glucose：** 211–234 未 <200（理想值未達）；Day2 01:00 為 181，之後回升。若當時有使用 insulin infusion 與 dextrose，可能反映速率或 dextrose 量的調整、進食，或 ketosis 未清；**無 MAR，以上皆屬假設，無法判斷。**
+- **Glucose：** 211–234 未 <200（理想值未達）；Day2 01:00 為 181，之後回升。Insulin infusion 經使用者確認在使用（曾 3 U/h、目前 2 U/h，各速率起訖時間未知），回升可能反映速率調降、進食（Day2 07:24 稀飯）、dextrose 來源，或 ketosis 未清；**沒有 MAR 與 BOHB，無法區分。**
 
 **判定：DKA resolution 未確認（indeterminate），不是「已 resolved」。** 建議依序：
 1. 立即補 BOHB（lab 或 POC；共識提到 POC 在 BOHB ≥5 mmol/L 時準確度有疑慮，本案此時應已低於此範圍）；
@@ -79,13 +98,22 @@ Day2 glucose 211–234 mg/dL、pH 7.329、HCO3⁻ 21.6，可以停 insulin infus
 - 2024 Table 3（Hypoglycemia）：DKA 治療中 hypoglycemia（<70 mg/dL）發生率 16–28%；嚴重 hypoglycemia（<40 mg/dL）與 mortality 增加相關。
 
 ### 3.2 個案應用
-- 本案 glucose 211–234：落在「<250 → dextrose＋減速、目標約 200」的區間。**Insulin 的目的此時是清 ketone，不是降糖**，所以不應因 glucose 接近 200 就停滴（若當時正在使用 infusion；無 MAR）。
+- 本案 glucose 211–234：落在「<250 → dextrose＋減速、目標約 200」的區間。**Insulin 的目的此時是清 ketone，不是降糖**，所以不應因 glucose 接近 200 就停滴（infusion 經使用者確認仍在使用，目前 2 U/h）。
 - 實際用的是 fixed-rate 還是 variable-rate、有沒有加 dextrose、濃度多少，**MAR 缺，無法評估**。
 
-### 3.3 Weight 未知 → 不建議固定 U/h（僅示意算術）
-0.05 U/kg/h 是 weight-based 的。若把 QA 中的速率反推「隱含體重」：
-- 3 U/h ÷ 0.05 = 隱含 60 kg；2 U/h ÷ 0.05 = 隱含 40 kg。
-- 以上**只是說明性算術**，不能僅憑「肥胖」就推論 2–3 U/h 偏低或不足。肥胖時 weight-based 劑量該用哪一種體重，共識也沒有規範。**目前劑量是否足夠，要看對 K、ketone（BOHB）、glucose 的實際反應；weight 與 MAR（實際速率與時間）都缺，所以不做判斷，也不給數值處方。**
+### 3.3 體重 104.5 kg 的 U/kg/h 算術（不是劑量建議）
+| 項目 | 算術 |
+|---|---|
+| 濃度 | 50 U ÷ 500 mL = **0.1 U/mL**（在 NovoRapid SmPC 0.05–1.0 U/mL 範圍內） |
+| 20 mL/h（目前） | 2 U/h ÷ 104.5 kg = **0.0191 U/kg/h** |
+| 30 mL/h（曾經） | 3 U/h ÷ 104.5 kg = **0.0287 U/kg/h** |
+| 2024 參考 0.05 U/kg/h | 0.05 × 104.5 = 5.225 U/h（指引參考算術） |
+| 2024 FRIII 0.1 U/kg/h | 10.45 U/h（初始期參考，非本時點） |
+| Vehicle 容量 | 20 mL/h = 480 mL/day；30 mL/h = 720 mL/day |
+| 一袋滴完所需 | 500 mL ÷ 20 = 25 h；÷ 30 ≈ 16.7 h |
+
+- 目前速率**低於** 0.05 U/kg/h 參考，但這**不等於應直接上調**：K 3.4（<3.5）是安全限制；最新 BOHB 未知，無法判斷 ketosis 是否仍在清；glucose 211–234、已進食、dextrose 來源未明。肥胖時用實際體重或其他體重，共識沒有規範。
+- **條件式順序**：先補 BOHB 與同管 chemistry（Na、Cl、HCO3⁻、K、Cr、glucose），在監測下處理 K；若 BOHB 未依預期下降，再由團隊檢討 insulin 是否足量、IV line 是否通暢、dextrose 是否足夠。是否調整與調多少屬臨床判斷與院內 protocol，本報告不給數值處方。
 - 監測依據是**每 1–2 h glucose＋每 4 h BOHB/pH/HCO3⁻/K**（S02 §4 開頭段）。2024 共識**沒有禁止降低 insulin**：降到 0.05 U/kg/h 之後，正文寫的是依 glucose（約 200 mg/dL）調整 insulin，並持續到 ketoacidosis 緩解（S02 §4 Insulin）；唯一的下限是 ADA 2026 對 nurse-driven protocol 的 1 unit/h（S03 DKA/HHS 段）。
 - 原則（**ketosis 未解仍需 insulin**）：依 glucose、K、ketone 的反應調整 insulin 速率，並以 dextrose 支持，避免 hypoglycemia 而能持續給 insulin。「固定 insulin 速率、只調 dextrose」是部分院內 protocol 的作法之一，**不是 2024 共識的唯一規定**。BOHB 未依預期下降時，應檢討 insulin 是否足量、IV line 是否通暢、dextrose 是否過量。
 - **低 K 優先**：K <3.5 時要優先處理（§6），不能因擔心 ketosis 反彈就忽略低 K 而維持原速率。
@@ -124,13 +152,16 @@ DKA 該用 0.9% NaCl 還是 Ringer's lactate/Plasma-Lyte？什麼時候用 0.45%
   (a) 本案不符合 HHS／mixed DKA/HHS 也不是 mixed DKA/HHS。HHS 需 glucose ≥600、effective osmolality >300（或 total >320）、BOHB <3.0、pH ≥7.3 且 HCO3⁻ ≥15（ADA 2026 Table 16.1）；本案 glucose 411、BOHB 5.6、HCO3⁻ 10.5。
   (b) Tonicity 不高：若採 gas Na 131（推定為 direct ISE，**方法未證實**），effective osmolality ≈ 2×131 + 411/18 ≈ 284.8；若用 chem Na 122 會更低（≈266.8）。chem Na 偏低可能是 lipemia／indirect-ISE 的假性低值，但這是**合理而未證實的推論**（TG 為 Day1 才測；詳見 electrolytes 報告）。
   (c) 2024 明言初期 serum Na 上升本身不是給低張液的理由（意譯）。
-  (d) **未解決的限制：** measured osmolality 318 與計算值之間的 osmolal gap（gas Na 計約 25）尚未拆解；Na 測定方法未經 lab 確認；Day2 沒有 measured osmolality、Cl、Cr；也沒有 fluid balance、urine output、weight、vitals。「不符合 HHS」只排除了 2024 consensus 在 HHS 段落寫的 0.45% 情境，**並不證明**其他低張液情境（例如經驗證的 true hypernatremia／free-water deficit、持續的 hypertonicity）都不存在。
+  (d) **未解決的限制：** measured osmolality 318 與計算值之間的 osmolal gap（gas Na 計約 25）尚未拆解；Na 測定方法未經 lab 確認；Day2 沒有 measured osmolality、Cl、Cr；fluid balance 與 urine output 只有片段（體重與 vitals 已知）。「不符合 HHS」只排除了 2024 consensus 在 HHS 段落寫的 0.45% 情境，**並不證明**其他低張液情境（例如經驗證的 true hypernatremia／free-water deficit、持續的 hypertonicity）都不存在。
   (e) **條件式行動：** 若要評估低張液，需要同時段的經驗證 direct-ISE Na（或 lab 確認方法）、measured osmolality、glucose、BUN，並評估 fluid balance 與 urine output；是否改變液體張力，由臨床團隊依這些資料決定。
   (f) **兩件事不要混淆：** 以低張液（0.45% saline 或作為 free water 的 D5W）矯正 tonicity，與 glucose <250 時加 5–10% dextrose 以避免 hypoglycemia、支持 insulin 持續給予（S02 §4 Fluid therapy／Insulin），是不同目的；後者不是低張液適應症的問題。
-- **Chem Na 122→135 的上升不應被當成「correction 太快」，也不應據此改用低張液：** chem 與 gas Na 的差距隨時間縮小（−9、−8、−6、−4），**可能**與干擾因素消失有關，但也可能受 glucose 下降、輸液與檢體差異影響；這只是支持性線索，不是已證實的機轉（TG 是 Day1 17:31 抽的，與 Day0 不同時）。本點已與 electrolyte-specialist 交叉確認（§8）。
+- **單憑 chem Na 122→135 的上升，不能診斷「correction 太快」，也不能據此改用低張液（同樣也不能排除）：** chem 與 gas Na 的差距隨時間縮小（−9、−8、−6、−4），**可能**與干擾因素消失有關，但也可能受 glucose 下降、輸液與檢體差異影響；這只是支持性線索，不是已證實的機轉（TG 是 Day1 17:31 抽的，與 Day0 不同時）。本點已與 electrolyte-specialist 交叉確認（§8）。
 - **NAGMA：** Day2 HCO3⁻ 21.6 仍偏低，可能是 ketoacid 未清，也可能是 hyperchloremic NAGMA。區分需要**同時段的 BOHB 加 chemistry Na/Cl/HCO3⁻**。只有在**已達 2024 resolution 條件**（ketone <0.6 且 venous pH ≥7.3 或 HCO3⁻ ≥18），且同時段 chemistry **證實**為 hyperchloremic NAGMA 時，才可說 isolated NAGMA 本身不應延長 DKA 的 IV insulin（S02 §3 指出恢復期 NAGMA 若被誤認為持續 DKA，可能延誤轉 SC）。**不能只憑 ketone <0.6 加 Cl 偏高就一律停滴**；停滴仍需完成 §5.3 的 transition 條件。處理方向是減少含氯液體，或改用 balanced solution。
 - **Ringer's lactate 搭配 dextrose：** 共識原文描述 dextrose 是加在 0.9% sodium chloride 之外；改用 balanced 液體作為 dextrose 載體屬於院內 protocol 的選擇。RL 含 K 約 4 mmol/L，不足以作為補 K 的方案。
-- **實際給液是否適當：無法判斷。** 缺 MAR（液體種類、速率、總量）、I/O、urine output、weight、BP/HR、最新 Cr、心臟功能。只能說：Day0 Cr 1.31、BUN 22 時應依 2024 監測腎功能（Table 3 "Acute kidney injury"：建議每日監測），並審視液體是否過量或不足。**不提供 mL/h 數值處方。**
+- **醫囑面的輸液（supplement v2）與 vehicle 算術：** LR 500 mL × 4 瓶 QD（2 L/day order）＋ 0.9% NaCl 500 mL QD = 每日排程 2.5 L；另有 0.9% NaCl 500 mL STAT 與 KCl in NS 500 mL STAT 各一次；insulin vehicle 20–30 mL/h = 480–720 mL/day。若全部是不同袋且都在 24 h 內給完，order 面約 4.0–4.2 L/day——這只是**上限情境**：insulin 可能就加在其中一袋 NS、各醫囑沒有開立時間與起訖，不能當成實際輸入量。Vehicle 種類也需確認：NovoRapid SmPC 的 IV 穩定性只列 0.9% NaCl、5% 或 10% dextrose（含 40 mmol/L KCl）與 polypropylene 袋（S18 §4.2）。
+- **I/O 片段（條件式）：** 若各筆為獨立區間量且無重複：IV 177＋1000＋1000＋209 = 2386 mL；口服液體 60＋450＋50 = 560 mL；合計 2946 mL；尿 1100＋950 = 2050 mL；片段液體差 +896 mL。IV 1000 mL 是輸入容量，不是 1000 mL/h；點滴紀錄沒有數字化的 mL/h。IV 177 mL（欄位標 RI）與 209 mL 不能換算成 insulin 單位，也不能在未確認來源與區間前認定就是 insulin 袋。固體 243／270（單位未列）不以 mL 計入。無完整起訖、其他輸出與 insensible loss → **不稱 24 h net、不推算 mL/kg/h 尿量**。
+- **Dextrose：** glucose 已 <250，2024 建議加 5–10% dextrose（S02 §4 Fluid therapy）；貼出的醫囑片段未見含 dextrose 液，病人已進食。需核對完整醫囑與碳水化合物來源，不能逕判「沒給」或「錯誤」。
+- **實際給液是否適當：仍無法完整判斷。** 最新 vitals 相對穩定（BP 149/86、HR 85），有部分尿量；但缺完整 MAR、完整 I/O、最新 Cr、心臟功能。Day0 Cr 1.31、BUN 22，應依 2024 監測腎功能（Table 3 Acute kidney injury：建議每日監測）。**不提供 mL/h 數值處方。**
 
 ---
 
@@ -142,7 +173,7 @@ DKA 該用 0.9% NaCl 還是 Ringer's lactate/Plasma-Lyte？什麼時候用 0.45%
   Fig 5 圖說（意譯）：basal-bolus 是偏好方案，應在停 IV insulin 前 1–2 h 開始。
   TDD 估算：insulin-naive 為 0.5–0.6 U/kg/day；有 hypoglycemia 風險者（kidney failure、frailty）約 0.3 U/kg/day；也可參考入院前劑量與 HbA1c，或 IV 速率（需謹慎）。並寫 basal insulin 至少在停 IV 前 1–2 h 開始（意譯）。
   新診斷者（意譯）：long-acting basal insulin 以 0.15–0.3 units/kg SC 起始；infusion 期間合併低劑量 basal（0.15–0.3 U/kg）有研究顯示可縮短 infusion 時間、防止 rebound，但部分臨床醫師因 hypoglycemia/hypokalemia 風險而避免。
-  **關鍵句：**「There are no current studies on transitioning to ultra-long-acting insulin (e.g., degludec, glargine U300).」
+  **關鍵點（意譯，S02 §4 Transition）：** 目前沒有研究探討轉換到 ultra-long-acting insulin（例如 degludec、glargine U300）。
   Section 8（future research）也把 DKA/HHS 緩解後轉換到 ultra-long-acting insulin 列為研究缺口（意譯）。
 - **ADA 2026 Ch16：**
   - "Transitioning From Intravenous to Subcutaneous Insulin"（一般住院段，意譯）：SC basal insulin 應在停 IV infusion 前 **2 h** 給予（ref 63 Kreider & Lien, Curr Diab Rep）。
@@ -161,7 +192,7 @@ DKA 該用 0.9% NaCl 還是 Ringer's lactate/Plasma-Lyte？什麼時候用 0.45%
 | IV→SC transition | §5.2：對接受 IV insulin 的 type 1 diabetes 患者，停 IV 前應考量 Toujeo 較長的 onset（意譯） | — |
 | DKA | — | §4.4：Toujeo 不是治療 DKA 的首選 insulin，此時建議改用 IV regular insulin（意譯） |
 | 起始劑量（insulin-naive T2D） | §2.3：0.2 U/kg once daily | §4.2：0.2 units/kg |
-| Unit-for-unit | §5.2/§12.2：on a unit-to-unit basis, TOUJEO has a lower glucose lowering effect than LANTUS；換藥時常需較高劑量 | §4.2：units 為 Toujeo 專屬 |
+| Unit-for-unit | §5.2/§12.2（意譯）：同樣單位數下，Toujeo 的降糖效果低於 Lantus；換藥時常需較高劑量 | §4.2：units 為 Toujeo 專屬 |
 | 途徑 | 禁 IV/IM/pump | §4.2：不可 IV 給予，不可用於 pump（意譯） |
 
 **個案應用（Toujeo「約 10 U」只是 QA 提問）：**
@@ -169,14 +200,14 @@ DKA 該用 0.9% NaCl 還是 Ringer's lactate/Plasma-Lyte？什麼時候用 0.45%
 2. 2024 consensus 明言 U300 轉換**缺乏研究**。可考慮的替代策略（由主治/內分泌決定，非 order）：
    (a) 初始 transition 使用 glargine U100、detemir 或 NPH 等證據較多的 basal，穩定後再換 U300（換藥時注意 unit-for-unit 效價差異）；
    (b) 若決定用 U300，在 IV infusion 期間更早給予（類似 2024/2026 所述 infusion 中合併低劑量 basal 的概念，但那些研究多用 glargine U100），延長 overlap，並在停 IV 後頭 24–72 h 密集監測 glucose 與 BOHB，配合 rapid-acting prandial/correction。
-3. **10 U 的劑量合理性無法評估：** 依 weight-based 算法（basal 0.15–0.3 U/kg；label 起始 0.2 U/kg；TDD 0.5–0.6 U/kg/day），10 U 只相當於體重 33–67 kg 時的 basal 量。沒有體重就無法判斷 10 U 是否合適（肥胖與 HbA1c 13.6% 本身不足以推論劑量高低）。另需考慮 U300 單位效價較 U100 低、steady state 要 3–5 天，**前幾天的實際 basal 效果會比標示劑量更低**。
+3. **10 U 的算術對照（10 U 仍只是提問，不是 MAR）：** 體重 104.5 kg → 10 U ≈ 0.096 U/kg；共識新診斷 basal 0.15–0.3 U/kg = 約 16–31 U；label insulin-naive T2D 起始 0.2 U/kg ≈ 21 U；共識 TDD 0.5–0.6 U/kg/day ≈ 52–63 U/day（basal 通常只占其中一部分）。10 U 低於這些常用範圍，但這只是算術對照：是否合適要由團隊依進食、血糖反應、低血糖風險與實際 basal 製劑判斷，本報告不給劑量。另需考慮 U300 單位效價較 U100 低、steady state 要 3–5 天，**前幾天的實際 basal 效果會比標示劑量更低**。
 4. K、Mg：K 不是 resolution 標準，但 transition 前後應依 2024（K 維持在 4–5 mmol/L）把 K 補到目標並追蹤 Mg（Day2 Mg 1.9 mg/dL）；K <3.5 應優先處理（見 §6）。
 
 ### 5.3 Transition 條件清單（條件式，非 order）
 - [ ] 同時段 BOHB <0.6 mmol/L 且 venous pH ≥7.3 或 HCO3⁻ ≥18（目前缺 BOHB）
 - [ ] 理想 glucose <200 mg/dL
 - [ ] 營養狀態與 SC 方案相配（**不是絕對條件**）：能進食者可用 basal-bolus（2024 Fig 5 偏好）；尚不能進食者，需有合適的 basal＋correction（必要時配合 dextrose）或續用 IV insulin 的計畫，依臨床穩定度與院內 protocol 決定
-- [ ] 已知體重（計算 TDD／basal）
+- [x] 已知體重 104.5 kg（計算 TDD／basal；肥胖時用哪一種體重仍需團隊判斷）
 - [ ] K 在監測下補足（目標 4–5）、Mg 已追蹤
 - [ ] Basal 在停 IV 前給予：traditional basal 依 2024 1–2 h / ADA 2026 2–4 h；**U300 需更早、更長的 overlap，且證據不足**
 - [ ] 停 IV 後持續監測 glucose 與 ketone
@@ -187,8 +218,8 @@ DKA 該用 0.9% NaCl 還是 Ringer's lactate/Plasma-Lyte？什麼時候用 0.45%
 
 - 2024 Section 4 "Potassium"（意譯）：補 K 以維持 K 4–5 mmol/L 為目標；入院時 K <3.5（5–10% 患者）應以 10 mmol/h 開始補 K，並將 insulin 延後到 K 升至 >3.5 mmol/L；並建議 insulin 開始後 2 h 測 K，之後每 4 h 測至 resolution。Table 3：治療中 hypokalemia（<3.5）約 55%；≤2.5 與 mortality 增加相關。
 - Electrolyte-specialist 讀取 Fig 4 後回報：K 欄位為 K⁺ <3.5 時給 10–20 mmol/h 直到 K⁺ >3.5，更快的補充需經 central venous access（意譯），**沒有「hold insulin」字樣，也沒有限定入院時**；圖與內文的速率不同（10 vs 10–20）。這是**單一 session 目視判讀、未經獨立再現**；本報告的決策依據以 S02 正文為主。
-- **個案：** Day1 15:03 chem K 3.2（gas 3.4），Day2 04:25 chem K 3.4（gas 3.5，不同 analyzer/採檢；早期有 hemolysis 紀錄）。若當時正使用 IV insulin（無 MAR，屬假設），K 3.2–3.4 是 **red flag**：應優先在 ECG/腎功能/urine output 監測下補 K，並審視 insulin 速率。是否暫停或調整 infusion，要和 ketosis 未清時停 insulin 的反彈風險權衡，屬臨床判斷；但**若當前 K 經確認 <3.5，臨床團隊須立即依低 K／DKA 流程決定暫停或調整 insulin，並在監測下補 K，不能只沿用既有速率而不處理**。**IV 補 K 的速率與濃度、是否可口服，屬院規與臨床判斷，依 IV access 決定；口服並非絕對禁止；本報告不開個人化處方。**
-- **無 MAR，不能宣稱已補或未補 K/insulin。**
+- **個案：** Day1 15:03 chem K 3.2（gas 3.4），Day2 04:25 chem K 3.4（gas 3.5，不同 analyzer/採檢；早期有 hemolysis 紀錄）。IV insulin 經使用者確認正在使用（目前 2 U/h），K 3.2–3.4 是 **red flag**：應優先在 ECG/腎功能/urine output 監測下補 K，並審視 insulin 速率。是否暫停或調整 infusion，要和 ketosis 未清時停 insulin 的反彈風險權衡，屬臨床判斷；但**若當前 K 經確認 <3.5，臨床團隊須立即依低 K／DKA 流程決定暫停或調整 insulin，並在監測下補 K，不能只沿用既有速率而不處理**。**IV 補 K 的速率與濃度、是否可口服，屬院規與臨床判斷，依 IV access 決定；口服並非絕對禁止；本報告不開個人化處方。**
+- **補 K 醫囑已知（supplement v2）：** KCl in NS 20 mEq/500 mL STAT drip；K-gluconate 20 mEq QID（order 面 80 mEq/day）＋20 mEq STAT。**無 MAR，不能把 QID＋STAT＋IV 加總成同一 24 h 已給 120 mEq**；實際給量與時間需核對，補後按時複查 K。
 
 ---
 
@@ -244,3 +275,9 @@ DKA 該用 0.9% NaCl 還是 Ringer's lactate/Plasma-Lyte？什麼時候用 0.45%
 - **US NovoLog PI §2（Novo Nordisk 原廠 label，openFDA set 3a1e73a2，effective 2023-02-28，意譯）：** IV 時稀釋至 0.05–1 unit/mL insulin aspart，使用 polypropylene infusion bag；僅能在醫療監督下、密切監測 glucose 與 K 時 IV 給予，以避免 hypoglycemia 與 hypokalemia。
 - **SC PK（EU §4.2/§5.1）：** onset 10–20 min，峰效 1–3 h，作用 3–5 h。這是 **SC** 數據，不可外推為 IV 行為。
 - **區分：** 2024 consensus 與 Toujeo SmPC 寫的是 IV「short-acting／regular insulin」；aspart IV 在 label 條件下可用，但**不是 regular human insulin**。若院內 IV protocol 用 aspart，order/MAR 應寫明藥名、濃度、稀釋液與袋材，不應記為「RI」；本案 MAR 缺，無法得知實際用的是哪一種。
+
+### 10.1 本例的產品與 hang time 核對（supplement v2）
+- **醫囑顯示 NovoRapid FlexPen 300 IU，50 IU STAT 加入點滴瓶。** SmPC §4.2 寫明 FlexPen 只適用 SC，需要 IV 時應使用 vial。這是**核對事項，不是已確認的錯誤**：電子醫囑品項名稱可能與藥局實際備藥不同。需核對：實際製劑（vial 或自 pen 抽取）、藥局或病房配製方式、vehicle 液體種類（SmPC 只列 0.9% NaCl、5%／10% dextrose 含 40 mmol/L KCl）、袋材（polypropylene）。
+- **穩定性與 hang time：** SmPC 為室溫 24 h 穩定，且起始會有部分 insulin 吸附於袋材、需監測血糖。500 mL ÷ 20 mL/h = 25 h、÷ 30 mL/h ≈ 16.7 h；目前 20 mL/h 時一袋可能掛超過 24 h。應核對實際掛上時間、換袋紀錄與院內規定，**不宣告已超時**。
+- **I/O 中的「RI 177 mL」：** 是輸入容量，不是單位；RI 可能是欄位慣稱，不能逕當 regular insulin，也不能在未確認來源與區間前對應到這袋 insulin。
+- **臨床判斷：** 若藥局確認為 vial 依 SmPC 條件配製，aspart IV 可依院內 protocol 使用；若無法確認產品或配製條件，由團隊與藥局決定是否重配，並在換袋前後加強 POC glucose 監測。

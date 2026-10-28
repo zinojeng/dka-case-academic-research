@@ -27,7 +27,7 @@
 | Day1 08:34 | T+14:06 | HbA1c 13.60%；albumin 3.5 g/dL；Ca 7.8；Mg 1.9 mg/dL（**無 Na/K/glucose 列出**） | pH 7.313；HCO3 12.5；Na 139；K 3.9（pCO2 未列） | 部分（gas Na/K 無 chemistry Na/K 可對照） |
 | Day1 15:03 | T+20:35 | glucose 281；Na 133；**K 3.2（全程 nadir）** | pH 7.357；HCO3 15.2；Na 139；K 3.4（pCO2 未列） | ✔ |
 | Day1 17:31 | T+23:03 | TG 1950 mg/dL；total CHO 413；HDL 23；direct LDL 52（calculated LDL unavailable）；**Cl 102（無同時 chemistry Na）**；Ca 8.2；phosphate 1.3（**單位未列**）；Mg 2.2；lactate 0.60（單位未列）；amylase 57（單位未列）；troponin/CK-MB normal（數值未列）；**無 glucose 列出** | pH 7.401；HCO3 17.0；Na 138；K 3.7（pCO2 未列） | 部分（chemistry 無 Na/K/glucose） |
-| Day1 22:39 | T+28:11 | — | pH 7.386；HCO3 17.2；Na 138；K 3.8（pCO2 未列） | ✘ gas only |
+| Day1 22:39 | T+28:11 | — | pH 7.386；HCO3 17.2；Na 138；K 3.8；pCO2 28.4（supplement：Codex 原始紀錄核對，brief 原未列） | ✘ gas only |
 | Day2 01:00 | T+30:32 | POC glucose 181 | — | ✘ |
 | Day2 02:50 | T+32:22 | POC glucose 211 | — | ✘ |
 | Day2 04:25–04:26 | T+33:57 | Na 135；K 3.4；Ca 7.8；phosphate 1.6（**單位未列**）；Mg 1.9；**無 plasma glucose、BOHB、Cr、albumin 列出** | pH 7.329；pCO2 40.7；HCO3 21.6；Na 139；K 3.5 | ✔（相隔約 1 分鐘；brief 以區間列出，未區分哪一筆在 04:25/04:26） |

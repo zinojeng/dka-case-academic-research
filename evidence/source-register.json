@@ -5,7 +5,7 @@
   "notes": [
     "Metadata verified against Crossref and/or NCBI E-utilities esummary on the compile date. Paths are relative to the project root; fulltext/ and parsed/ are git-ignored.",
     "access: fulltext-pdf = PDF read; fulltext-xml/html = publisher or PMC full text read as XML/HTML; abstract-only = only the PubMed abstract was read; metadata-only = no text read.",
-    "No patient data was sent to any external service. Only published literature PDFs went to LlamaParse."
+    "No raw patient records were sent to literature-download or PDF-parsing services. Only published literature PDFs went to LlamaParse. Claude Code used the authorized deidentified case brief for analysis."
   ],
   "sources": [
     {
@@ -289,6 +289,18 @@
       "pmcid": "PMC2699725",
       "access": "metadata-only",
       "accuracy_note": "Identifiers come from the S02 reference list. Not read; the phosphate threshold wording in mg/dL is unverified by this librarian."
+    },
+    {
+      "id": "S20",
+      "role": "Manufacturer product information: K-Glu potassium gluconate oral solution",
+      "citation": "Sintong. K-Glu oral solution product information. Accessed 2026-10-28.",
+      "url": "https://www.sintong.com.tw/tw/products_view/216",
+      "access": "fulltext-html",
+      "locators": {
+        "composition": "Product composition: potassium gluconate 312 mg/mL; each 15 mL contains K+ 20 mEq."
+      },
+      "accuracy_note": "Added by Codex for supplement v2 after the original librarian session completed. This verifies the listed product composition, not the actual administered dose or timing; confirm MAR and local product label.",
+      "retrieval": "Manufacturer product page opened and checked by Codex for supplement v2."
     }
   ],
   "discrepancies": [

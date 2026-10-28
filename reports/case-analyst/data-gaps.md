@@ -3,6 +3,8 @@
 > 原則：缺資料就寫缺口，**不推定治療已做或未做**；本檔不做治療建議。時間以 Day0/1/2 + 時刻表示。
 > 來源：`docs/case-questions.md`（`.private/case-brief.md` 讀取被 permission settings 拒絕，見 case-timeline.md §0）。
 
+> **Supplement v2 狀態（2026-10-28，clinical-update 加註；原表保留為歷史版本）**：B1 weight 已知（104.5 kg、BMI 34.1）；B2 vitals 已知（Day1 17:00–Day2 09:01）；B3 I/O 只有片段（不是完整 24 h）；A10 已有進食；A2 insulin 配方經使用者確認（aspart 50 U/500 mL、目前 2 U/h，產品與配製待藥局核對）；A5/A6 有 K 與 CaCl₂ 醫囑但無 MAR，未見 phosphate 醫囑；A8 有 LR／NS 醫囑；phosphate 單位已確認 mg/dL。仍缺：MAR、mental status、ECG、ionized Ca、最新 Cr/BOHB、Na ISE 方法。最新整理見 `reports/case-timeline.md`。
+
 ## A. 治療紀錄（最關鍵）
 | # | 缺口 | 影響的下游問題 | 備註 |
 |---|---|---|---|

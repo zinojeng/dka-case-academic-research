@@ -50,7 +50,7 @@ claude --bg --name "<display_name>" --model claude-opus-5-5 --effort high \
 - **永遠用 bare `--`**：`--mcp-config`、`--add-dir`、`--allowedTools`、`--disallowedTools` 都是 variadic。
 - **Edit rule**：owned 目錄 → `Edit(//abs/dir/**)`；owned 單一檔案 → 精確 `Edit(//abs/file.md)`（`file.md/**` 不會匹配檔案本身）。
 - MCP：從 `.private/mcp.local.json` 只複製該角色的 server 到 `runtime/mcp/<role>.json`（0600），值絕不印出；缺 server 直接失敗。Allow rule 以 server 為單位（`mcp__<s>` 與 `mcp__<s>__*`）；generic `mcp__*` 觀察到不會核准工具。
-- `.private/`：常見敏感副檔名 `*.json/*.key/*.pem/*.env/*.txt/*.yaml/*.yml/*.toml` deny；啟動時列出 `.private/` 內實際的子目錄（`<sub>/**`）與檔案（精確路徑）逐一 deny，**唯獨 `case-brief.md` 可讀**（只讀名稱，不讀內容）。不用 `.private/*/**` 這類寬 wildcard —— 實測它會擋住 case-brief.md 本身。
+- `.private/`：常見敏感副檔名 `*.json/*.key/*.pem/*.env/*.txt/*.yaml/*.yml/*.toml` deny；啟動時列出 `.private/` 內實際的子目錄（`<sub>/**`）與檔案（精確路徑）逐一 deny，**唯獨 `case-brief.md` 可讀**（只讀名稱，不讀內容）。不用 `.private/*/**` 這類寬 wildcard —— 實測它會擋住 case-brief.md 本身。此清單是**啟動當下的快照**：launch 之後才新增到 `.private/` 的檔案只受副檔名 pattern 約束；這是協作 guardrail，不是安全邊界。
 - Prompt 內所有要先讀的檔案都以專案根絕對路徑給出（isolated cwd 下相對路徑會錯）。
 - 啟動後以 `claude agents --json --all` 確認 id、name、完整 sessionId（UUID）才記為 `launched`。
 
@@ -83,6 +83,7 @@ claude --bg --name "<display_name>" --model claude-opus-5-5 --effort high \
 
 身分規則（**本機協作約定，不是密碼學或安全邊界**）：
 - 從專案根目錄（或任何非 `sessions/` cwd）呼叫 = trusted operator（Codex/人）。
+- `--from`/`--to` 只能出現一次（含 `--from=x` 與縮寫形式），否則 argparse 會取最後一個值、繞過 Bash prefix rule 的身分（shared cwd 模式尤其依賴此點）。
 - 從 `sessions/<role>/` 呼叫 → `message send --from` 必須是該 role；`manifest` 只能寫該 role；operator-only 指令拒絕。launch 的 Bash allow rule 也只允許該 role 的 helper 形式。
 - `request`/`challenge` 一律以 `open` 開始，不能自行標 resolved；關閉只能靠回覆。
 - `response`/`ack` 必須由原收件者回給原寄件者；`ruling` 只能由 codex/human；例外：session 可對自己送出的 `transport` 記錄補記 native `ack`。
@@ -111,7 +112,8 @@ Clone 到其他路徑：每個 isolated `sessions/<role>/` 都要信任一次；
 - 首次 dispatch case-analyst：`Workspace not trusted`（rc 1）→ 記為失敗 attempt，保留於 registry。
 - 信任後 dispatch：session 啟動，但被 EnterWorktree guard 擋住 —— 專案根 `.claude/settings.json` 的 `bgIsolation: none` 在 isolated cwd 未生效。
 - Codex 正向實證：native session 從**同一** `sessions/case-analyst` cwd 以 `--settings <ABS_ROOT>/.claude/settings.json --setting-sources ''` 且只允許 Write/Read 啟動，Write 成功建立 ignored `sessions/case-analyst/smoke.md`，native state `done`。結論：明確 settings 綁定修正了 guard 問題，無需 Bash workaround。
-- 待辦：以修正後 flags 對 case-analyst 執行 `restart`（Codex 執行）。
+- 已完成：Codex 以修正後 flags 對 case-analyst 執行 `restart`；case/data-gap 輸出與 manifest 成功。
+- resume 實測：state `done` 但 pid 仍存活的 session，以無 flag resume 仍被 clone（回報 exit 5）→ 現在 live pid 一律拒絕 resume。
 
 ## Legacy takeover（本輪）
 本輪 clinical sessions 由 Codex 直接啟動，輸出為扁平檔案，訊息為手寫 JSON（任意 id/schema）。shipped plan 已記錄實際 owner 與輸出；**不要**為了開始而 `plan --write --overwrite`。

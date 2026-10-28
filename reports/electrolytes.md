@@ -3,10 +3,28 @@
 - 作者角色：electrolyte-specialist（Claude Code Opus 5.5 session「DKA electrolytes Opus55」）
 - 依據：僅 `.private/case-brief.md`（去識別摘要）＋公開文獻；未讀原始病歷。時間以 Day0/1/2 表示。
 - 格式：每題依「臨床問題 → 已知事實 → 證據 → 個案應用 → 缺漏資料」。
-- 重要前提：**病歷中沒有 medication administration record（MAR）、補 K/Ca/P 醫囑、輸液種類/速率/總量、體重、vital signs、urine output（UO）、意識狀態**。因此本報告：
-  1. 不宣稱任何電解質「已補」或「未補」——「沒有記錄」≠「沒有給」；
+- 重要前提（supplement v2 更新）：使用者已補上體重 104.5 kg、Day1–2 vitals、部分 I/O、電解質單位，以及 K／Ca／輸液醫囑（見 §S）。**仍沒有 medication administration record（MAR）、意識狀態、ECG、ionized Ca、最新 Cr／BOHB**。因此本報告：
+  1. 醫囑只代表「有開」，不宣稱任何電解質「已全部給完」；沒有 MAR，也不把多筆醫囑加總成實際給量；
   2. 不給個人化劑量／速率處方，只提供決策框架與需先確認的資料。
 - QA 原文提到 glucose 482 mg/dL：case brief 中**無對應 lab**，本報告不採用。
+
+---
+
+## S. Supplement v2 更新（2026-10-28，取代下文相衝突的舊敘述）
+
+| 項目 | 新資料 | 對本報告的影響 |
+|---|---|---|
+| 單位 | Na/K/Cl = mEq/L（單價離子數值同 mmol/L）；**Ca 與 phosphate = mg/dL** | QA1 phosphate 不再是「單位未知」：1.3 → 1.6 mg/dL = **0.42 → 0.52 mmol/L**，確認中度低磷 |
+| Ca 醫囑 | Calcium chloride 400 mg/20 mL 2 amp STAT IV | 800 mg 是 **calcium chloride 製劑量**，不等於 800 mg 元素鈣；元素鈣含量須由實際商品仿單（水合物形式）確認，本報告不做換算。是否已給、開立理由與當時 iCa 待核對 |
+| K 醫囑 | KCl in NS 20 mEq/500 mL 1 瓶 STAT drip（40 mEq/L）；K-gluconate 20 mEq/15 mL（K-Glu 原廠產品頁：每 15 mL 含 K⁺ 20 mEq、成分 potassium gluconate；https://www.sintong.com.tw/tw/products_view/216，Codex 獨立核對），15 mL QID（order 面 80 mEq/day）＋15 mL STAT（20 mEq） | 不能再寫「無補 K 醫囑」。但 QID＋STAT＋IV **不能無 MAR 直接視為同一 24 h 已給 120 mEq**（可能漏服、STAT 可能即首劑、避免重複） |
+| Phosphate 醫囑 | 使用者貼出的醫囑片段中**未見**含磷製劑 | 片段不代表完整醫囑沒有；是否需補仍依症狀判斷 |
+| 輸液醫囑 | LR 500 mL × 4 瓶 QD（2 L/day order）；0.9% NaCl 500 mL QD；另一袋 0.9% NaCl 500 mL STAT | LR 含 Na 130、K 約 4、Ca 約 1.4 mmol/L；NS 含 Na/Cl 154。影響 Na 走勢與 K 小量來源（LR 2 L 若全數給完約 8 mEq K，不足以補 K） |
+| 體重 | 104.5 kg、BMI 34.1（Day1 17:00） | 2024 總體 K 缺乏 3–6 mmol/kg → 約 310–630 mmol，**僅說明量級，不是補充目標** |
+| Vitals | Day1 17:00–Day2 09:01 每 2 h；Day1 21:01 一次 RR 30（23:01 回到 20）；最新 149/86、HR 85、RR 18 | 補磷「respiratory compromise」條件：單一 RR 30 不足以判定，但需評估呼吸肌力與症狀 |
+| 部分 I/O | 尿 1100 + 950 = 2050 mL（片段） | 已知有尿量，但不是完整 24 h，不換算 mL/kg/h；補 K 的腎功能條件仍需最新 Cr |
+| 長期用藥 | 含 ARB 的降壓複方、β-blocker、fibrate（order） | ARB 影響 K 走向；fibrate 與 TG 1950 相關 |
+
+仍待核對：MAR、ionized Ca（含採檢 pH）、ECG、最新 Cr、意識狀態、Na ISE 方法與 lipemia index、血氣檢體類型。
 
 ---
 
@@ -56,20 +74,20 @@
 
 ### 1.1 臨床問題
 1. Ca 7.8 mg/dL、albumin 3.5 g/dL 算低血鈣嗎？corrected Ca 可信嗎？
-2. Phosphate 1.3 → 1.6（未列單位）代表什麼？要補嗎？
+2. Phosphate 1.3 → 1.6 mg/dL（單位已確認）代表什麼？要補嗎？
 3. 能否說「已補磷所以 Ca 下降」或「沒有補」？
 4. 補磷相關 RCT 與 hypocalcemia 風險為何？
 
 ### 1.2 已知事實（case brief）
-| 時間 | Total Ca (mg/dL) | Albumin (g/dL) | Phosphate（單位未列） | Mg (mg/dL) |
+| 時間 | Total Ca (mg/dL) | Albumin (g/dL) | Phosphate mg/dL（mmol/L） | Mg (mg/dL) |
 |---|---|---|---|---|
 | Day0 18:28 | 9.3 | — | — | — |
 | Day1 08:34 | 7.8 | 3.5 | — | 1.9 |
-| Day1 17:31 | 8.2 | — | 1.3 | 2.2 |
-| Day2 04:25 | 7.8 | — | 1.6 | 1.9 |
+| Day1 17:31 | 8.2 | — | 1.3（0.42） | 2.2 |
+| Day2 04:25 | 7.8 | — | 1.6（0.52） | 1.9 |
 
-- 無 ionized Ca、PTH、25-OH vitamin D、症狀（paresthesia、Chvostek/Trousseau、tetany）、ECG QTc、呼吸肌力等資料。
-- 無補 Ca/P/Mg 的醫囑或 MAR；無輸液內容（例如是否含 potassium phosphate）。
+- 無 ionized Ca、PTH、25-OH vitamin D、症狀（paresthesia、Chvostek/Trousseau、tetany）、ECG QTc、呼吸肌力等資料。Vitals 已知（§S），Day1 21:01 曾有一次 RR 30。
+- 醫囑：有 calcium chloride 400 mg/20 mL 2 amp STAT IV；使用者貼出的片段中未見 phosphate 或 Mg 製劑；**沒有 MAR**。輸液醫囑為 LR 與 NS，未見 potassium phosphate。
 - 多筆 lipemia（TG 1950 mg/dL, Day1 17:31）；lipemia 可能干擾比色法分析，實際干擾程度依檢驗系統而定（本 session 未取得該院方法資料）。
 
 ### 1.3 證據
@@ -85,23 +103,23 @@
 ### 1.4 個案應用
 1. **Corrected Ca（Payne，僅供參考）**：Day1 08:34 為 7.8 + 0.8×(4.0−3.5) = **8.2 mg/dL**。若沿用同一 albumin 套到 Day1 17:31（8.2 → 8.6）或 Day2（7.8 → 8.2），等於假設 albumin 不變，屬**未驗證假設**。
    → 結論：數值落在「輕度偏低或臨界」，**不足以診斷或排除真正 hypocalcemia**；需 **ionized Ca**（最好 blood gas analyzer 同時測，並註明 pH 校正與否）。
-2. **Ca 9.3 → 7.8 的可能解釋**（無法排序，缺資料）：輸液稀釋與 albumin 變化（Day0 無 albumin）、酸中毒矯正後蛋白結合改變（影響 ionized，不直接改變 total）、若曾補磷則可能 Ca-P 結合（[4] 補磷組 iCa 較低，但兩組 total Ca 都下降且無差異）、lipemia 干擾、真實 hypocalcemia（Mg 正常，Mg 缺乏不像主因）。**無 MAR，不能用 Ca 下降反推給過磷。**
-3. **Phosphate 單位的條件式解讀**（換算：mg/dL × 0.3229 = mmol/L；1.0 mmol/L ≈ 3.10 mg/dL）：
+2. **Ca 9.3 → 7.8 的可能解釋**（無法排序，缺資料）：輸液稀釋與 albumin 變化（Day0 無 albumin）、酸中毒矯正後蛋白結合改變（影響 ionized，不直接改變 total）、若曾補磷則可能 Ca-P 結合（[4] 補磷組 iCa 較低，但兩組 total Ca 都下降且無差異）、lipemia 干擾、真實 hypocalcemia（Mg 正常，Mg 缺乏不像主因）。**無 MAR，不能用 Ca 下降反推給過磷。** 反過來，calcium chloride 醫囑存在也不能證明 Ca 已補上或 Ca 7.8 已經是補後值——開立時間與給藥時間都未知。
+3. **Phosphate（單位已確認 mg/dL）**（換算：mg/dL × 0.3229 = mmol/L；1.0 mmol/L ≈ 3.10 mg/dL）：
 
-   | 假設單位 | 1.3 | 1.6 | 意義 |
+   | 時點 | mg/dL | mmol/L | 意義 |
    |---|---|---|---|
-   | **mg/dL**（台灣多數實驗室慣用，但**需檢驗科確認**） | 0.42 mmol/L | 0.52 mmol/L | 中度低磷（一般成人參考約 2.5–4.5 mg/dL）。低於 2024 閾值 1.0 mmol/L，但**高於** 2009 閾值 1.0 mg/dL |
-   | mmol/L | 4.03 mg/dL | 4.96 mg/dL | 正常至偏高，則無低磷問題 |
+   | Day1 17:31 | 1.3 | 0.42 | 中度低磷（一般成人參考約 2.5–4.5 mg/dL） |
+   | Day2 04:25 | 1.6 | 0.52 | 仍為中度低磷；低於 2024 數值門檻 1.0 mmol/L，**高於** 2009 門檻 1.0 mg/dL |
 
-   - 在 mg/dL 假設下，依 2024 文字，是否補磷取決於**是否有 muscle weakness / respiratory or cardiac compromise**。case brief **沒有**這些評估資料，所以無法判定「需要補」或「不需要補」。依 2009 的 <1.0 mg/dL 標準則未達門檻。
-   - 1.3 → 1.6 的上升可能是自發恢復（insulin 早期磷進入細胞，之後再分布或飲食恢復）、曾給含磷製劑，或檢驗變異。**沒有 MAR，不能推論「已補」或「沒補」**。
-4. **補磷時的 Ca 風險**：此個案 total Ca 已偏低、iCa 未知，若臨床決定補磷（例如出現無力或呼吸問題），應先取得 iCa，並注意速率（[2] 提及 4.5 mmol/h 為一般認為安全之上限、[4] 顯示補磷組 iCa 下降）。具體劑量依院規與體重，**本報告不給個人化處方**。
+   - 依 2024 文字，是否補磷取決於**是否同時有 muscle weakness 或 respiratory／cardiac compromise**。目前有 vitals（Day1 21:01 一次 RR 30，23:01 回到 20），但沒有肌力、呼吸肌或心臟功能評估，所以仍無法判定「需要補」或「不需要補」。單一 RR 30 不足以判定 respiratory compromise。
+   - 1.3 → 1.6 的上升可能是自發恢復（insulin 早期磷進入細胞，之後再分布或飲食恢復；Day1 18:00 起有進食）、曾給含磷製劑，或檢驗變異。使用者貼出的醫囑片段**未見**含磷製劑，但片段不代表完整醫囑；**沒有 MAR，不能推論「已補」或「沒補」**。
+4. **補磷時的 Ca 風險**：此個案 total Ca 已偏低、iCa 未知，又有 calcium chloride 醫囑。若臨床決定補磷（例如出現無力或呼吸問題），應先取得 iCa，注意速率（[2] 提及 4.5 mmol/h 為一般認為安全之上限、[4] 顯示補磷組 iCa 下降），並依藥局相容性規範避免與 calcium 製劑同管混合；potassium phosphate 的 K 也要和 KCl／K-gluconate 一起計算。具體劑量依院規，**本報告不給個人化處方**。
+5. **Calcium chloride 醫囑的判讀**：400 mg/20 mL × 2 amp = calcium chloride 製劑 800 mg，不等於 800 mg 元素鈣；元素鈣含量須由實際商品仿單（水合物形式）確認。CaCl₂ 對周邊靜脈刺激性高，給法依院規。教學重點：order 寫的 mg 是鹽的重量，與 calcium gluconate 的元素鈣含量不同，交班與換算時要寫清楚「鹽 mg」或「元素鈣 mmol」。
 
 ### 1.5 缺漏資料（需補）
 - **Ionized Ca**（含採檢時 pH）、重複 albumin、Mg 趨勢、PTH／25-OH D（若 iCa 持續低）。
-- Phosphate **單位與參考區間**（向檢驗科確認）。
-- 症狀與徵象：肌力、呼吸（呼吸次數、潮氣量）、心衰竭徵象、溶血或橫紋肌溶解（CK）、ECG QTc。
-- MAR：是否曾給 potassium phosphate、calcium gluconate、Mg、bicarbonate；輸液種類與量。
+- 症狀與徵象：肌力、呼吸肌力（vitals 已有 RR，但無潮氣量或肌力評估）、心衰竭徵象、溶血或橫紋肌溶解（CK）、ECG QTc。
+- MAR：calcium chloride 是否已給、時間與理由；是否曾給 potassium phosphate、Mg、bicarbonate。
 - 腎功能趨勢（只有 Day0 Cr 1.31 mg/dL）。
 
 ---
@@ -182,7 +200,7 @@
 
 #### (e) Cerebral edema vs ODS
 - **Cerebral edema**：成人罕見；機轉與 tonicity 快速下降、低灌流、發炎相關 [1b Table 3]。本例離散測值未顯示 effective tonicity 持續下降，但無法排除短時變化；若出現頭痛、意識改變、bradycardia 或高血壓，應依 [1b] 對腦部影像檢查採低門檻。
-- **ODS**：風險來自**慢性、真正低張**的 hyponatremia 被快速矯正。本例的「低 Na」**推論上**較可能是 **translocational（非低張）**，加上**可能的** pseudohyponatremia（未證實）；gas Na 131 → 139 與 chem Na 122 → 135 的上升，**推論上**可能主要反映 glucose 下降（水回到細胞內），以及可能的干擾減少，而不是 true hypotonic hyponatremia 的矯正——這是推論，不是已證實的事實。因此不宜直接把 chem Na 從 122 升到 135 解讀為「Na 矯正過快（13 mmol/L）、有 ODS 風險」。
+- **ODS**：風險來自**慢性、真正低張**的 hyponatremia 被快速矯正。本例的「低 Na」**推論上**較可能是 **translocational（非低張）**，加上**可能的** pseudohyponatremia（未證實）；gas Na 131 → 139 與 chem Na 122 → 135 的上升，可能反映 glucose 下降（水回到細胞內）、干擾減少，也可能包含實際的水與鈉平衡變化（輸液 Na 含量、尿量）；沒有同時段 direct-ISE Na 與 TG，**無法歸因於其中任一機轉**。因此單憑 chem Na 從 122 升到 135，**不能診斷**「Na 矯正過快（13 mmol/L）」，也不能排除；需以經確認方法的同時段 Na、osmolality 與 fluid balance 判讀。
   - **低張液**：現有資料**未建立** 0.45% saline 的適應症（[1b] §Fluid therapy 只在 HHS 中 osmolality 未下降時提到）；但 Na 方法、osmolal gap 與 I/O 都未確認，**不能排除所有低張液情境**。以低張液（0.45% saline 或作為 free water 的 D5W）矯正 tonicity，和 glucose <250 時加 5–10% dextrose 以支持 insulin 持續給予（[1b] §Fluid therapy／Insulin）是**兩件不同的事**，不應混為一談。
   - 例外：若檢驗科確認 chemistry 其實是 direct ISE，此推論必須重做。
 
@@ -196,8 +214,8 @@
 ### 2.6 缺漏資料
 - **檢驗方法**：中央 chemistry 與 blood gas 的 Na 測定方式（indirect vs direct ISE）、gas 檢體類型（arterial/venous）、lipemia index／hemolysis index。
 - 同一檢體以 direct ISE 或 ultracentrifugation 後重測的 Na；Day0 的 TG。
-- 意識狀態（GCS）、神經學症狀、vital signs。
-- 輸液種類、速率、總量與 I/O（判斷 free water 與 Na 走勢）。
+- 意識狀態（GCS）、神經學症狀（vital signs 已知，見 §S）。
+- 輸液實際給量與速率（醫囑為 LR 與 NS，LR Na 130、NS Na 154；I/O 只有片段），用以判斷 free water 與 Na 走勢。
 
 ---
 
@@ -221,8 +239,9 @@
 | Day1 22:39 | — | 3.8 | — |
 | Day2 04:25 | **3.4（latest）** | 3.5 | Mg 1.9 |
 
-- Insulin 使用狀況（QA 提及 3→2 U/h、Toujeo 約 10 U）**只是提問內容，不是 MAR**；是否、何時、多少 K 已補，**完全沒有紀錄**。
-- 無 ECG、UO、最近 Cr（只有 Day0 Cr 1.31）、IV access 類型（周邊／中心）。
+- Insulin：使用者確認 50 U／500 mL（0.1 U/mL），曾 20–30 mL/h（2–3 U/h），目前 2 U/h；Toujeo 約 10 U 仍只是提問，不是 MAR。
+- K 醫囑（supplement v2，無開立時間）：KCl in NS 20 mEq/500 mL 1 瓶 STAT drip；K-gluconate 20 mEq/15 mL，15 mL QID（order 面 80 mEq/day）＋15 mL STAT（20 mEq）。**實際給了幾次、何時給，沒有 MAR**。
+- 部分尿量已知（片段 2050 mL，不是完整 24 h）；有進食。仍無 ECG、最近 Cr（只有 Day0 Cr 1.31）、IV access 類型（周邊／中心）。
 
 ### 3.3 證據
 - **2024 共識 §Potassium [1][1b]**：
@@ -240,7 +259,7 @@
 1. **哪個 K 可信？** Chem（serum）與 gas（whole blood）來源不同：serum K 通常因血小板在凝血時釋出 K 而略高於 plasma/whole blood；hemolysis 會使 K 假性升高（Day0 有 hemolysis 紀錄 → 早期 chem K 4.0 可能**高估**）。本例卻是 gas K 常比 chem K **高 0.1–0.4**，方向與一般預期相反，可能與分析儀校正、檢體處理或時間差有關，**原因無法確定**。Lipemia 對 K 影響小 [11]。
    → 實務上應以**同一方法的趨勢**判讀；nadir 3.2（chem）與 3.4（gas）**兩種方法都 <3.5**，因此 Day1 15:03 的 hypokalemia 是真實訊號，不能用 gas 值 3.5 否定 Day2 的 chem 3.4。
 2. **K <3.5 與 insulin（紅旗）**：
-   - 2024 本文「K >3.5 前延後 insulin」（意譯）的語境是**入院時** K 低（尚未開始 insulin）。本例 K 在治療過程中降到 3.2；**若當時正使用 IV insulin（無 MAR，屬假設）**，文字並未直接說「中途停掉已在跑的 insulin」，Fig 4（單一 session 目視）也沒有 hold insulin 字樣。
+   - 2024 本文「K >3.5 前延後 insulin」（意譯）的語境是**入院時** K 低（尚未開始 insulin）。本例 K 在治療過程中降到 3.2；使用者已確認 IV insulin 正在使用（目前 2 U/h；各時點的實際速率與起訖仍無 MAR），而 2024 文字並未直接說「中途停掉已在跑的 insulin」，Fig 4（單一 session 目視）也沒有 hold insulin 字樣。
    - 但同一機轉（insulin 讓 K 進入細胞）在治療中途同樣存在。因此本報告的立場是：**K <3.5 是嚴重限制**，應以**監測下的 K 補充為優先**（ECG／monitor、確認 UO 與腎功能、檢查 Mg；複查間隔屬**臨床判斷**，2024 正文為開始 insulin 後 2 h、之後每 4 h），**同時由主治醫師重新評估 insulin 速率**。若仍在持續 ketosis（Day1 BOHB 4.2，之後沒有 BOHB），完全停掉 insulin 有 ketoacidosis 反彈的風險。降低 insulin 速率並配合 dextrose、全速補 K、或短暫暫停，屬**臨床判斷**，不是可以機械套用的規則；但**若當前 K 經確認 <3.5，臨床團隊須立即依低 K／DKA 流程決定暫停或調整 insulin，並在監測下補 K，不能只沿用既有速率而不處理**。這一點與 fluid-insulin-specialist 一致（見 §4）。
    - 入院時 K 為 4.0／4.4（≥3.5），依 2024 文字開始 insulin 時**不需延後**。
 3. **Transition 與 K**：轉換 SC basal（例如 glargine U300／Toujeo）期間，insulin 作用仍會讓 K 往細胞內移。DKA resolution 本身不以 K 為準則，但**轉換前後 K 應補到目標 4–5 mmol/L 並持續監測**（2024：K 每 4 h，直到 resolution）。Overlap 時間（2024 的 1–2 h vs ADA 2026 的 2–4 h）不改變 K 監測頻率。
@@ -248,14 +267,15 @@
    - 2024 文字與 Fig 4 都只描述 IV 補充，**沒有禁止 oral**。
    - （**臨床判斷／院規，非 2024 原文**）IV 的優點是可滴定，一般用於 K 較低、有症狀或 ECG 變化、不能口服、腸胃功能不佳、正在用 IV insulin 等情況；oral KCl 吸收可靠但較慢，在可進食、無嘔吐、K 輕度偏低且穩定時可作為**合併或接續**手段。具體 K 門檻（例如以 3.0 為分界）依院內 protocol。
    - 周邊或中心靜脈的最大濃度與速率、是否需要 ECG monitor，依**院內 IV potassium policy**。Fig 4 指出「更快的補充需要 central venous access」。
-   - **在沒有體重、UO、Cr、ECG、IV access、MAR 的情況下，本報告不提供個人化劑量或速率。**
+   - **本例的醫囑**：靜脈 KCl 濃度 40 mEq/L（20 mEq/500 mL）；口服 K-gluconate QID＋STAT。病人已進食，口服途徑合理。三筆醫囑若全在同一日給完，order 面上限是 120 mEq，但**這是上限情境，不是實際給量**：QID 可能有漏服，STAT 可能就是首劑 QID；沒有 MAR 就加總會高估補充量，也可能在交班時造成重複給藥。補後應依 2024 頻率複查 K，並看趨勢（chem 3.2 → 3.4）。
+   - **體重已知（104.5 kg），但仍缺最新 Cr、ECG、IV access 與 MAR，本報告不提供個人化劑量或速率。**
 5. **Mg**：1.9／2.2／1.9 mg/dL，大致在一般參考範圍內；hypomagnesemia 會造成 refractory hypokalemia，目前資料不支持此為主因，但補 K 期間應持續追蹤。
 6. **Phosphate 與 K 的交互**：若臨床決定補磷，potassium phosphate 會同時提供 K（[1b] §Phosphate：需要時可加 20–30 mmol potassium phosphate），計算總 K 負荷時要納入。
 
 ### 3.5 缺漏資料
-- **MAR**：insulin 實際速率與時間、K 製劑（KCl／K phosphate）、途徑與總量、oral K。
+- **MAR**：insulin 實際起訖時間、KCl drip 與 K-gluconate 實際給了幾次與時間（避免 QID／STAT 重複）。
 - ECG（U wave、QT）、cardiac monitor、心律不整症狀、肌無力或呼吸症狀。
-- UO、最近 Cr／eGFR（Day0 Cr 1.31 之後無資料）、IV access 類型。
+- 完整 UO（目前只有片段）、最近 Cr／eGFR（Day0 Cr 1.31 之後無資料）、IV access 類型。
 - Day1 15:03 之後的 chem K 趨勢（只有 gas）、最近一次 BOHB（判斷 insulin 必要性）。
 - 院內 K 補充 protocol（周邊最大濃度與速率）。
 
@@ -275,8 +295,8 @@
 ---
 
 ## 5. 一頁摘要（給臨床團隊）
-1. **Ca**：total Ca 7.8、albumin 3.5 → Payne 校正約 8.2，但**校正公式不可靠**[13] → **請測 ionized Ca**。不能推論曾補磷導致 Ca 下降（無 MAR）。
-2. **Phosphate**：單位未列。若為 mg/dL → 0.42 → 0.52 mmol/L（中度低磷），是否補磷取決於肌無力、呼吸或心臟受損（2024 閾值 <1.0 mmol/L 並需有症狀）。RCT [4][5] 未顯示補磷改善結局；[4] 兩組 total Ca 都下降且無差異，補磷組 iCa 較低（僅 13 人可測）。2024（mmol/L）與 2009（mg/dL）閾值不一致，不可推定 2024 單位寫錯。
+1. **Ca**：total Ca 7.8、albumin 3.5 → Payne 校正約 8.2，但**校正公式不可靠**[13] → **請測 ionized Ca**。不能推論曾補磷導致 Ca 下降（無 MAR）。有 calcium chloride 400 mg/20 mL × 2 STAT 醫囑：800 mg 是 calcium chloride 製劑量，不等於 800 mg 元素鈣（元素鈣含量待商品仿單確認），是否已給待 MAR。
+2. **Phosphate**：單位已確認 mg/dL → 0.42 → 0.52 mmol/L（中度低磷），是否補磷取決於肌無力、呼吸或心臟受損（2024 閾值 <1.0 mmol/L 並需有症狀）；醫囑片段未見含磷製劑（不代表完整醫囑沒有）。RCT [4][5] 未顯示補磷改善結局；[4] 兩組 total Ca 都下降且無差異，補磷組 iCa 較低（僅 13 人可測）。2024（mmol/L）與 2009（mg/dL）閾值不一致，不可推定 2024 單位寫錯。
 3. **Na**：chem 122 vs gas 131 同時 → **lipemia／indirect-ISE pseudohyponatremia 是合理但未證實的推論**，疊加 translocational hyponatremia。Measured osmolality 318 與 Na 122 不一致但並非不可能並存；高 gap 也可能來自未量測溶質。Gas-based corrected Na 136.0（1.6）／138.5（2.4）；effective osmolality ≈285；osmolal gap ≈25（無法拆解）。**非 HHS**。離散測值未顯示 effective tonicity 持續下降，但不能排除短時變化。現有資料未建立 0.45% saline 適應症，也不能排除所有低張液情境。**需檢驗科確認 ISE 方法。**
-4. **K**：nadir 3.2、latest 3.4（gas 3.5），兩種方法都曾 <3.5 → **紅旗**。2024 正文（入院語境）為 K <3.5 延後 insulin 至 >3.5；Fig 4（單一 session 目視）寫 10–20 mmol/h（正文寫 10 mmol/h），且需先確認腎功能／UO。若當時正使用 insulin（無 MAR），應優先監測下補 K，並重新評估 insulin 速率；當前 K 若確認 <3.5，須立即依低 K／DKA 流程處理。IV 依院規，oral 不是絕對禁忌。**沒有體重、UO、Cr、ECG、MAR → 不給個人化處方。**
-5. 本報告已依 Codex 臨床審查修訂（2026-10-28，synthesis-editor 執行），見 `reports/reviews/clinical-review.md`。
+4. **K**：nadir 3.2、latest 3.4（gas 3.5），兩種方法都曾 <3.5 → **紅旗**。2024 正文（入院語境）為 K <3.5 延後 insulin 至 >3.5；Fig 4（單一 session 目視）寫 10–20 mmol/h（正文寫 10 mmol/h），且需先確認腎功能／UO。IV insulin 經使用者確認正在使用（目前 2 U/h），應優先監測下補 K，並重新評估 insulin 速率；當前 K 若確認 <3.5，須立即依低 K／DKA 流程處理。IV 依院規，oral 不是絕對禁忌。已有 KCl drip 與 K-gluconate QID＋STAT 醫囑，但**不能無 MAR 加總為 120 mEq/day**。體重已知，仍缺最新 Cr、ECG、MAR → 不給個人化處方。
+5. 本報告已依 Codex 臨床審查修訂（2026-10-28，synthesis-editor 執行），並依 supplement v2 更新（§S；clinical-update 執行），見 `reports/reviews/clinical-review.md`。

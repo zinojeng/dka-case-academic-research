@@ -1,0 +1,12 @@
+// Assets-only Worker：沒有 main script，Cloudflare 直接服務 ./public（由 `npm run build` 產生）。
+// 不放 account_id、routes 或 secrets；帳號由執行 deploy 的人以 wrangler login / CLOUDFLARE_API_TOKEN 提供。
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "dka-teaching-rounds",
+  "compatibility_date": "2026-10-28",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  }
+}

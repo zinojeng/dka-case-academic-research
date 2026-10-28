@@ -1,6 +1,10 @@
 # DKA 個案 academic deep research workflow
 
-以單一去識別 DKA 個案（42 歲男性，Day0–Day2）為核心的文獻研究：五大 QA（Ca/P、Na、K、fluids、insulin transition）＋延伸（KPD、TG/pancreatitis），由多個 native Claude Code background sessions（pinned `claude-opus-5-5`）分工完成，Codex 統籌與 git release。
+教學網站：**[DKA 床邊判讀](https://dka-teaching-rounds.zinojeng.workers.dev)**。免登入，支援手機閱讀；可切換 PGY 重點與 Fellow 深讀，包含個案時間軸、Insulin 算術核對、九題練習及來源連結。
+
+以單一去識別 DKA 個案（40 多歲男性，Day0–Day2）為核心的文獻研究：五大 QA（Ca/P、Na、K、fluids、insulin transition）＋延伸（KPD、TG/pancreatitis），由多個 native Claude Code background sessions（pinned `claude-opus-5-5`）分工完成，Codex 統籌與 git release。
+
+網站原始碼與部署說明見 [site](site/README.md) 和 [網站文件](docs/website.md)。研究紀錄保留於 private repository；公開教學頁僅提供去識別內容。
 
 ## 結構
 ```

@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "from": "clinical-update",
+  "to": "codex",
+  "kind": "completion",
+  "status": "accepted",
+  "created_at": "2026-10-28T03:29:29.076230Z",
+  "topic": "Supplement v2 clinical update: clinical.json + reports revised",
+  "note": "Ad hoc clinical-update role delegated by Codex in coordination/briefs/clinical-web-update.md; completion submitted separately because it is outside the six-role baseline plan. Operator acceptance closes this record without impersonating any baseline sender.",
+  "outputs": [
+    {
+      "path": "site/content/clinical.json",
+      "sha256": "425e10e2c9fb486e79baeb2ccf6e862a2db2b03d99939cad96d7738a39a78e7d"
+    },
+    {
+      "path": "reports/clinical-summary.zh-TW.md",
+      "sha256": "c7b0e411ab04a7b544c121e05dec0434fbdb34fc939a536c469d1406d0ed9904"
+    },
+    {
+      "path": "reports/case-timeline.md",
+      "sha256": "d1f562a544f2f90e7178adc8154a5bb5ffe97b72ee337473975c410b26173e52"
+    },
+    {
+      "path": "reports/electrolytes.md",
+      "sha256": "a51400d39be19398f0bae5b217e42c7b04b4fef9a8ec631bcc7724d968e6e803"
+    },
+    {
+      "path": "reports/fluid-insulin.md",
+      "sha256": "2c95fdc9979af8d1a1aadc4a7b31db6b4f5221816f3cbd4063e91088953f036b"
+    },
+    {
+      "path": "reports/reviews/clinical-review.md",
+      "sha256": "72ae51bb6b818e35e82fbedeb6c91c0efb417807a041f6f21487dd0b85f1dfa2"
+    },
+    {
+      "path": "docs/case-questions.md",
+      "sha256": "fd8d934a13f8e785d1b6e866c461a0be5b14a32c81d09c916b86a32cfb87d324"
+    },
+    {
+      "path": "reports/case-analyst/data-gaps.md",
+      "sha256": "b251bb7eea815a87a8a0fd936802363941b28ba0a4dd481e62316eb6ae539322"
+    },
+    {
+      "path": "reports/case-analyst/case-timeline.md",
+      "sha256": "30eb77f13a4961dedead46f5950cbdce30e75bf75472bfe84924b148ea772663"
+    }
+  ],
+  "checks": [
+    "clinical.json parses; contract keys present; topic ids exactly calcium-phosphate/sodium/potassium/fluids/insulin; 9 quizzes with valid answer indices; 7 references (S02,S03,S09,S11,S17,S18,S20) and every topic/quiz sourceId resolves; io 2946-2050=896",
+    "Privacy scan across all outputs: no MRN, /Users paths or credential references; only dates are research date 2026-10-28 and pre-existing label effective dates in fluid-insulin.md; public age 40 多歲",
+    "NovoRapid EMA PDF checked locally with pdftotext (not uploaded): SmPC 4.2 vial-only IV, 0.05-1.0 U/mL in 0.9% NaCl/5%/10% dextrose incl 40 mmol/L KCl, polypropylene bags, 24 h room temp, initial adsorption; FlexPen SC only"
+  ],
+  "applied_codex_precision_notes": [
+    "IV 1000 = input volume not mL/h",
+    "RI177/IV209 not converted to U nor mapped to insulin bag",
+    "med orders not placed on any Day",
+    "no phosphate order in pasted list (not proof none elsewhere)",
+    "age 40多歲, no raw dates/record ID/paths",
+    "verbatim English label/consensus quotes in fluid-insulin 5.1/5.2 replaced by zh-TW paraphrase with locator"
+  ],
+  "unresolved": [
+    "Full MAR, latest BOHB + analyte confirmation, latest Cr, ionized Ca, ECG, mental status, Na ISE method/lipemia index, gas sample type, actual insulin product/vehicle/bag and hang time, I/O completeness"
+  ],
+  "not_done": [
+    "No site UI, scripts, tests, .claude, git or Cloudflare changes; historical mailbox untouched; no new literature added"
+  ],
+  "revised_at": "2026-10-28T03:42:10.582198Z",
+  "codex_v2_qa_applied": [
+    "Removed unverified elemental-Ca 218-289 mg range everywhere; kept only '800 mg calcium chloride product != 800 mg elemental Ca; hydrate/product label must confirm'",
+    "Weakened Na narrowing-gap wording: not attributable to glucose/interference without same-time ISE/TG; real water/sodium balance changes possible; chem Na rise alone cannot diagnose (or exclude) rapid correction",
+    "K-Glu active ingredient: added reference S20 (was P01) (manufacturer page, Codex-verified; not opened by this session; not added to evidence/source-register.json); potassium topic sourceIds now S02+S20; site references = 7",
+    "Schema fix: K-Glu reference id P01 -> S20 (refs must be S+2 digits); URL unchanged; root to add S20 to evidence/source-register.json"
+  ],
+  "final_qa_applied": [
+    "Day1 01:58 pH meets OR pH arm; not resolution (HCO3 13.4, no ketone)",
+    "insulin takeaway/quiz use 血酮 not BOHB",
+    "24 h stability conditional on listed fluids, 0.05-1.0 U/mL, polypropylene bags",
+    "Day1 22:39 pCO2 28.4 (Codex raw verification; raw chart not read here); all '未列/推算約30' removed from public content and reports",
+    "public 目前/現在 -> 該次紀錄/Day2 紀錄/現有資料"
+  ],
+  "accepted_by": "codex",
+  "accepted_at": "2026-10-28T03:45:16.948042+00:00",
+  "acceptance_basis": "Explicit operator acceptance for delegated supplement-v2 session outside the six-role baseline plan; read-only medical QA 3c90cb01 found no blockers. Final audit metadata reconciled by Codex; six baseline role acceptance records refreshed. This is an operator completion record, not a workflow mailbox message."
+}

@@ -4,13 +4,13 @@
   "decision": "accepted",
   "by": "codex",
   "attempt_id": "3e0061297b05",
-  "created_at": "2026-10-28T03:07:22.044491Z",
-  "basis": "Independent Claude clinical review and recheck completed; code findings fixed with targeted regressions and live tests; final code diff review remains a separate release gate",
+  "created_at": "2026-10-28T03:49:27.716572Z",
+  "basis": "Independent medical and code reviews completed; concrete findings resolved, new supplement QA and website tests recorded by Codex; no remaining high-confidence blockers.",
   "open_challenges": [],
   "outputs": [
     {
       "path": "reports/red-team-reviewer/review.md",
-      "sha256": "42b0f23fd32831c5646a67dda7c3d3090be1b28273e3e33f0c68a4840f97de43"
+      "sha256": "4140dd0e06b531cfbc931e0b10ed2b5b10bfd52a9bf451a3fb34c1fa870ac9d5"
     }
   ]
 }

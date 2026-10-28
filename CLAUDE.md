@@ -3,7 +3,8 @@
 本檔適用於本專案任何 Claude Code session（含 `sessions/<role>/` 下的 native `--bg` session，CLAUDE.md 由上層目錄自動載入）。
 
 ## 資料與隱私
-- 根目錄數字開頭的原始病歷 MD 為 **read-only、gitignored、禁止讀取**；個案資料只來自 `.private/case-brief.md`（去識別）或可追蹤的 `docs/case-questions.md`。
+- 根目錄數字開頭的原始病歷 MD 為 **read-only、gitignored**。**研究角色 worker 禁止讀取**原始病歷與 `runtime/`；個案資料只來自 `.private/case-brief.md`（去識別）或可追蹤的 `docs/case-questions.md`。
+- 例外：trusted operator（Codex）可唯讀讀取原始病歷以製作去識別 brief，並可明確授權獨立 review/實作 session 讀取特定的**已去識別（redacted）**runtime 檔案；此授權不延伸到其他角色。
 - 可追蹤檔案（reports/、docs/、coordination/）必須去識別：用 Day0/1/2 + 時刻，不寫病歷號、真實日期、醫師、居住/工作地、本機絕對路徑。
 - 憑證只存在 `.private/` key file 與 ignored `runtime/mcp/`；**絕不讀出、印出、引用或寫入訊息**。
 - 只有已發表 literature PDF 可送 LlamaParse；病歷/case brief 絕不上傳任何服務。
@@ -12,7 +13,7 @@
 - 每個角色只寫入 `coordination/workflow-plan.json` 中自己的 `owned_outputs`；其他人的檔案一律 read-only。
 - `.claude/agents/*.md`、`.claude/commands/`、`.claude/settings.json`、`scripts/`、`docs/`、`CLAUDE.md` 由 workflow 維護者（Codex/workflow-builder）擁有；研究角色不得修改。
 - `.claude/settings.local.json` 由 Codex 管理（ignored），其他人不改。
-- `coordination/messages/`、`coordination/manifests/`、`coordination/acceptance/` 只透過 `scripts/workflow.py` 寫入（原子、不可覆寫訊息）。
+- `coordination/messages/`、`coordination/manifests/`、`coordination/acceptance/` 只透過 `scripts/workflow.py` 寫入（原子）。訊息不可覆寫；唯一例外是 operator 明確執行 `migrate-legacy --repair --apply` 修復**匯入的副本**。legacy 原檔永不改寫。
 - `.claude/settings.json` 設 `worktree.bgIsolation: "none"`：報告以 owner 路徑分隔，不靠 worktree；需要改 code 時再明確開 worktree。
 
 ## 研究與寫作

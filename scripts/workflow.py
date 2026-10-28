@@ -1067,6 +1067,15 @@ def cmd_accept(pr, a):
     return 0
 
 
+class Once(argparse.Action):
+    """Reject a repeated option (incl. --opt=v and abbreviations): argparse would silently keep the last value."""
+
+    def __call__(self, parser, namespace, values, option_string=None):
+        if getattr(namespace, self.dest, None) is not None:
+            parser.error(f"{option_string} given more than once; identity options may appear only once")
+        setattr(namespace, self.dest, values)
+
+
 def parser():
     ap = argparse.ArgumentParser(prog="workflow.py")
     ap.add_argument("--root")
@@ -1091,7 +1100,8 @@ def parser():
     p = sub.add_parser("status"); p.add_argument("--json", action="store_true")
     p = sub.add_parser("message"); ms = p.add_subparsers(dest="action", required=True)
     s = ms.add_parser("send")
-    s.add_argument("--from", dest="sender", required=True); s.add_argument("--to", required=True); s.add_argument("--topic", required=True)
+    s.add_argument("--from", dest="sender", required=True, action=Once); s.add_argument("--to", required=True, action=Once)
+    s.add_argument("--topic", required=True)
     s.add_argument("--kind", default="info", choices=KINDS); s.add_argument("--status", default="open", choices=STATUSES)
     s.add_argument("--channel", default="file", choices=("file", "native")); s.add_argument("--body", default="")
     s.add_argument("--reply-to"); s.add_argument("--evidence", action="append"); s.add_argument("--unresolved", action="append")

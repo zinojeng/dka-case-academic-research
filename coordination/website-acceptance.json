@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "decision": "accepted",
+  "by": "codex",
+  "created_at": "2026-10-28T03:49:54.026756+00:00",
+  "clinical_session": "bd6be66e-35c7-4c16-91d8-ac6d82d62959",
+  "site_session": "65fcf42f-e75f-471e-907f-ae613bed7e8f",
+  "medical_reviewer_session": "3c90cb01-1d98-4b79-9e1d-9a556c3b874c",
+  "basis": "Explicit Codex delegation, independent read-only clinical and code review; all concrete blocking audit findings resolved, relevant UI/recovery fixes verified.",
+  "url": "https://dka-teaching-rounds.zinojeng.workers.dev",
+  "cloudflare_version": "2c54829d-477f-45be-9d95-fc1ed3280e6a",
+  "tests": {
+    "workflow": 26,
+    "website": 39
+  },
+  "browser_checks": [
+    "Desktop and 390/360px without horizontal overflow",
+    "PGY/Fellow mode, search, calculator validation/reset, quiz feedback/keyboard/reset",
+    "TOC remains usable across 390->1440->360px resize",
+    "Live HTML and app.js match local build; 200 assets and branded404; CSP/noindex headers"
+  ],
+  "source_register_membership": "7 of 7 website references present in 20-source register; manually checked by Codex",
+  "outputs": [
+    {
+      "path": "site/content/clinical.json",
+      "sha256": "425e10e2c9fb486e79baeb2ccf6e862a2db2b03d99939cad96d7738a39a78e7d"
+    },
+    {
+      "path": "site/build.mjs",
+      "sha256": "9bcedc27d063cf5a3b1231edb7da75e23cc6f1cb2995c28ea81b80abdcac1772"
+    },
+    {
+      "path": "site/lib/render.mjs",
+      "sha256": "be5e939ca71a072e2836975ce622179af0b06b8c4955e6ad2330d16d3a5ead7e"
+    },
+    {
+      "path": "site/lib/validate.mjs",
+      "sha256": "6025e0f77b6444d18f80cfcfbd4b4b9afae3bd9872a2e5167397495c47c55da6"
+    },
+    {
+      "path": "site/src/assets/app.js",
+      "sha256": "9b2d48c528d17e345ad4873f83e2fbedc65d49d25775b2cc80e636fd33c7f031"
+    }
+  ]
+}

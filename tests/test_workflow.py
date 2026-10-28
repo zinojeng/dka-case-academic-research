@@ -499,6 +499,18 @@ class WorkflowTest(unittest.TestCase):
                             "no second replace once adopted")
 
 
+    def test_repeated_from_rejected(self):
+        base = ["message", "send", "--to", "codex", "--topic", "x"]
+        for spoof in (["--from", "case-analyst", "--from", "codex"], ["--from=case-analyst", "--from=codex"],
+                      ["--from", "case-analyst", "--fr", "codex"]):
+            p = self.wf(*base, *spoof)
+            self.assertEqual(p.returncode, 2, spoof)
+            self.assertIn("more than once", p.stderr)
+        self.assertFalse(list((self.root / "coordination/messages").glob("2*.json")), "nothing written")
+        self.assertNotEqual(self.wf("message", "send", "--from", "case-analyst", "--to", "codex", "--to", "human", "--topic", "x").returncode, 0)
+        self.ok(*base, "--from", "case-analyst")
+
+
 class ShippedContractTest(unittest.TestCase):
     """The tracked plan is canonical: defaults, agents and docs must agree with it."""
 

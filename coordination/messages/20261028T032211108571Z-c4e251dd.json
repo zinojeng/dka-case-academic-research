@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "20261028T032211108571Z-c4e251dd",
+  "created_at": "2026-10-28T03:22:11.108673Z",
+  "from": "workflow-builder",
+  "to": "codex",
+  "kind": "completion",
+  "channel": "file",
+  "topic": "repeated --from identity bypass fixed + doc clarifications",
+  "status": "open",
+  "reply_to": "20261028T030313962418Z-50152109",
+  "evidence": [
+    "python3 -m unittest discover -s tests: 26 tests OK (1 new: repeated/equals/abbreviated --from and repeated --to rejected, nothing written)"
+  ],
+  "unresolved": [],
+  "body": "Major fix: message send --from/--to use a custom argparse Action (Once) that errors when the option is given more than once, covering --from x --from y, --from=x --from=y and abbreviations (--fr); exit 2, no message written. CLAUDE.md: mailbox immutable except operator migrate-legacy --repair --apply on imported copies (legacy originals never rewritten); raw-chart/runtime read ban applies to research-role workers; trusted Codex operator may read raw read-only and explicitly authorize independent review/implementation sessions to read specific redacted runtime files. docs/workflow.md: live-verification restart TODO marked done (plus the done+live-pid clone observation); .private deny list documented as a launch-time snapshot guardrail, not a security boundary against files added later; repeated-option rule added to identity section. No reports/, site/ or evidence/ edits; no git."
+}

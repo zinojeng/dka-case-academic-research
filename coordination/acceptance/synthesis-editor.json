@@ -4,21 +4,21 @@
   "decision": "accepted",
   "by": "codex",
   "attempt_id": "bfb00c0c405e",
-  "created_at": "2026-10-28T03:08:08.805052Z",
-  "basis": "User-requested plain-language article inspected; accurate clinical uncertainty retained; copy lineage explicitly adopted after original stopped; parent records completion metadata",
+  "created_at": "2026-10-28T03:50:10.545296Z",
+  "basis": "Final supplement-v2 plain-language synthesis and reference audit accepted after medical QA; trailing whitespace normalized by Codex, output hashes current.",
   "open_challenges": [],
   "outputs": [
     {
       "path": "reports/clinical-summary.zh-TW.md",
-      "sha256": "24df29b3767da0289d974633e393a32589c20172c59ffc62065353a03dfa208f"
+      "sha256": "c7b0e411ab04a7b544c121e05dec0434fbdb34fc939a536c469d1406d0ed9904"
     },
     {
       "path": "reports/case-timeline.md",
-      "sha256": "193ad6f299a69c2689e1edb0ac09a821acac9f8a421aa5895cdc00af09f463d0"
+      "sha256": "d1f562a544f2f90e7178adc8154a5bb5ffe97b72ee337473975c410b26173e52"
     },
     {
       "path": "reports/reviews/clinical-review.md",
-      "sha256": "815b00c3e69ecb5f290efe54b3b6afeaf754f4fcdb8d84e4630b107d26c4c446"
+      "sha256": "72ae51bb6b818e35e82fbedeb6c91c0efb417807a041f6f21487dd0b85f1dfa2"
     }
   ]
 }
