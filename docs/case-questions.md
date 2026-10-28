@@ -8,10 +8,10 @@
 ## 時間軸
 | 時點 | Chemistry / 其他 | Blood gas（arterial/venous 未知） |
 |---|---|---|
-| Day0 18:28 | plasma glucose 411 mg/dL, Na 122, K 4.0, BUN 22 mg/dL, Cr 1.31 mg/dL, Ca 9.3 mg/dL; BOHB 5.6 mmol/L; measured osmolality 318 mOsm/kg; lipase 57 U/L (<60), CRP 0.28, WBC 6.4 | pH 7.316, pCO2 20.3, HCO3 10.5, Na 131, K 4.4 |
+| Day0 18:28 | plasma glucose 411 mg/dL, Na 122, K 4.0, BUN 22 mg/dL, Cr 1.31 mg/dL, Ca 9.3 mg/dL; blood ketone 5.6 mmol/L（很可能為 BOHB，分析物待確認）; measured osmolality 318 mOsm/kg; lipase 57 U/L (<60), CRP 0.28, WBC 6.4 | pH 7.316, pCO2 20.3, HCO3 10.5, Na 131, K 4.4 |
 | Day0 19:46 | glucose 380, Na 123, K 3.9 | pH 7.278, HCO3 11.3, Na 133, K 4.3 |
 | Day1 01:58 | Na 130, K 3.4; POC glucose 220 | pH 7.385, HCO3 13.4, Na 138, K 3.6 |
-| Day1 05:53 | glucose 297, Na 129, K 3.6, BOHB 4.2 | — |
+| Day1 05:53 | glucose 297, Na 129, K 3.6, blood ketone 4.2 mmol/L（最後一筆） | — |
 | Day1 08:34 | HbA1c 13.60%, albumin 3.5 g/dL, Ca 7.8, Mg 1.9 mg/dL | pH 7.313, HCO3 12.5, Na 139, K 3.9 |
 | Day1 15:03 | glucose 281, Na 133, K 3.2 | pH 7.357, HCO3 15.2, Na 139, K 3.4 |
 | Day1 17:31 | TG 1950 mg/dL, total CHO 413, HDL 23, direct LDL 52（calculated LDL unavailable）; Cl 102（無同時 chemistry Na）; Ca 8.2, phosphate 1.3 mg/dL（0.42 mmol/L）, Mg 2.2; lactate 0.60, amylase 57; troponin/CK-MB normal | pH 7.401, HCO3 17.0, Na 138, K 3.7 |
@@ -25,10 +25,10 @@ QA 作者另提 glucose 482 但**無對應 lab**；Toujeo 約 10 U 仍是**提�
 ## Supplement v2（使用者新增；去識別）
 - **單位**：Na/K/Cl = mEq/L（數值同 mmol/L）；Ca 與 phosphate = mg/dL。
 - **血酮**：檢驗名稱 Blood Ketone Quantitative Test、參考 0–0.6 mmol/L；很可能為 BOHB，分析物待檢驗科確認。最後一筆仍為 Day1 05:53 的 4.2。
-- **Insulin（使用者確認）**：50 U 加入 500 mL 輸液 = 0.1 U/mL；曾 20–30 mL/h（2–3 U/h），目前 2 U/h（0.019 U/kg/h；3 U/h = 0.029）。醫囑顯示 NovoRapid FlexPen 300 IU，50 IU STAT 加入點滴瓶；實際製劑、藥局配製與給藥起訖待核對。
+- **Insulin（使用者確認）**：50 U 加入 500 mL 輸液 = 0.1 U/mL；曾 20–30 mL/h（2–3 U/h），該次紀錄當下 2 U/h（0.0191 U/kg/h；3 U/h = 0.0287）。醫囑顯示 NovoRapid FlexPen 300 IU，50 IU STAT 加入點滴瓶；實際製劑、藥局配製與給藥起訖待核對。
 - **醫囑（無開立時間；order ≠ 已給）**：Calcium chloride 400 mg/20 mL 2 amp STAT IV（鹽 800 mg，非元素鈣 800 mg）；KCl in NS 20 mEq/500 mL 1 瓶 STAT drip；K-gluconate 20 mEq/15 mL，15 mL QID（order 面 80 mEq/day）＋15 mL STAT；LR 500 mL × 4 瓶 QD（2 L/day）；0.9% NaCl 500 mL QD 與另一袋 STAT。貼出的片段未見 phosphate 製劑與含 dextrose 液。長期用藥含 β-blocker、含 ARB 降壓複方、fibrate。
-- **Vitals**：Day1 17:00–Day2 09:01 每 2 h；Day1 21:01 一次 BP 103/70、HR 94、RR 30；最新 Day2 09:01 BP 149/86、T 35.7、HR 85、RR 18。
-- **進食**：Day1 18:00、Day2 07:24 有固體進食。
+- **Vitals**（BP／HR／RR／T）：Day1 17:00 137/81、84、14、36.2；19:01 131/67、79、17、35.5；21:01 103/70、94、30、36.0；23:01 134/72、85、20、36.1。Day2 01:01 133/62、83、17、36.7；03:01 117/53、83、19、36.5；05:01 135/83、84、16、36.6；07:01 150/80、90、17、36.3；09:01 149/86、85、18、35.7。有生命徵象紀錄，但不能據此確定意識狀態或 DKA 緩解。
+- **進食**：Day1 18:00 乾飯、Day2 07:24 稀飯（固體，單位未列）。
 - **部分 I/O（不是完整 24 h）**：Day1 21:00 口服 60 mL、21:44 尿 1100、22:43 口服 450、22:46 IV 177（欄位標 RI）、22:47 IV 1000；Day2 06:06 IV 1000、尿 950、06:07 IV 209、07:40 口服 50；固體 243、270 單位未列。條件式：液體 2946、尿 2050、片段差 +896 mL。IV 1000 為輸入容量非 mL/h；不換算 mL/kg/h；RI 177 不換算為 U。
 
 **資料缺口（不可補造）**：完整 MAR（insulin 起訖與 hang time、K/Ca 實際給量、dextrose）、mental status、ECG、ionized Ca、latest Cr/BOHB、Na ISE 方法、gas 檢體類型、完整 I/O、C-peptide/autoantibodies。

@@ -23,6 +23,7 @@
 | Vitals | Day1 17:00–Day2 09:01 每 2 h；Day1 21:01 一次 RR 30（23:01 回到 20）；最新 149/86、HR 85、RR 18 | 補磷「respiratory compromise」條件：單一 RR 30 不足以判定，但需評估呼吸肌力與症狀 |
 | 部分 I/O | 尿 1100 + 950 = 2050 mL（片段） | 已知有尿量，但不是完整 24 h，不換算 mL/kg/h；補 K 的腎功能條件仍需最新 Cr |
 | 長期用藥 | 含 ARB 的降壓複方、β-blocker、fibrate（order） | ARB 影響 K 走向；fibrate 與 TG 1950 相關 |
+| 血酮分析物 | Blood Ketone Quantitative Test，參考 0–0.6 mmol/L | 下文表格沿用 brief 的「BOHB」標示，但分析物**很可能是 BOHB、尚待檢驗科確認**；最後一筆仍是 Day1 05:53 的 4.2，Day0 的 5.6 不是最新值 |
 
 仍待核對：MAR、ionized Ca（含採檢 pH）、ECG、最新 Cr、意識狀態、Na ISE 方法與 lipemia index、血氣檢體類型。
 
