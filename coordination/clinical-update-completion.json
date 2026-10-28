@@ -3,7 +3,7 @@
   "from": "clinical-update",
   "to": "codex",
   "kind": "completion",
-  "status": "accepted",
+  "status": "superseded",
   "created_at": "2026-10-28T03:29:29.076230Z",
   "topic": "Supplement v2 clinical update: clinical.json + reports revised",
   "note": "Ad hoc clinical-update role delegated by Codex in coordination/briefs/clinical-web-update.md; completion submitted separately because it is outside the six-role baseline plan. Operator acceptance closes this record without impersonating any baseline sender.",
@@ -80,5 +80,7 @@
   ],
   "accepted_by": "codex",
   "accepted_at": "2026-10-28T03:45:16.948042+00:00",
-  "acceptance_basis": "Explicit operator acceptance for delegated supplement-v2 session outside the six-role baseline plan; read-only medical QA 3c90cb01 found no blockers. Final audit metadata reconciled by Codex; six baseline role acceptance records refreshed. This is an operator completion record, not a workflow mailbox message."
+  "acceptance_basis": "Explicit operator acceptance for delegated supplement-v2 session outside the six-role baseline plan; read-only medical QA 3c90cb01 found no blockers. Final audit metadata reconciled by Codex; six baseline role acceptance records refreshed. This is an operator completion record, not a workflow mailbox message.",
+  "superseded_by": "coordination/prior-data-reconciliation.json",
+  "superseded_reason": "Later user-requested reconciliation updated some output files. Original hashes remain a historical supplement-v2 snapshot; current role acceptance and the new reconciliation record identify accepted current outputs."
 }

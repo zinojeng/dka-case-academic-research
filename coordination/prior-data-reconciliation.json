@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "decision": "accepted",
+  "by": "codex",
+  "created_at": "2026-10-28T04:08:45.588513+00:00",
+  "user_request": "give previous data to claude to update information",
+  "delegated_session": "bd6be66e-35c7-4c16-91d8-ac6d82d62959",
+  "model": "claude-opus-5-5",
+  "source_handoff": ".private/prior-data-handoff.md",
+  "scope": "Reconcile previous user-supplied data against current research files; no new clinical observations or literature.",
+  "outputs": [
+    {
+      "path": "docs/case-questions.md",
+      "sha256": "0a9523c8a0c4af269acbdba50f0da821c897335376031a748129e8c3572dfae9"
+    },
+    {
+      "path": "reports/case-analyst/case-timeline.md",
+      "sha256": "df82d9d77f0a2e2b6da21f6ae3e177d6c355a917eeb41cf512a8a278d3d1c547"
+    },
+    {
+      "path": "reports/case-analyst/data-gaps.md",
+      "sha256": "bf8b2a8e6b16a607196a0f6ccf674522a42bf991e815ff36906986f1b5c4653f"
+    },
+    {
+      "path": "reports/electrolytes.md",
+      "sha256": "bb46ec8a7bccd5b587ac0e3504652a8b0566ed1e6aed82ba5ea213eb56d4b5c9"
+    }
+  ],
+  "updates": [
+    "Current case-analyst timeline and known/missing data tables now include confirmed weight, units, vitals, meals, conditional I/O, orders and insulin arithmetic.",
+    "Blood-ketone analyte caveat consistent across case questions and electrolyte report; Day0 5.6 is not latest.",
+    "Unconfirmed medication exposures and ketone measurement method retained as gaps.",
+    "Derived interpretations separated from factual tables and linked to sourced specialist reports."
+  ],
+  "verification": [
+    "Independent read-only diff review plus Codex source check; no critical findings.",
+    "Header dates removed; missing gap items restored; meal/amount pairing supported directly by original user data.",
+    "Changed Markdown links resolve; identifier/key/path scan clean; raw record unchanged."
+  ],
+  "website": {
+    "url": "https://dka-teaching-rounds.zinojeng.workers.dev",
+    "content_unchanged": true,
+    "redeployment_required": false,
+    "basis": "The previously deployed supplement-v2 page already includes the user-supplied data; site source unchanged."
+  },
+  "supersedes": "coordination/clinical-update-completion.json"
+}
