@@ -1,0 +1,17 @@
+/[0-9]*.md
+.private/
+.metadata_cache/
+.env
+.env.*
+!.env.example
+*.key
+*.log
+.claude/settings.local.json
+.claude/worktrees/
+runtime/
+sessions/
+fulltext/
+parsed/
+__pycache__/
+*.pyc
+.DS_Store
