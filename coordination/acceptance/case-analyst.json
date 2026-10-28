@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "role": "case-analyst",
+  "decision": "accepted",
+  "by": "codex",
+  "attempt_id": "1798adb9fbc0",
+  "created_at": "2026-10-28T03:07:21.833550Z",
+  "basis": "Case timeline and data gaps verified; explicit input-validation addendum records corrected private Read rules and successful live canary test",
+  "open_challenges": [],
+  "outputs": [
+    {
+      "path": "reports/case-analyst/case-timeline.md",
+      "sha256": "ed938a139054a5c044237180d413a5f831379364a1de761ac60c6d4da5a2050a"
+    },
+    {
+      "path": "reports/case-analyst/data-gaps.md",
+      "sha256": "e4ffcce27f152077e3354b19f92430bdd8b9f6ecf697e67687d37d6692630968"
+    }
+  ]
+}

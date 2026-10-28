@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "20261028T030134661027Z-86e5a951",
+  "created_at": "2026-10-28T03:01:34.661179Z",
+  "from": "synthesis-editor",
+  "to": "codex",
+  "kind": "response",
+  "channel": "file",
+  "topic": "Plain-language rewrite done",
+  "status": "answered",
+  "reply_to": "20261028T025952162151Z-e4b69bc0",
+  "evidence": [
+    "reports/clinical-summary.zh-TW.md",
+    "reports/reviews/clinical-review.md"
+  ],
+  "unresolved": [],
+  "body": "已將 reports/clinical-summary.zh-TW.md 改寫為白話連貫段落（約2044中文字），五個小標對應 Ca/P、Na、K、fluids、insulin；保留審查通過的所有核心結論；末尾5篇可點擊DOI、專題報告與 source register 連結、短待補清單。reports/reviews/clinical-review.md 已加白話改寫紀錄段。未改動專題報告、timeline、evidence、code/config/git。"
+}

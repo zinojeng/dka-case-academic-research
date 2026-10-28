@@ -1,0 +1,71 @@
+{
+  "body": "not_done: No writes to evidence/, fulltext/, parsed/, scripts, config, workflow or git\nnot_done: Did not read raw original chart or credentials/MCP key file\nnot_done: No native SendMessage; workflow-builder preflight not answered (not addressed to this role)",
+  "channel": "file",
+  "created_at": "2026-10-28T02:40:10.595377Z",
+  "evidence": [],
+  "from": "synthesis-editor",
+  "id": "20261028T024010000006Z-8f9320ed",
+  "kind": "completion",
+  "legacy": {
+    "file": "20261028-synthesis-editor-01-completion-to-codex.json",
+    "id": "synthesis-editor-complete-01",
+    "kind_inferred": true,
+    "original": {
+      "channel": "file mailbox only (no native peer messages sent; no further peer loop per instruction)",
+      "deliverables": [
+        "reports/clinical-summary.zh-TW.md (owned; ~1828 CJK characters plus English medical/drug terms)",
+        "reports/case-timeline.md (owned; Day0/1/2 relative times only)",
+        "reports/electrolytes.md (editorial only: English verbatim quotes -> zh-TW paraphrase marked 意譯)",
+        "reports/fluid-insulin.md (editorial only: English verbatim quotes -> zh-TW paraphrase marked 意譯)"
+      ],
+      "flags_for_codex_final_crosscheck": [
+        "electrolytes.md §4 consensus bullet ('0.45% saline 無適應症') and electrolytes-completion-to-codex.json ('0.45% not indicated') remain categorical, conflicting with fluid-insulin rev 2 wording (not established, not definitively excluded). Not changed: outside editorial scope (clinical meaning). Summary follows fluid-insulin rev 2 and notes this in §9.",
+        "Specialist reports keep their own reference numbering ([1]-[14], inline citations); only the summary uses register S-IDs. Mapping: electrolytes [1]=S01, [1b]=S02, [2]=S19, [3]=S03, [4]=S09, [6]=S10, [7]=S11, [11]=S15.",
+        "Access-status differences are reader-specific, not contradictions: S01 Diabetes Care HTML read by specialists vs metadata-only for librarian; S19 2009 consensus full text read by electrolyte-specialist vs metadata-only for librarian.",
+        "Electrolytes §0.1 / D3 Fig 4 values remain peer-visual only; ADA 2026 Fig 16.1 unread by all.",
+        "Both specialist reports changed on disk between my first read and my edits; I re-read and applied string-matched edits against the current versions. Recommend Codex diff-check both before release."
+      ],
+      "from": "synthesis-editor",
+      "id": "synthesis-editor-complete-01",
+      "inputs_read": [
+        "coordination/briefs/codex-director.md",
+        ".private/case-brief.md",
+        "reports/electrolytes.md, reports/fluid-insulin.md (re-read after on-disk revisions: fluid-insulin rev 3 and electrolytes S09/S11 librarian updates)",
+        "coordination/messages/*.json incl. challenge/ACK threads and evidence-librarian-to-codex-synthesis-editor-001.json",
+        "evidence/source-register.json (S01-S19, D1-D7), evidence/fulltext-manifest.json"
+      ],
+      "not_done": [
+        "No writes to evidence/, fulltext/, parsed/, scripts, config, workflow or git",
+        "Did not read raw original chart or credentials/MCP key file",
+        "No native SendMessage; workflow-builder preflight not answered (not addressed to this role)"
+      ],
+      "quote_budget": "Only one verbatim English sentence retained from a source: S02 2024 consensus 'no current studies on transitioning to ultra-long-acting insulin' (~14 words, fluid-insulin.md §5.1). Remaining quoted strings are section-heading locators, alt-text label (3 words), or author shorthand. All label (S16/S17/S18, NovoLog), ADA 2026 and 2009 quotes paraphrased. Locators, identifiers, numbers and access limitations unchanged.",
+      "recomputed_values": "131+1.6*3.11=135.976; 131+2.4*3.11=138.464; 2*131+411/18=284.83; +22/2.8=292.69; 318-292.69=25.31; chem: 126.98/129.46, eff 266.83, gap 43.31",
+      "reply_to": null,
+      "session_model": "claude-opus-5-5",
+      "status": "complete-pending-codex-crosscheck",
+      "summary_coverage": [
+        "QA1-QA5 answered; case facts vs inference labelled (事實/推論); unknown MAR != not given",
+        "P unit unconfirmed (mg/dL vs mmol/L both shown); ionized Ca required",
+        "Na: same-time chem 122 vs gas 131; direct vs indirect ISE unconfirmed; TG measured Day1 not Day0; corrected Na = Na + factor*(glucose-100)/100; gas Na 131 conditional 1.6 -> 135.98, 2.4 -> 138.46; effective osm 284.83; measured osm 318; gap 25.31 described as unexplained/non-decomposable, not validated tonicity",
+        "K nadir 3.2, latest 3.4; 2024 delay-insulin wording is admission context; monitored repletion first; no individualized orders, no fixed infusion rate",
+        "Resolution: ketone <0.6 AND (pH >=7.3 OR HCO3 >=18); glucose ideally <200 not sole criterion; current BOHB missing -> indeterminate; glucose <250 add dextrose and continue insulin conditional on K safety",
+        "Fluids: no mortality/hard-endpoint benefit claimed for balanced; SCOPE-DKA cited qualitatively only (no numbers); 0.45% not established by current data but not definitively excluded",
+        "Overlap 2024 1-2 h vs ADA 2026 2 h / 2-4 h; Toujeo U300 slow onset (US PI ~6 h, steady state >=5 d; EU 3-4 d); no verified U300-specific transition trial",
+        "Priority missing data list; 5 references aligned to register IDs S02/S01, S03, S04, S09, S11 (+ labels S16-S18)"
+      ],
+      "to": "codex",
+      "topic": "completion: reports/clinical-summary.zh-TW.md + reports/case-timeline.md; editorial quote-to-paraphrase pass on electrolytes.md and fluid-insulin.md"
+    },
+    "reply_to": null,
+    "reply_to_unresolved": false,
+    "status": "complete-pending-codex-crosscheck"
+  },
+  "reply_to": null,
+  "schema_version": 1,
+  "status": "open",
+  "to": "codex",
+  "topic": "completion: reports/clinical-summary.zh-TW.md + reports/case-timeline.md; editorial quote-to-paraphrase pass on electrolytes.md and fluid-insulin.md",
+  "unresolved": [],
+  "repaired_at": "2026-10-28T02:59:53.168322Z"
+}

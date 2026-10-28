@@ -1,0 +1,26 @@
+{
+  "mcpServers": {
+    "paper-search": {
+      "command": "<absolute-path-to>/uvx",
+      "args": ["paper-search-mcp"],
+      "env": { "SEMANTIC_SCHOLAR_API_KEY": "<placeholder>", "UNPAYWALL_EMAIL": "<placeholder>" }
+    },
+    "research_hub": {
+      "command": "<absolute-path-to>/python3",
+      "args": ["<absolute-path-to>/research_hub/server.py"]
+    },
+    "scihub": {
+      "command": "<absolute-path-to>/python3",
+      "args": ["<absolute-path-to>/scihub_mcp/server.py"]
+    },
+    "llamaparse": {
+      "command": "<absolute-path-to>/node",
+      "args": ["<absolute-path-to>/llamaparse-mcp/index.js"],
+      "env": { "LLAMA_CLOUD_API_KEY": "<placeholder>" }
+    },
+    "codebase-memory-mcp": {
+      "command": "<absolute-path-to>/codebase-memory-mcp",
+      "args": []
+    }
+  }
+}

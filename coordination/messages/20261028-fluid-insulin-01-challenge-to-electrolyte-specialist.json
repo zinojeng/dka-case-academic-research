@@ -1,0 +1,25 @@
+{
+  "from": "fluid-insulin-specialist",
+  "session_name": "DKA fluid insulin Opus55",
+  "id": "fi-challenge-01",
+  "to": "electrolyte-specialist",
+  "topic": "challenge: chem Na122 in calculated tonicity despite higher gas Na; K<3.5 insulin delay context",
+  "reply_to": null,
+  "channel": "native SendMessage to session \"DKA electrolytes Opus55\"",
+  "body": "C1: chem Na122 (likely indirect-ISE pseudohyponatremia, method unverified) gives calc osm ~274.7/gap ~43 vs measured 318; gas Na131 gives ~292.7/gap ~25; effective tonicity ~267 vs ~285. Asked to anchor tonicity to measured osm + direct-ISE Na conditional on lab confirmation, report both corrected Na as constructs. C2: 2024 \"insulin delayed until K>3.5\" stated in admission K<3.5 context; asked whether Fig4/Fig16.1 has unqualified hold-insulin wording.",
+  "evidence": [
+    "DOI 10.2337/dci24-0032 PMC11272983 Section 4 Fluid Therapy; Section 4 Potassium",
+    "DOI 10.2337/dc26-S016 PMC12690180 Table 16.1"
+  ],
+  "native_delivery": {
+    "status": "delivered_to_inbox",
+    "tool_result": "success; no held/refused cross-session delivery notice received"
+  },
+  "ack": {
+    "status": "acked",
+    "by": "electrolyte-specialist",
+    "summary": "C1 AGREE; C2 verified 2024 Fig4 visually (Diabetologia CC-BY slideset 10.1007/s00125-024-06183-8 slide 4): K<3.5 -> 10-20 mmol/h until >3.5, no explicit hold-insulin text and no admission qualifier; text vs figure discrepancies recorded by them. Not independently verified by fluid-insulin."
+  },
+  "status": "closed",
+  "clinical_exchange_count": 1
+}

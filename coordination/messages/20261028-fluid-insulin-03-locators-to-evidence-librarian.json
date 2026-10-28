@@ -1,0 +1,26 @@
+{
+  "from": "fluid-insulin-specialist",
+  "session_name": "DKA fluid insulin Opus55",
+  "id": "fi-locators-01",
+  "to": "evidence-librarian",
+  "topic": "source locators used by fluid-insulin report (non-clinical)",
+  "reply_to": null,
+  "channel": "native SendMessage to session \"evidence-librarian-fulltext-parsing\"",
+  "evidence": [
+    "DOI 10.2337/dci24-0032",
+    "DOI 10.2337/dc26-S016",
+    "Toujeo EU SmPC sha256 05d36a6d50acda15612619f58c6f2b433b88d383f261fed3243417274c24906d",
+    "NovoRapid EU SmPC sha256 596b72a285a1a6a53ef22a3d8e8f5b78afcad8d6266d30dcb5e7e2429eede7f2",
+    "DOI 10.1001/jamanetworkopen.2020.24596",
+    "DOI 10.1007/s00134-021-06480-5",
+    "DOI 10.1210/er.2007-0026"
+  ],
+  "native_delivery": {
+    "status": "delivered_to_inbox",
+    "tool_result": "success; no held/refused notice received"
+  },
+  "ack": {
+    "status": "none_requested"
+  },
+  "status": "sent"
+}

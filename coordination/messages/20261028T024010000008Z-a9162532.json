@@ -1,0 +1,53 @@
+{
+  "body": "deliverable: reports/electrolytes.md\nkey_findings: Text vs Fig 4 discrepancy recorded, not resolved: K<3.5 rate 10 mmol/h (text) vs 10-20 (Fig 4); maintenance 20-30 vs 10-20 mmol/L; resolution >= vs >; Fig 4 has no hold-insulin wording\nkey_findings: Phosphate threshold: 2024 <1.0 mmol/L (~3.1 mg/dL) vs 2009 <1.0 mg/dL; case phosphate units unknown, interpreted conditionally\nkey_findings: Day0 chemNa122 vs gasNa131 most consistent with indirect-ISE pseudohyponatremia on top of translocational hyponatremia; method unverified; gas-based corrected Na 136.0/138.5, effective osm 284.8, osmolal gap 25.3; not HHS\nkey_findings: K nadir 3.2 / latest 3.4 red flag; prioritized monitored repletion; no individualized order (no weight/UO/Cr/ECG/MAR)\nnot_done: No writes to evidence/, fulltext/, parsed/, other reports, workflow, or git\nnot_done: Scratch copies of OA XML/slideset kept only in job tmp dir (outside project)",
+  "channel": "file",
+  "created_at": "2026-10-28T02:40:10.595387Z",
+  "evidence": [
+    "2024 consensus verified from Diabetologia OA full text (PMC11343900) + Diabetes Care PMC HTML (PMC11272983); Fig 4 visually read from CC-BY slideset",
+    "2009 consensus full text (PMC2699725); ADA 2026 S16 (PMC12690180) partial HTML, Fig 16.1 K numbers NOT verified",
+    "Primary: Fisher 1983 PMID 6406531, Wilson 1982 PMID 6802095, Katz 1973 PMID 4763428, Hillier 1999 PMID 10225241, Davidson 1992 PMID 1582030, Arora 2012 PMID 21316179, Desgagnes 2025 PMID 39836424, Chopra 2026 PMID 42729988 (abstract-only unless stated)"
+  ],
+  "from": "electrolyte-specialist",
+  "id": "20261028T024010000008Z-a9162532",
+  "kind": "completion",
+  "legacy": {
+    "file": "electrolytes-completion-to-codex.json",
+    "id": "ELEC-DONE",
+    "kind_inferred": true,
+    "original": {
+      "cross_session": "2 native exchanges with DKA fluid insulin Opus55 (both SendMessage success, delivered to inbox, none held/refused); actual ACK received from peer; see electrolytes-ELEC-CH1-to-fluid-insulin.json. Locator message to evidence librarian delivered, no ACK expected.",
+      "deliverable": "reports/electrolytes.md",
+      "evidence": [
+        "2024 consensus verified from Diabetologia OA full text (PMC11343900) + Diabetes Care PMC HTML (PMC11272983); Fig 4 visually read from CC-BY slideset",
+        "2009 consensus full text (PMC2699725); ADA 2026 S16 (PMC12690180) partial HTML, Fig 16.1 K numbers NOT verified",
+        "Primary: Fisher 1983 PMID 6406531, Wilson 1982 PMID 6802095, Katz 1973 PMID 4763428, Hillier 1999 PMID 10225241, Davidson 1992 PMID 1582030, Arora 2012 PMID 21316179, Desgagnes 2025 PMID 39836424, Chopra 2026 PMID 42729988 (abstract-only unless stated)"
+      ],
+      "from": "electrolyte-specialist (DKA electrolytes Opus55)",
+      "id": "ELEC-DONE",
+      "key_findings": [
+        "Text vs Fig 4 discrepancy recorded, not resolved: K<3.5 rate 10 mmol/h (text) vs 10-20 (Fig 4); maintenance 20-30 vs 10-20 mmol/L; resolution >= vs >; Fig 4 has no hold-insulin wording",
+        "Phosphate threshold: 2024 <1.0 mmol/L (~3.1 mg/dL) vs 2009 <1.0 mg/dL; case phosphate units unknown, interpreted conditionally",
+        "Day0 chemNa122 vs gasNa131 most consistent with indirect-ISE pseudohyponatremia on top of translocational hyponatremia; method unverified; gas-based corrected Na 136.0/138.5, effective osm 284.8, osmolal gap 25.3; not HHS",
+        "K nadir 3.2 / latest 3.4 red flag; prioritized monitored repletion; no individualized order (no weight/UO/Cr/ECG/MAR)"
+      ],
+      "not_done": [
+        "No writes to evidence/, fulltext/, parsed/, other reports, workflow, or git",
+        "Scratch copies of OA XML/slideset kept only in job tmp dir (outside project)"
+      ],
+      "reply_to": null,
+      "status": "complete-pending-human-gate",
+      "to": "codex",
+      "topic": "Completion: reports/electrolytes.md (QA1 Ca/P, QA2 Na/tonicity/cerebral, QA3 K)"
+    },
+    "reply_to": null,
+    "reply_to_unresolved": false,
+    "status": "complete-pending-human-gate"
+  },
+  "reply_to": null,
+  "schema_version": 1,
+  "status": "open",
+  "to": "codex",
+  "topic": "Completion: reports/electrolytes.md (QA1 Ca/P, QA2 Na/tonicity/cerebral, QA3 K)",
+  "unresolved": [],
+  "repaired_at": "2026-10-28T02:59:53.168411Z"
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "20261028T030808613889Z-beef1c82",
+  "created_at": "2026-10-28T03:08:08.614174Z",
+  "from": "codex",
+  "to": "synthesis-editor",
+  "kind": "ruling",
+  "channel": "file",
+  "topic": "Plain-language rewrite completed and inspected",
+  "status": "resolved",
+  "reply_to": "20261028T025952162151Z-e4b69bc0",
+  "evidence": [],
+  "unresolved": [],
+  "body": "User-requested prose rewrite and final accuracy edits are complete. Parent verified current files and accepted the explicit resume copy; original session stopped. The copied worker could not access its shell cwd for helper metadata, so Codex records acceptance from the trusted project shell."
+}

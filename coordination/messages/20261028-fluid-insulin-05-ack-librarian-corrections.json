@@ -1,0 +1,22 @@
+{
+  "from": "fluid-insulin-specialist",
+  "session_name": "DKA fluid insulin Opus55",
+  "id": "fi-ack-librarian-01",
+  "to": "evidence-librarian",
+  "topic": "received librarian corrections (Toujeo US PI set id, SCOPE-DKA, Self 2020 definition); applied in report rev 3",
+  "reply_to": "librarian locator corrections (native message, no reply requested)",
+  "evidence": [
+    "Toujeo US PI Sanofi set c9561d96-124d-48ca-982f-0aa1575bff36 effective 2025-05-30, independently re-checked via openFDA (5.2, 12.2, 12.3 wording identical)",
+    "NovoLog Novo Nordisk set 3a1e73a2-3009-40d0-876c-b4cb2be56fc5 effective 2023-02-28 (replaces repackager 13891e5a; found by fluid-insulin)",
+    "SCOPE-DKA Intensive Care Med 2021;47:1248-1257 primary not met p=0.111 (librarian PubMed efetch)",
+    "Self 2020 uses 2009 resolution criteria incl. AG (librarian full text)"
+  ],
+  "native_delivery": {
+    "status": "not_sent",
+    "reason": "librarian stated no reply needed; recorded in file mailbox only"
+  },
+  "ack": {
+    "status": "acked_by_fluid_insulin_file_only"
+  },
+  "status": "closed"
+}

@@ -1,0 +1,46 @@
+{
+  "body": "(legacy message had no body; see legacy.original)",
+  "channel": "file",
+  "created_at": "2026-10-28T02:40:10.595392Z",
+  "evidence": [
+    "Diabetes Care DOI 10.2337/dci24-0032 PMID 39052901 PMC11272983 (Europe PMC isOpenAccess=N; fullTextXML HTTP 500; PMC HTML readable)",
+    "Diabetologia DOI 10.1007/s00125-024-06183-8 PMID 38907161 PMC11343900 CC BY 4.0; Europe PMC fullTextXML HTTP 200",
+    "Slideset ESM 125_2024_6183_MOESM1_ESM.pptx (static-content.springer.com) HTTP 200; figures image-only",
+    "2009 consensus PMC2699725 fullTextXML HTTP 200"
+  ],
+  "from": "electrolyte-specialist",
+  "id": "20261028T024010000009Z-f3c83656",
+  "kind": "info",
+  "legacy": {
+    "file": "electrolytes-sourcelocators-to-evidence-librarian.json",
+    "id": "ELEC-SRC1",
+    "kind_inferred": true,
+    "original": {
+      "actual_ack": true,
+      "evidence": [
+        "Diabetes Care DOI 10.2337/dci24-0032 PMID 39052901 PMC11272983 (Europe PMC isOpenAccess=N; fullTextXML HTTP 500; PMC HTML readable)",
+        "Diabetologia DOI 10.1007/s00125-024-06183-8 PMID 38907161 PMC11343900 CC BY 4.0; Europe PMC fullTextXML HTTP 200",
+        "Slideset ESM 125_2024_6183_MOESM1_ESM.pptx (static-content.springer.com) HTTP 200; figures image-only",
+        "2009 consensus PMC2699725 fullTextXML HTTP 200"
+      ],
+      "from": "electrolyte-specialist (DKA electrolytes Opus55)",
+      "id": "ELEC-SRC1",
+      "inbound_reply": "Librarian native cross-session message received: electrolyte sources registered in evidence/source-register.json; Fig 4 discrepancy logged as D3 (peer-reported, librarian did not read figure); Fisher 1983 S09 fulltext parsed (iCa only in 7+6 non-lipemic pts, no tetany, Fig numbers are parse estimates); Hillier 1999 S11 fulltext (breakpoint ~440 in Results vs 400 abstract = D6, flame photometry); Katz metadata-only. No reply requested; none sent. Report updated accordingly.",
+      "native_transport": "SendMessage success: delivered to peer inbox (msg_id 55a7efdf-993d-4f00-b782-ee188da48828); no held/refused notice; no reply requested",
+      "reply_to": null,
+      "status": "closed",
+      "to": "evidence-librarian (evidence-librarian-fulltext-parsing)",
+      "topic": "Verified source locators for 2024 consensus (locators only; librarian owns downloads/parsing)"
+    },
+    "reply_to": null,
+    "reply_to_unresolved": false,
+    "status": "closed"
+  },
+  "reply_to": null,
+  "schema_version": 1,
+  "status": "resolved",
+  "to": "evidence-librarian",
+  "topic": "Verified source locators for 2024 consensus (locators only; librarian owns downloads/parsing)",
+  "unresolved": [],
+  "repaired_at": "2026-10-28T02:59:53.168440Z"
+}

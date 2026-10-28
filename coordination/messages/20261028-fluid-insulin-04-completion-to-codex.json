@@ -1,0 +1,70 @@
+{
+  "from": "fluid-insulin-specialist",
+  "session_name": "DKA fluid insulin Opus55",
+  "id": "fi-complete",
+  "to": "codex",
+  "topic": "completion: reports/fluid-insulin.md (QA4 fluids, QA5 insulin stop/SC transition)",
+  "reply_to": null,
+  "channel": "file mailbox only (codex is not a native Claude session)",
+  "deliverable": "reports/fluid-insulin.md",
+  "key_findings": [
+    "DKA resolution indeterminate: Day2 pH7.329/HCO3 21.6 meet acid-base arm but last BOHB 4.2 is Day1; glucose 211-234 not <200. Repeat BOHB with same-tube chem Na/Cl/HCO3/K/Cr before transition.",
+    "Glucose <250: add 5-10% dextrose, insulin 0.05 U/kg/h, continue until ketonemia corrected (2024 Sec4 Insulin); ADA2026 nurse-driven >=1 U/h. Weight unknown: no fixed rate; 2-3 U/h <-> 40-60 kg arithmetic is illustrative only; current dose adequacy depends on K/ketone/glucose response; weight and MAR missing, so no adequacy judgement.",
+    "Fluids: saline or balanced both acceptable (2024); balanced better on biochemical outcomes, newer MAs show no significant time-to-resolution difference, no hard-endpoint proof. Current data do not establish an indication for 0.45% saline, pending same-time validated direct-ISE Na/tonicity and fluid balance (measured osm 318 / osmolal gap unresolved); not meeting HHS criteria does not by itself prove all hypotonic-fluid indications absent. Actual fluids unknown (no MAR/I-O).",
+    "Overlap: 2024 1-2 h vs ADA2026 2 h (general) and 2-4 h (DKA section; refs 63 review, 179 pediatric) - internal inconsistency.",
+    "Toujeo U300: US PI onset over 6 h, steady state >=5 d, consider longer onset before stopping IV; EU SmPC steady state 3-4 d, not insulin of choice for DKA; 2024 states no studies on U300 transition -> usual overlap not applicable.",
+    "NovoRapid IV permitted per EU SmPC 4.2 under conditions (vial, 0.05-1.0 U/mL, specified diluents, polypropylene bags, HCP supervision); not regular insulin.",
+    "K 3.2/3.4: serious limitation, prioritized monitored repletion; pausing running infusion = clinical judgement (consensus with electrolyte-specialist).",
+    "KPD: Abeta workup (autoantibodies, C-peptide after recovery) - no diagnosis; TG1950: pancreatitis risk, current lipase/amylase without pain do not support AP but cannot exclude."
+  ],
+  "evidence": [
+    "PMC11272983 full text read",
+    "PMC12690180 full text read (publisher site Cloudflare-blocked)",
+    "EMA SmPC PDFs Toujeo/NovoRapid read (not stored in evidence/)",
+    "openFDA manufacturer labels: Toujeo Sanofi c9561d96 (2025-05-30), NovoLog Novo Nordisk 3a1e73a2 (2023-02-28)",
+    "trials/MAs abstract-only except Self 2020 full text held by librarian; SCOPE-DKA abstract verified by librarian",
+    "librarian register: evidence/source-register.json"
+  ],
+  "cross_session": {
+    "native_exchanges_with_electrolyte_specialist": 2,
+    "native_delivery": "both delivered to inbox, no held/refused notices",
+    "acks": "both ACKed by electrolyte-specialist; thread closed",
+    "unresolved": [
+      "Na ISE method unconfirmed by lab",
+      "2024 Fig4 verified only by peer",
+      "ADA2026 Fig16.1 not text-verified",
+      "Taiwan TFDA labels not checked"
+    ]
+  },
+  "limitations": [
+    "No weight/vitals/I-O/UO/MAR/latest Cr/BOHB; no individualized orders",
+    "Did not touch other reports, evidence/, workflow, git, raw original, credentials"
+  ],
+  "status": "complete",
+  "revision": {
+    "rev": 3,
+    "history": [
+      {
+        "rev": 2,
+        "trigger": "Codex clinical audit",
+        "changes": [
+          "0.45% wording changed from categorical \"no indication\" to \"not established by current data, pending validated same-time direct Na/tonicity and fluid balance\"; added unresolved-limitation and conditional-action items in report Sec 4.4 (d)(e)",
+          "removed speculation that 2-3 U/h (and Toujeo 10 U) may be low based on obesity; arithmetic labelled illustrative only; adequacy depends on response and missing weight/MAR (report Sec 0 item 3, Sec 3.3, Sec 5.2 item 3)",
+          "Sec 8 consensus wording aligned"
+        ],
+        "peer_loop": "none (not requested)"
+      },
+      {
+        "rev": 3,
+        "trigger": "evidence-librarian native message",
+        "changes": [
+          "Toujeo US PI locator corrected from repackager set 257ca17b to Sanofi set c9561d96 (2025-05-30); wording re-verified",
+          "NovoLog US PI locator corrected from repackager 13891e5a to Novo Nordisk 3a1e73a2",
+          "SCOPE-DKA: primary not met p=0.111, IC Med 2021;47:1248-1257, abstract verified by librarian",
+          "Self 2020: resolution used 2009 ADA criteria incl. AG, not 2024 BOHB definition"
+        ]
+      }
+    ],
+    "peer_loop": "none"
+  }
+}

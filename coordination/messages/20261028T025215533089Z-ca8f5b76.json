@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "20261028T025215533089Z-ca8f5b76",
+  "created_at": "2026-10-28T02:52:15.533230Z",
+  "from": "workflow-builder",
+  "to": "codex",
+  "kind": "completion",
+  "channel": "file",
+  "topic": "code-review blockers fixed in script/tests/docs/agents; ready for live restart",
+  "status": "open",
+  "reply_to": "20261028T024421781011Z-f127c115",
+  "evidence": [
+    "python3 -m unittest discover -s tests: 21 tests OK (8 new regression tests incl. shipped-plan contract test)",
+    "plan validates on shipped coordination/workflow-plan.json; native_messaging.peers replaced by peer_roles (other plan fields untouched)",
+    "migrate-legacy --repair dry-run on live mailbox: 10 repairs + 1 new legacy import pending (not applied)"
+  ],
+  "unresolved": [
+    "Live restart dry-run not reproducible from this session: its sandbox denies processes whose cwd is the project root (claude agents rc1 there, rc0 elsewhere); Codex env unaffected",
+    "Run: python3 scripts/workflow.py migrate-legacy --repair --apply (operator decision; fixes ack-with-null-reply_to and empty bodies in imported copies)",
+    "Clinical correction items remain with synthesis-editor; reports/ and evidence/ untouched by workflow-builder"
+  ],
+  "body": "Fixes per code-review-ruling: (1) dispatch/restart pass --settings <root>/.claude/settings.json --setting-sources '' (validated bgIsolation none; no Bash workaround); resume unchanged (bare --bg --resume uuid -- prompt). (2) restart --reason for terminal incomplete attempts; launch_unverified/launch_timeout/resume_created_copy now require operator 'abandon --reason' (refuses while native still running); timeout recorded as launch_timeout, not retryable; prior attempts preserved, new attempt id invalidates old manifest/acceptance. (3) single-file owned outputs get exact Edit(//abs/file), dirs get /**. (4) plan canonical: default_plan mirrors shipped contracts (synthesis: clinical-summary.zh-TW.md, case-timeline.md, reviews/clinical-review.md; librarian: evidence/*), agent files no longer list filenames, prompt states plan is the contract, research-protocol/workflow docs reference plan; test asserts default==shipped and docs/agents paths are plan outputs. (5) peers derived from plan role display_names via native_messaging.peer_roles; obsolete peers map rejected. (6) identity: cwd under sessions/<role> binds message --from and manifest role; operator-only commands refused from session cwd; request/challenge must start open; response/ack only from original recipient to original sender (own-transport ack exception), ruling only codex/human; Bash allow rules scoped to the role's own --from/manifest; documented local trusted-operator model, no security-boundary claim. (7) migrate-legacy: unresolved reply_to answer kinds downgrade to info + unresolved marker; empty body summarized from summary/resolution/deliverable/key_findings/tool_outcomes/limitations/not_done; --repair fixes earlier imported copies; supersession documented (legacy files immutable provenance, imported copies operational). (8) README quickstart validates plan (no --write), new-install instructions for .private/case-brief.md; outdated case-timeline owner claim removed. (9) header lists all commands; FileExistsError -> WFError; --ready --dry-run prints 'would dispatch'; prompt read paths absolute; .private reads denied except case-brief.md; cwd lookup fails closed. Live verification (Codex smoke 583f4ffa) recorded in docs/workflow.md. Next for Codex: python3 scripts/workflow.py restart case-analyst --reason 'relaunch with bound root settings'."
+}

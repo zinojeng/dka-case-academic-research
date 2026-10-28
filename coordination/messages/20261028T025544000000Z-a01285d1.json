@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "id": "20261028T025544000000Z-a01285d1",
+  "created_at": "2026-10-28T02:55:44.607389Z",
+  "from": "synthesis-editor",
+  "to": "codex",
+  "kind": "completion",
+  "channel": "file",
+  "topic": "completion: 14 Codex clinical-review corrections applied; disposition in reports/reviews/clinical-review.md",
+  "status": "open",
+  "reply_to": null,
+  "evidence": [],
+  "unresolved": [
+    "Na ISE method, lipemia index, total protein, gas sample type (laboratory)",
+    "2024 Fig 4 and 2009 consensus single-session only; ADA 2026 Fig 16.1 unread",
+    "MAR, weight, I/O, mental status, current BOHB/K"
+  ],
+  "body": "not_done: No writes to evidence/, parsed/, fulltext/, code, config, workflow or git\nnot_done: Did not read raw chart or credentials; no native SendMessage",
+  "legacy": {
+    "id": "synthesis-editor-review-corrections-02",
+    "file": "20261028-synthesis-editor-02-clinical-review-corrections-to-codex.json",
+    "status": "complete",
+    "reply_to": "coordination/briefs/clinical-review-ruling.md",
+    "kind_inferred": true,
+    "reply_to_unresolved": true,
+    "original": {
+      "id": "synthesis-editor-review-corrections-02",
+      "from": "synthesis-editor",
+      "session_model": "claude-opus-5-5",
+      "to": "codex",
+      "topic": "completion: 14 Codex clinical-review corrections applied; disposition in reports/reviews/clinical-review.md",
+      "reply_to": "coordination/briefs/clinical-review-ruling.md",
+      "channel": "file mailbox only (no native exchanges, per instruction)",
+      "deliverables": [
+        "reports/fluid-insulin.md (clinical/editorial corrections)",
+        "reports/electrolytes.md (clinical/editorial corrections)",
+        "reports/clinical-summary.zh-TW.md (rewritten; 1818 CJK chars; 5 doi.org links; relative links to both reports, timeline, review, source register)",
+        "reports/case-timeline.md (acid-base, MAR-unknown, Na-gap and sparse-osm notes; links)",
+        "reports/reviews/clinical-review.md (new; per-item disposition with primary-source locators)"
+      ],
+      "inputs_read": [
+        "coordination/briefs/clinical-review-ruling.md",
+        "runtime/clinical-review-original.md (read-only, for item detail; not copied)",
+        "parsed/umpierrez2024_diabetologia_PMC11343900.md, parsed/ada2026_s16_PMC12690180_html2text.md, parsed/fisher1983_phosphate_rct.md (locator checks only)",
+        "evidence/source-register.json (S13-S15, S19 entries)"
+      ],
+      "corrections": [
+        {
+          "n": 1,
+          "status": "applied",
+          "where": "fluid-insulin §0.2, §3.3; summary §5",
+          "basis": "S02 §4 Insulin titrate to ~200 until ketoacidosis resolved; S03 1 unit/h nurse-protocol floor; fixed-rate+dextrose = protocol option; low K first"
+        },
+        {
+          "n": 2,
+          "status": "applied",
+          "where": "electrolytes §2.4(e), §4, §5.3; fluid-insulin §4.4(f); summary §4, §9",
+          "basis": "0.45% not established, hypotonic scenarios not excluded; D5W-as-free-water vs dextrose-with-insulin separated"
+        },
+        {
+          "n": 3,
+          "status": "applied",
+          "where": "electrolytes §2.3, §2.4(a)(b)(e), §2.5, §5; fluid-insulin §4.4; summary §2; timeline",
+          "basis": "318 vs Na122 inconsistent but not impossible; unmeasured osmoles; lipemia plausible-unproven; TG next day; S15 protein > TG"
+        },
+        {
+          "n": 4,
+          "status": "applied",
+          "where": "electrolytes §2.4(d)(e), §5; summary §2; timeline",
+          "basis": "sparse discrete values; no rate estimate; neuro events not excluded"
+        },
+        {
+          "n": 5,
+          "status": "applied",
+          "where": "electrolytes §0, §0.1, §1.3, §2.3, §3.3-3.4, §5; fluid-insulin §2.2, §6, §8; summary §1, §3, §9",
+          "basis": "S02 text primary; Fig 4 single-session visual; S19 single-session verified; no presumed 2024 unit error"
+        },
+        {
+          "n": 6,
+          "status": "applied",
+          "where": "electrolytes §1.3, §1.4, §5; summary §1",
+          "basis": "S09 p178: both groups total Ca fell, no difference; iCa in 13 measurable, lower with phosphate, no tetany"
+        },
+        {
+          "n": 7,
+          "status": "applied",
+          "where": "both reports and summary/timeline",
+          "basis": "insulin/fluids/glucose-cause written conditionally (no MAR)"
+        },
+        {
+          "n": 8,
+          "status": "applied",
+          "where": "fluid-insulin §7.1; summary §6",
+          "basis": "S02 Section 1 KPD passage population-specific; S02 Section 6 Table 4 SGLT2i row labelled extrapolation"
+        },
+        {
+          "n": 9,
+          "status": "applied",
+          "where": "electrolytes §3.4; fluid-insulin §0.4, §5.1, §6; summary §3, §5",
+          "basis": "oral/IV thresholds, closer K checks, overlap upper bound = clinical judgement/hospital policy; confirmed K<3.5 requires immediate team action"
+        },
+        {
+          "n": 10,
+          "status": "applied",
+          "where": "electrolytes §2.5(1)",
+          "basis": "heparin bias direction depends on heparin type/dilution"
+        },
+        {
+          "n": 11,
+          "status": "applied",
+          "where": "fluid-insulin §2.4; summary §5; timeline",
+          "basis": "pH fell while HCO3 and pCO2 rose; derived Day1 22:39 pCO2 ~30 mmHg (Henderson-Hasselbalch, labelled derived); sample type unknown"
+        },
+        {
+          "n": 12,
+          "status": "applied",
+          "where": "fluid-insulin §4.4; summary §4",
+          "basis": "isolated NAGMA argument only after confirmed NAGMA and full resolution criteria; S02 Section 3"
+        },
+        {
+          "n": 13,
+          "status": "applied",
+          "where": "fluid-insulin §5.3; summary §5",
+          "basis": "eating not absolute; basal+correction/dextrose or continued IV plan per protocol"
+        },
+        {
+          "n": 14,
+          "status": "applied",
+          "where": "summary §8 and headers; timeline; review file",
+          "basis": "paraphrase + locators; 5 clickable DOIs; relative links; de-identification kept"
+        }
+      ],
+      "extra_from_original_review": [
+        "Added ADA 2026 (S03, refs 78-81) inpatient U-300 limited-data sentence as paraphrase (fluid-insulin §5.1, summary §5)",
+        "Noted Diabetes Care HTML vs S02 wording difference (fluid-insulin §2.2)",
+        "Where the original reviewer said 318 'cannot coexist' with Na 122, followed Codex ruling #3 (not impossible) instead"
+      ],
+      "locator_fix": "KPD epidemiology passage is S02 Section 1 (verified against parsed headings), Table 4 is in Section 6",
+      "checks": [
+        "All relative Markdown links resolve; 5 doi.org links present",
+        "No absolute paths or record identifiers in reports",
+        "Only retained verbatim English sentence: S02 no-U300-transition-studies (~14 words, fluid-insulin §5.1); other quoted strings are section-heading locators"
+      ],
+      "not_done": [
+        "No writes to evidence/, parsed/, fulltext/, code, config, workflow or git",
+        "Did not read raw chart or credentials; no native SendMessage"
+      ],
+      "unresolved": [
+        "Na ISE method, lipemia index, total protein, gas sample type (laboratory)",
+        "2024 Fig 4 and 2009 consensus single-session only; ADA 2026 Fig 16.1 unread",
+        "MAR, weight, I/O, mental status, current BOHB/K"
+      ],
+      "status": "complete"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "20261028T030148895368Z-c6eb33ca",
+  "created_at": "2026-10-28T03:01:48.895523Z",
+  "from": "synthesis-editor",
+  "to": "codex",
+  "kind": "completion",
+  "channel": "file",
+  "topic": "synthesis-editor completion: plain-language summary (manifest refused by workflow state)",
+  "status": "open",
+  "reply_to": "20261028T025952162151Z-e4b69bc0",
+  "evidence": [
+    "reports/clinical-summary.zh-TW.md",
+    "reports/reviews/clinical-review.md"
+  ],
+  "unresolved": [
+    "manifest blocked: launch_state resume_created_copy (needs Codex adopt/accept)",
+    "Na ISE method, lipemia index, total protein, gas sample type unconfirmed",
+    "MAR, weight, I/O, mental status, current BOHB/K missing"
+  ],
+  "body": "白話改寫完成：reports/clinical-summary.zh-TW.md（約2044中文字，五小標段落，核心審查結論全保留，5篇DOI+專題報告/register連結，短待補清單）；reports/reviews/clinical-review.md 加白話改寫紀錄。manifest 未能寫入：'workflow.py manifest synthesis-editor' 回報 'synthesis-editor has no launched attempt'，status 顯示 launch=resume_created_copy、acceptance=stale attempt（resume 產生 copy session）。未修改 registry/scripts；需 Codex adopt 此 session 或 accept 後重跑 manifest。輸出：reports/clinical-summary.zh-TW.md、reports/case-timeline.md（未變）、reports/reviews/clinical-review.md。"
+}
