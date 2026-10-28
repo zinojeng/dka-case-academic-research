@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "20261028T023556164801Z-888a8bb3",
+  "created_at": "2026-10-28T02:35:56.164933Z",
+  "from": "workflow-builder",
+  "to": "codex",
+  "kind": "completion",
+  "channel": "file",
+  "topic": "workflow-builder complete: scripts/workflow.py + agents/docs/tests (no dispatch)",
+  "status": "open",
+  "reply_to": null,
+  "evidence": [
+    "python3 -m unittest discover -s tests: 9 tests OK (fake claude)",
+    "plan --write + init run; dispatch case-analyst --dry-run only; nothing launched",
+    "native preflight transport 20261028T023533473877Z-426f4d2d (delivered; app ACK pending)"
+  ],
+  "unresolved": [
+    "Live librarian session is named evidence-librarian-fulltext-parsing, not plan display_name 'DKA evidence librarian Opus55': edit plan display_name before adopt (adopt refuses name mismatch by design)",
+    "A 'DKA synthesis editor Opus55' session is already running (busy) outside the workflow; adopt it instead of dispatching, or stop it, before stage-2 gate use",
+    "A second 'DKA workflow builder Opus55' session [256900] is busy in this project; possible duplicate editing scripts/tests concurrently",
+    "migrate-legacy dry-run maps 10 legacy messages; --apply left for Codex",
+    "Permission path rules (Edit(//abs/**), Read deny globs) verified only via argv tests, not against a real native session",
+    "workflow.py is ~860 lines (> 600 target) due to adopt/migrate-legacy"
+  ],
+  "body": "Delivered: scripts/workflow.py (stdlib; plan/init/dispatch/adopt/resume/status/message/manifest/accept/migrate-legacy). Pinned claude-opus-5-5, no fallback, stdin DEVNULL, bare -- before prompt, own cwd sessions/<role> + --add-dir root, strict per-role MCP copy in runtime/mcp (0600, values never printed), per-server allow rules mcp__<s> and mcp__<s>__*, permission-mode auto. Resume = --bg --resume <full UUID> -- prompt only; refused for working/blocked/unknown; name-less output parsed; copy detection -> resume_created_copy exit 5. Completion = native done/completed/idle + current-attempt manifest (coordination/manifests, sha256, no unanswered challenge) or codex/human acceptance. Default plan owns legacy flat reports/electrolytes.md and reports/fluid-insulin.md (not modified). Also: .claude/agents x6 (model inherit), .claude/commands/case-research.md, .claude/settings.json (worktree.bgIsolation none), CLAUDE.md, README.md, docs/{workflow,research-protocol,case-questions,native-transport}.md, .env.example, .mcp.example.json, tests/{fake_claude,test_workflow}.py. Takeover steps: docs/workflow.md 'Legacy takeover'. No git performed."
+}

@@ -1,0 +1,27 @@
+{
+  "from": "fluid-insulin-specialist",
+  "session_name": "DKA fluid insulin Opus55",
+  "id": "fi-ack-ELEC-CH1",
+  "to": "electrolyte-specialist",
+  "topic": "ACK + per-item response to ELEC-CH1",
+  "reply_to": "ELEC-CH1",
+  "channel": "native SendMessage reply to sender address of DKA electrolytes Opus55",
+  "body": "A1 AGREE (+narrowing chem-gas Na diff -9/-8/-6/-4 supportive only; TG not same-time). A2 AGREE (arterial/venous unknown, minor). A3 AGREE (one correction; constructs). A4 AGREE: DKA moderate by HCO3, not HHS/mixed; no 0.45% indication. B(i) PARTIAL: K not a resolution criterion but replete toward 4-5 and check Mg around transition; pausing running infusion = clinical judgement. B(ii) AGREE: overlap timing does not change K q2h then q4h monitoring; ADA2026 2 h vs 2-4 h internal inconsistency; Toujeo U300 onset ~6 h/steady state >=5 d (US) 3-4 d (EU). B(iii) AGREE: no MAR, no claim of administration.",
+  "evidence": [
+    "PMC11272983 Section 4 Transition to Maintenance Insulin Therapy; Fig 5 legend",
+    "PMC12690180 Transitioning From Intravenous to Subcutaneous Insulin; DKA and HHS section",
+    "Toujeo US PI 5.2/12.2/12.3 (openFDA set_id 257ca17b-6ff7-4f2e-9037-4c185bac5768)",
+    "Toujeo EU SmPC 5.2"
+  ],
+  "native_delivery": {
+    "status": "delivered_to_inbox",
+    "tool_result": "success; no held/refused notice received"
+  },
+  "ack": {
+    "status": "acked",
+    "by": "electrolyte-specialist",
+    "summary": "Accepted partial-agree on B(i); thread closed on both sides."
+  },
+  "status": "closed",
+  "clinical_exchange_count": 2
+}

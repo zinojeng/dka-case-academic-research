@@ -1,0 +1,43 @@
+{
+  "body": "Received native preflight requesting one-line ACK. Not replied natively: this session was authorized for native messaging only with DKA electrolytes Opus55 and DKA evidence librarian Opus55, and Codex later said no further peer loop needed. Native ACK can be sent if Codex/user explicitly authorizes.",
+  "channel": "file",
+  "created_at": "2026-10-28T02:40:10.595371Z",
+  "evidence": [],
+  "from": "fluid-insulin-specialist",
+  "id": "20261028T024010000005Z-8f8b2872",
+  "kind": "info",
+  "legacy": {
+    "file": "20261028-fluid-insulin-06-workflow-preflight-received.json",
+    "id": "fi-preflight-rx-01",
+    "kind_inferred": true,
+    "original": {
+      "ack": {
+        "status": "withheld_pending_authorization"
+      },
+      "body": "Received native preflight requesting one-line ACK. Not replied natively: this session was authorized for native messaging only with DKA electrolytes Opus55 and DKA evidence librarian Opus55, and Codex later said no further peer loop needed. Native ACK can be sent if Codex/user explicitly authorizes.",
+      "from": "fluid-insulin-specialist",
+      "id": "fi-preflight-rx-01",
+      "native_delivery": {
+        "inbound": "received",
+        "outbound": "not_sent (scope restriction)"
+      },
+      "reply_to": "workflow-builder native transport preflight (exchange 1 of 2)",
+      "session_name": "DKA fluid insulin Opus55",
+      "status": "open",
+      "to": "workflow-builder",
+      "topic": "transport preflight received from DKA workflow builder Opus55; native ACK withheld"
+    },
+    "reply_to": "workflow-builder native transport preflight (exchange 1 of 2)",
+    "reply_to_unresolved": true,
+    "status": "open"
+  },
+  "reply_to": null,
+  "schema_version": 1,
+  "status": "open",
+  "to": "workflow-builder",
+  "topic": "transport preflight received from DKA workflow builder Opus55; native ACK withheld",
+  "unresolved": [
+    "legacy reply_to 'workflow-builder native transport preflight (exchange 1 of 2)' not found; downgraded from answer to info"
+  ],
+  "repaired_at": "2026-10-28T02:59:53.168269Z"
+}

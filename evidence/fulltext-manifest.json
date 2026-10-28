@@ -1,0 +1,32 @@
+{
+  "schema": "dka-fulltext-manifest/v1",
+  "owner": "evidence-librarian",
+  "compiled": "2026-10-28",
+  "paths_relative_to": "project root (fulltext/ and parsed/ are git-ignored)",
+  "files": [
+    {"source": "S02", "file": "fulltext/umpierrez2024_diabetologia_PMC11343900.xml", "type": "JATS XML", "bytes": 351998, "sha256": "6f63be2ff5309d444bcc946344666df478db8b709df3b9e864d67f36edcc4def", "obtained_via": "Europe PMC REST fullTextXML (HTTP 200)",
+     "parsed": {"file": "parsed/umpierrez2024_diabetologia_PMC11343900.md", "bytes": 72937, "sha256": "69b4362ab978f91fa6e5e9136f6249b0c4752d2b45561b7662b73e5de5061682", "method": "local stdlib XML-to-Markdown script (not LlamaParse; source was not a PDF)", "status": "success; figures not captured (image-only)"}},
+    {"source": "S03", "file": "fulltext/ada2026_s16_PMC12690180.html", "type": "PMC HTML", "bytes": 386930, "sha256": "d23e94dd5f99fbed47b80f3fe234015f80fc3b2993b99e0114a5bbf6b101c438", "obtained_via": "curl of the PMC article page",
+     "parsed": {"file": "parsed/ada2026_s16_PMC12690180_html2text.md", "bytes": 123701, "sha256": "19ec3d88ceb3b5139a5db9ce9636f2e24ed164ce727198f0b455e2da3075555b", "method": "local HTML tag-strip to plain text (not LlamaParse)", "status": "success; single-line plain text; figures not captured"}},
+    {"source": "S04", "file": "fulltext/self2020_jno_balanced_dka.pdf", "type": "PDF, 13 pages", "bytes": 1023069, "sha256": "beb0ba99af71732705680b99b9c3deedf634848b77b312778810b258dde361c1", "obtained_via": "scihub MCP download_pdf (sci-hub.ee); identity confirmed by pdftotext title page",
+     "parsed": {"file": "parsed/self2020_jno_balanced_dka.md", "bytes": 68440, "sha256": "88dfa296ecbd46c95882f5b7e58daea4176b708322b9b91747c335242c72fc37", "method": "LlamaParse MCP parse_pdf_to_markdown", "status": "success (tool output exceeded the display limit, but the file was saved); key numbers grep-verified against the abstract"}},
+    {"source": "S09", "file": "fulltext/fisher1983_phosphate_rct.pdf", "type": "PDF, 4 pages", "bytes": 524331, "sha256": "7080c7b242dd19fd4e0e2c20f96f9c3b38ddfed74085b2df0a20fa08497d03b3", "obtained_via": "scihub MCP download_pdf by DOI (sci-hub.ee); identity confirmed by pdftotext title page",
+     "parsed": {"file": "parsed/fisher1983_phosphate_rct.md", "bytes": 22755, "sha256": "cd9877f9bb97d932ab1e134f10464c350d001210b122c49fffdda2a3053a1114", "method": "LlamaParse MCP parse_pdf_to_markdown", "status": "success; WARNING: Fig 1/Fig 2 numeric tables are LlamaParse graph estimates, not published data"}},
+    {"source": "S11", "file": "fulltext/hillier1999_na_correction.pdf", "type": "PDF, 5 pages", "bytes": 111890, "sha256": "817b5e5d7faee2571d16e7a84ea3d2e66227b42bdaae96aecd4ff1972fe1e00f", "obtained_via": "scihub MCP download_pdf by DOI (sci-hub.ee); identity confirmed by pdftotext title page",
+     "parsed": {"file": "parsed/hillier1999_na_correction.md", "bytes": 23817, "sha256": "6112accbc25cbb899cc4af5684474853756018130638366ef0a8fd57d55f86a8", "method": "LlamaParse MCP parse_pdf_to_markdown", "status": "success for text; WARNING: Fig 1-3 numeric tables are spurious LlamaParse artefacts"}},
+    {"source": "S16", "file": "fulltext/label_ema_toujeo_epar_pi.pdf", "type": "PDF, 71 pages", "bytes": 1795954, "sha256": "05d36a6d50acda15612619f58c6f2b433b88d383f261fed3243417274c24906d", "obtained_via": "curl from ema.europa.eu",
+     "parsed": {"method": "local pdftotext -layout, kept in a session scratch area (not saved to parsed/)", "status": "text extracted; section locators recorded in the source register; not sent to LlamaParse"}},
+    {"source": "S17", "file": "fulltext/label_us_toujeo_dailymed_c9561d96.html", "type": "DailyMed HTML", "bytes": 287449, "sha256": "fbd1d14e255a6f8c25d78d335a42d1a3530d53fe00dab6f7d796dc00ceb07d97", "obtained_via": "curl from dailymed.nlm.nih.gov",
+     "parsed": {"method": "local tag-strip and grep", "status": "quotes verified verbatim"}},
+    {"source": "S18", "file": "fulltext/label_ema_novorapid_epar_pi.pdf", "type": "PDF, 122 pages", "bytes": 999531, "sha256": "596b72a285a1a6a53ef22a3d8e8f5b78afcad8d6266d30dcb5e7e2429eede7f2", "obtained_via": "curl from ema.europa.eu",
+     "parsed": {"method": "local pdftotext -layout (scratch)", "status": "text extracted; locators recorded; not sent to LlamaParse"}}
+  ],
+  "failed_attempts": [
+    {"source": "S01", "target": "Diabetes Care consensus PDF", "attempts": ["curl europepmc.org ?pdf=render -> Cloudflare HTML (deleted)", "curl publisher article-pdf -> Cloudflare HTML (deleted)", "curl PMC /pdf/ -> HTML (deleted)", "curl europepmc ptpmcrender backend -> Cloudflare 'Just a moment' (deleted)", "Europe PMC REST fullTextXML -> HTTP 500", "PMC OA service oa.fcgi -> 404", "scihub DOI -> no embedded PDF", "scihub PMID -> not found", "paper-search download_with_fallback (europepmc) -> failed", "Unpaywall MCP -> empty result"]},
+    {"source": "S02", "target": "Diabetologia PDF", "attempts": ["curl link.springer.com content/pdf -> HTML (deleted)", "scihub DOI -> no embedded PDF"], "resolution": "full-text XML used instead"},
+    {"source": "S03", "target": "ADA 2026 Section 16 PDF", "attempts": ["curl publisher article-pdf -> Cloudflare HTML (deleted)", "curl PMC /pdf/ -> HTML (deleted)", "research_hub download_paper -> 403", "scihub DOI -> no embedded PDF", "Europe PMC fullTextXML -> HTTP 500"], "resolution": "PMC HTML used instead"},
+    {"source": "S04", "target": "OA route", "attempts": ["paper-search download_with_fallback (pubmed, no scihub) -> failed (no Unpaywall URL)"], "resolution": "scihub succeeded"},
+    {"source": "S05", "target": "SCOPE-DKA PDF", "attempts": ["scihub DOI -> no embedded PDF"], "resolution": "abstract-only"}
+  ],
+  "llamaparse_summary": {"attempted": 3, "succeeded": 3, "files": ["fisher1983_phosphate_rct.pdf", "self2020_jno_balanced_dka.pdf", "hillier1999_na_correction.pdf"], "notes": "LlamaParse writes the .md next to the PDF; the files were moved to parsed/. Patient material was never uploaded."}
+}

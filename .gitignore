@@ -15,3 +15,10 @@ parsed/
 __pycache__/
 *.pyc
 .DS_Store
+
+/err*.txt
+
+node_modules/
+.wrangler/
+.dev.vars
+.dev.vars.*

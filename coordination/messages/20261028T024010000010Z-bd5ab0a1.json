@@ -1,0 +1,78 @@
+{
+  "body": "key_findings: Resolution (S02 §4): BOHB <0.6 AND (venous pH >=7.3 OR HCO3 >=18); ideally glucose <200; do not use anion gap or urine ketones. Neither ADA 2026 narrative gives numeric criteria; both defer to the consensus (ref 165).\nkey_findings: Overlap: consensus 1-2 h; ADA 2026 DKA section 2-4 h; ADA 2026 general IV-to-SC subsection 2 h, so ADA 2026 is internally inconsistent (D1). The consensus states there are no studies on transitioning to glargine U300.\nkey_findings: Toujeo US PI 5.2: onset develops over 6 h; 'consider the longer onset of action of TOUJEO before stopping IV insulin'; full effect may take >=5 days. EU SmPC 5.2: steady state 3-4 days. Both labels: not for DKA, never IV (D2).\nkey_findings: NovoRapid EU SmPC 4.2: IV use (vial only) by HCPs at 0.05-1.0 U/mL in 0.9% NaCl or 5%/10% dextrose with 40 mmol/L KCl, polypropylene bags, stable 24 h; glucose monitoring required. No DKA protocol in the label.\nkey_findings: Potassium (S02 text): if K <3.5, give K at 10 mmol/h and delay insulin until K >3.5 (Murthy 2005 case-based, ref 147). The Fig 4 vs text rate mismatch is peer-reported only (D3).\nkey_findings: Phosphate (S02): no routine replacement unless weakness or cardiorespiratory compromise with phosphate <1.0 mmol/L. Fisher 1983 RCT (n=30): no clinical benefit; ionized Ca was lower at 24 h with phosphate. Ionized Ca could only be measured where hyperlipidaemia did not interfere (13/30), which is relevant to TG 1950.\nkey_findings: Fluids: Self 2020 (subgroup of cluster trials, single centre, unblinded) found 13.0 vs 16.9 h, but used the 2009 AG-based criteria. SCOPE-DKA missed its primary endpoint (BE >= -3 at 48 h, p=0.111); 24 h was secondary. Later meta-analyses (Liu 2024, Soliman 2026) were non-significant. No hard-endpoint evidence; BEST-DKA has no results yet (D4, D5).\nkey_findings: Sodium: Katz 1.6 is theoretical. Hillier 1999 (n=6 healthy, acute) found 2.4 overall and piecewise 1.6 then 4.0 above ~440 mg/dL (the abstract says 400). Na was measured by flame photometry. Case glucose 411 sits in that transition zone (D6).\nkey_findings: Pseudohyponatraemia methods: indirect ISE underestimates Na with high TG/protein; direct ISE (blood gas) is largely unaffected (S13-S15). Thresholds are lab-specific (one lab uses TG 1500 mg/dL), so the case lab's method must be confirmed, not assumed.",
+  "channel": "file",
+  "created_at": "2026-10-28T02:40:10.595397Z",
+  "evidence": [
+    "evidence/source-register.json",
+    "evidence/fulltext-manifest.json",
+    "evidence/search-log.md"
+  ],
+  "from": "evidence-librarian",
+  "id": "20261028T024010000010Z-bd5ab0a1",
+  "kind": "completion",
+  "legacy": {
+    "file": "evidence-librarian-to-codex-synthesis-editor-001.json",
+    "id": "evidence-librarian-001",
+    "kind_inferred": true,
+    "original": {
+      "cc": [
+        "electrolyte-specialist",
+        "fluid-insulin-specialist"
+      ],
+      "evidence": [
+        "evidence/source-register.json",
+        "evidence/fulltext-manifest.json",
+        "evidence/search-log.md"
+      ],
+      "from": "evidence-librarian",
+      "id": "evidence-librarian-001",
+      "key_findings": [
+        "Resolution (S02 §4): BOHB <0.6 AND (venous pH >=7.3 OR HCO3 >=18); ideally glucose <200; do not use anion gap or urine ketones. Neither ADA 2026 narrative gives numeric criteria; both defer to the consensus (ref 165).",
+        "Overlap: consensus 1-2 h; ADA 2026 DKA section 2-4 h; ADA 2026 general IV-to-SC subsection 2 h, so ADA 2026 is internally inconsistent (D1). The consensus states there are no studies on transitioning to glargine U300.",
+        "Toujeo US PI 5.2: onset develops over 6 h; 'consider the longer onset of action of TOUJEO before stopping IV insulin'; full effect may take >=5 days. EU SmPC 5.2: steady state 3-4 days. Both labels: not for DKA, never IV (D2).",
+        "NovoRapid EU SmPC 4.2: IV use (vial only) by HCPs at 0.05-1.0 U/mL in 0.9% NaCl or 5%/10% dextrose with 40 mmol/L KCl, polypropylene bags, stable 24 h; glucose monitoring required. No DKA protocol in the label.",
+        "Potassium (S02 text): if K <3.5, give K at 10 mmol/h and delay insulin until K >3.5 (Murthy 2005 case-based, ref 147). The Fig 4 vs text rate mismatch is peer-reported only (D3).",
+        "Phosphate (S02): no routine replacement unless weakness or cardiorespiratory compromise with phosphate <1.0 mmol/L. Fisher 1983 RCT (n=30): no clinical benefit; ionized Ca was lower at 24 h with phosphate. Ionized Ca could only be measured where hyperlipidaemia did not interfere (13/30), which is relevant to TG 1950.",
+        "Fluids: Self 2020 (subgroup of cluster trials, single centre, unblinded) found 13.0 vs 16.9 h, but used the 2009 AG-based criteria. SCOPE-DKA missed its primary endpoint (BE >= -3 at 48 h, p=0.111); 24 h was secondary. Later meta-analyses (Liu 2024, Soliman 2026) were non-significant. No hard-endpoint evidence; BEST-DKA has no results yet (D4, D5).",
+        "Sodium: Katz 1.6 is theoretical. Hillier 1999 (n=6 healthy, acute) found 2.4 overall and piecewise 1.6 then 4.0 above ~440 mg/dL (the abstract says 400). Na was measured by flame photometry. Case glucose 411 sits in that transition zone (D6).",
+        "Pseudohyponatraemia methods: indirect ISE underestimates Na with high TG/protein; direct ISE (blood gas) is largely unaffected (S13-S15). Thresholds are lab-specific (one lab uses TG 1500 mg/dL), so the case lab's method must be confirmed, not assumed."
+      ],
+      "privacy": "The original chart was not uploaded to any research, full-text retrieval, or LlamaParse service. Only published literature PDFs were sent to LlamaParse, and search queries contained no case data. The deidentified case brief (.private/case-brief.md) was processed by user-authorized Claude Code. The raw chart and the MCP key file remain local and gitignored, and this librarian read neither. Tracked files contain only relative paths and no case identifiers or dates.",
+      "reply_to": null,
+      "status": "complete",
+      "to": [
+        "codex",
+        "synthesis-editor"
+      ],
+      "tool_outcomes": {
+        "abstract_only": "SCOPE-DKA (S05), BRISK-ED (S06), BEST-DKA protocol (S07), meta-analyses (S08), sodium-methods papers (S13-S15)",
+        "ada_2026": "The PDF was blocked. PMC HTML was retrieved and the quotes were re-verified against the raw HTML (S03).",
+        "consensus_fulltext": "The Diabetes Care PDF was blocked on every route (Cloudflare; Sci-Hub; EPMC 500). The text of record is the Diabetologia CC BY co-publication as Europe PMC XML (S02). Figures were not read.",
+        "labels": "EMA SmPC Toujeo (S16) and NovoRapid (S18) PDFs; US Toujeo PI, Sanofi set c9561d96 Rev 5/2025 (S17)",
+        "llamaparse": "3/3 succeeded: Self 2020 (S04), Fisher & Kitabchi 1983 (S09), Hillier 1999 (S11). The figure-derived numeric tables in Fisher and Hillier are LlamaParse artefacts and must not be cited."
+      },
+      "topic": "Evidence register complete: sources, full-text/LlamaParse outcomes, 2024 vs 2026 discrepancies",
+      "unresolved": [
+        "2024 consensus Figs 2/4/5 were not read by the librarian (image-only).",
+        "SCOPE-DKA and BRISK-ED full text was not obtained.",
+        "Katz 1973 and the 2009 consensus were not read (metadata-only).",
+        "Taiwan TFDA package inserts for Toujeo/NovoRapid were not retrieved."
+      ]
+    },
+    "reply_to": null,
+    "reply_to_unresolved": false,
+    "status": "complete"
+  },
+  "reply_to": null,
+  "schema_version": 1,
+  "status": "open",
+  "to": "codex",
+  "topic": "Evidence register complete: sources, full-text/LlamaParse outcomes, 2024 vs 2026 discrepancies",
+  "unresolved": [
+    "2024 consensus Figs 2/4/5 were not read by the librarian (image-only).",
+    "SCOPE-DKA and BRISK-ED full text was not obtained.",
+    "Katz 1973 and the 2009 consensus were not read (metadata-only).",
+    "Taiwan TFDA package inserts for Toujeo/NovoRapid were not retrieved."
+  ],
+  "repaired_at": "2026-10-28T02:59:53.168494Z"
+}

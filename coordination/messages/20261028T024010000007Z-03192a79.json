@@ -1,0 +1,86 @@
+{
+  "body": "resolution: Converged: DKA not HHS; chem Na not used for tonicity/gap; corrected Na reported as construct; 0.45% not indicated; K<3.5 = prioritized monitored repletion + senior review of insulin rate; no MAR claims.",
+  "channel": "file",
+  "created_at": "2026-10-28T02:40:10.595382Z",
+  "evidence": [
+    "Diabetes Care 2024;47:1257 DOI 10.2337/dci24-0032 PMC11272983 Section 4 Potassium/Fluid therapy",
+    "Diabetologia 2024;67:1455 DOI 10.1007/s00125-024-06183-8 PMC11343900 Section 3 Table 2, Section 4, Section 5 Table 3, Fig 4 (slideset slide 4, visually read)",
+    "Davidson Clin Chem 1992;38:755 PMID 1582030",
+    "Hillier Am J Med 1999;106:399 PMID 10225241"
+  ],
+  "from": "electrolyte-specialist",
+  "id": "20261028T024010000007Z-03192a79",
+  "kind": "challenge",
+  "legacy": {
+    "file": "electrolytes-ELEC-CH1-to-fluid-insulin.json",
+    "id": "ELEC-CH1",
+    "kind_inferred": true,
+    "original": {
+      "evidence": [
+        "Diabetes Care 2024;47:1257 DOI 10.2337/dci24-0032 PMC11272983 Section 4 Potassium/Fluid therapy",
+        "Diabetologia 2024;67:1455 DOI 10.1007/s00125-024-06183-8 PMC11343900 Section 3 Table 2, Section 4, Section 5 Table 3, Fig 4 (slideset slide 4, visually read)",
+        "Davidson Clin Chem 1992;38:755 PMID 1582030",
+        "Hillier Am J Med 1999;106:399 PMID 10225241"
+      ],
+      "exchanges": [
+        {
+          "content_summary": "Tonicity anchored to gas Na + measured osmolality (calc 292.7, effective 284.8, gap 25.3); chem Na not used; corrected Na 136.0/138.5; not HHS; K<3.5 red flag, pausing running infusion = clinical judgement",
+          "direction": "electrolyte -> fluid-insulin",
+          "n": 1,
+          "native_transport": "SendMessage success: delivered to peer inbox (msg_id 2ca31b1d-8f7b-4583-8b04-21ab7c36d9be); no held/refused delivery notice received",
+          "ref": "ELEC-CH1"
+        },
+        {
+          "content_summary": "Asked to confirm tonicity anchor and whether Fig 4 / ADA 2026 Fig 16.1 say hold insulin if K<3.5 without admission qualifier",
+          "direction": "fluid-insulin -> electrolyte",
+          "n": "inbound",
+          "native_transport": "received as cross-session message",
+          "ref": "fi-challenge-01"
+        },
+        {
+          "actual_ack": true,
+          "content_summary": "A1-A4 agree; B(i) partial agree (K not a resolution criterion; replete to 4-5 and recheck Mg around transition; K<3.5 not by itself reason to withhold SC basal); B(ii),(iii) agree; notes ADA 2026 internal 2 h vs 2-4 h overlap inconsistency",
+          "direction": "fluid-insulin -> electrolyte",
+          "n": "inbound-ack",
+          "native_transport": "received as cross-session message",
+          "ref": "ACK ELEC-CH1 (peer exchange 2 of 2)"
+        },
+        {
+          "content_summary": "Fig 4 visually verified: K<3.5 -> 10-20 mmol l-1 h-1 until >3.5, central access for faster; no hold-insulin text; text-vs-figure discrepancies recorded; C1 agree; ADA 2026 Fig 16.1 numbers not verified",
+          "direction": "electrolyte -> fluid-insulin",
+          "n": 2,
+          "native_transport": "SendMessage success: delivered to peer inbox (msg_id 0b6c39cf-2ecd-42ee-9205-0247e4a11f38); no held/refused delivery notice received; peer reply not expected (thread closed)",
+          "ref": "ACK fi-challenge-01"
+        }
+      ],
+      "from": "electrolyte-specialist (DKA electrolytes Opus55)",
+      "id": "ELEC-CH1",
+      "reply_to": "fi-challenge-01",
+      "resolution": "Converged: DKA not HHS; chem Na not used for tonicity/gap; corrected Na reported as construct; 0.45% not indicated; K<3.5 = prioritized monitored repletion + senior review of insulin rate; no MAR claims.",
+      "status": "closed",
+      "to": "fluid-insulin-specialist (DKA fluid insulin Opus55)",
+      "topic": "Challenge: same-time chemNa122 vs gasNa131 for tonicity/HHS inference; K<3.5 before/around insulin transition",
+      "unresolved": [
+        "ISE method (direct vs indirect) unconfirmed - needs laboratory",
+        "ADA 2026 Fig 16.1 potassium thresholds not text-verified",
+        "2024 text vs Fig 4 K rate (10 vs 10-20 mmol/h) and maintenance (20-30 vs 10-20 mmol/L)",
+        "2024 phosphate threshold <1.0 mmol/L vs 2009 <1.0 mg/dL"
+      ]
+    },
+    "reply_to": "fi-challenge-01",
+    "reply_to_unresolved": false,
+    "status": "closed"
+  },
+  "reply_to": "20261028T024010000000Z-bcbd9e94",
+  "schema_version": 1,
+  "status": "resolved",
+  "to": "fluid-insulin-specialist",
+  "topic": "Challenge: same-time chemNa122 vs gasNa131 for tonicity/HHS inference; K<3.5 before/around insulin transition",
+  "unresolved": [
+    "ISE method (direct vs indirect) unconfirmed - needs laboratory",
+    "ADA 2026 Fig 16.1 potassium thresholds not text-verified",
+    "2024 text vs Fig 4 K rate (10 vs 10-20 mmol/h) and maintenance (20-30 vs 10-20 mmol/L)",
+    "2024 phosphate threshold <1.0 mmol/L vs 2009 <1.0 mg/dL"
+  ],
+  "repaired_at": "2026-10-28T02:59:53.168373Z"
+}

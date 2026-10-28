@@ -1,0 +1,343 @@
+{
+  "schema": "dka-evidence-source-register/v1",
+  "owner": "evidence-librarian",
+  "compiled": "2026-10-28",
+  "notes": [
+    "Metadata verified against Crossref and/or NCBI E-utilities esummary on the compile date. Paths are relative to the project root; fulltext/ and parsed/ are git-ignored.",
+    "access: fulltext-pdf = PDF read; fulltext-xml/html = publisher or PMC full text read as XML/HTML; abstract-only = only the PubMed abstract was read; metadata-only = no text read.",
+    "No raw patient records were sent to literature-download or PDF-parsing services. Only published literature PDFs went to LlamaParse. Claude Code used the authorized deidentified case brief for analysis."
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "role": "2024 hyperglycemic crises consensus (Diabetes Care version)",
+      "citation": "Umpierrez GE, Davis GM, ElSayed NA, et al. Hyperglycemic Crises in Adults With Diabetes: A Consensus Report. Diabetes Care. 2024;47(8):1257-1275.",
+      "doi": "10.2337/dci24-0032",
+      "pmid": "39052901",
+      "pmcid": "PMC11272983",
+      "access": "metadata-only (this librarian); the content was read via co-publication S02",
+      "retrieval": "PDF attempts failed: diabetesjournals.org, PMC, and the Europe PMC render endpoints all returned a Cloudflare HTML challenge; Sci-Hub (DOI and PMID) found no PDF; research_hub was not tried for this DOI; paper-search download_with_fallback failed. The Europe PMC fullTextXML endpoint returned HTTP 500. A peer (fluid-insulin) reports reading the PMC HTML.",
+      "notes": "Co-published in Diabetologia (S02) with the same author group and title. The text sections are presumed identical, but this librarian did not compare them line by line."
+    },
+    {
+      "id": "S02",
+      "role": "2024 consensus, Diabetologia co-publication (CC BY 4.0); used as the text of record",
+      "citation": "Umpierrez GE, Davis GM, ElSayed NA, et al. Hyperglycaemic crises in adults with diabetes: a consensus report. Diabetologia. 2024;67(8):1455-1479.",
+      "doi": "10.1007/s00125-024-06183-8",
+      "pmid": "38907161",
+      "pmcid": "PMC11343900",
+      "access": "fulltext-xml",
+      "fulltext_file": "fulltext/umpierrez2024_diabetologia_PMC11343900.xml",
+      "parsed_file": "parsed/umpierrez2024_diabetologia_PMC11343900.md",
+      "locators": {
+        "diagnosis": "Section 3 > Diagnostic criteria for DKA (Fig 2a; Table 2 severity: BOHB 3.0-6.0 mild/moderate, >6.0 severe)",
+        "ketone_monitoring": "Section 3: recommends direct venous/capillary BOHB for diagnosis and monitoring; urine nitroprusside underestimates early and overestimates late",
+        "anion_gap": "Section 3: anion gap 'not recommended as a first-line diagnostic or resolution criterion'; hyperchloraemic NAGMA after treatment 'may delay transition back to subcutaneous insulin if mistaken for persistent DKA'",
+        "monitoring": "Section 4 intro: capillary glucose every 1-2 h; electrolytes, phosphate, creatinine, BOHB and venous pH every 4 h until resolution",
+        "fluids": "Section 4 > Fluid therapy: isotonic saline or balanced crystalloid at 500-1000 ml/h for the first 2-4 h (no renal/cardiac compromise); add 5-10% dextrose once glucose <250 mg/dl; Na rises 1.6 mmol/l per 100 mg/dl glucose fall (stated in the HHS paragraph); 0.45% NaCl only if osmolality is not declining despite adequate positive fluid balance and insulin (HHS paragraph)",
+        "insulin": "Section 4 > Insulin: FRIII 0.1 U/kg/h; at glucose <250 add dextrose and reduce to 0.05 U/kg/h; keep glucose ~200 mg/dl until ketoacidosis resolved; early basal 0.15-0.3 U/kg during infusion",
+        "transition": "Section 4 > Transition to maintenance insulin therapy: overlap 1-2 h; basal 'at least 1-2 h before cessation'; TDD 0.5-0.6 U/kg/day in insulin-naive (about 0.3 if at hypoglycaemia risk); 'There are no current studies on transitioning to ultra-long-acting insulin (e.g., degludec, glargine U300)'",
+        "potassium": "Section 4 > Potassium: start when K <5.0, target 4-5; 20-30 mmol K per litre; if K <3.5, start K at 10 mmol/h and delay insulin until K >3.5 [ref 147 Murthy 2005]; check K 2 h after starting insulin, then every 4 h",
+        "bicarbonate": "Section 4 > Bicarbonate: consider only if pH <7.0",
+        "phosphate": "Section 4 > Phosphate: routine replacement not indicated unless muscle weakness / respiratory or cardiac compromise with phosphate <1.0 mmol/l; rapid replacement may precipitate hypocalcaemia [ref 152 = Fisher & Kitabchi 1983]; 20-30 mmol potassium phosphate if needed",
+        "resolution": "Section 4 > Criteria for resolution: ketone <0.6 mmol/l AND (venous pH >=7.3 OR bicarbonate >=18); ideally glucose <200 mg/dl; anion gap and urine ketones should not be used",
+        "complications": "Section 5 Table 3: hypokalaemia (<3.5 in ~55% of DKA), NAGMA, cerebral oedema (<0.1%, ~30% mortality), osmotic demyelination (rapid correction of hyponatraemia), AKI",
+        "balanced_fluid_refs": "refs 125-129 = Alghamdi 2022 CCE; Self 2020 JAMA Netw Open; Catahay 2022 Heart Lung; Jahangir 2022 Cureus; Bergmann 2021 Pediatr Emerg Care"
+      },
+      "figure_caveat": "Figs 2, 4 and 5 are image-only and were not read by this librarian. Peer electrolyte-specialist reports that Fig 4 differs from the text (K 10-20 mmol/h until K >3.5 vs text 10 mmol/h; 10-20 mmol K per litre vs text 20-30; resolution >7.3 / >18 vs text >=). This is peer-reported and not independently verified."
+    },
+    {
+      "id": "S03",
+      "role": "ADA Standards of Care 2026, Section 16 (hospital)",
+      "citation": "American Diabetes Association Professional Practice Committee for Diabetes. 16. Diabetes Care in the Hospital: Standards of Care in Diabetes-2026. Diabetes Care. 2026;49(Suppl 1):S339-S355.",
+      "doi": "10.2337/dc26-S016",
+      "pmid": "41358892",
+      "pmcid": "PMC12690180",
+      "access": "fulltext-html (PMC)",
+      "fulltext_file": "fulltext/ada2026_s16_PMC12690180.html",
+      "parsed_file": "parsed/ada2026_s16_PMC12690180_html2text.md",
+      "retrieval": "Publisher PDF and PMC PDF returned Cloudflare HTML; Sci-Hub and research_hub (403) failed; Europe PMC fullTextXML returned HTTP 500. PMC article HTML was retrieved with curl and converted to plain text locally.",
+      "locators": {
+        "rec_16_16": "Rec 16.16 (A): manage DKA/HHS with IV fluids, insulin and electrolytes (Fig 16.1), close monitoring, 'timely and bridged transition' to SC insulin, and treat the precipitant",
+        "rec_16_17": "Rec 16.17 (B): DKA/HHS education at discharge",
+        "table_16_1": "Table 16.1 DKA criteria: glucose >=200 mg/dl or prior diabetes; BOHB >=3.0 or urine ketone >=2+; pH <7.3 and/or HCO3 <18",
+        "dka_transition": "DKA/HHS section: 'administration of basal insulin 2-4 h before the intravenous insulin is stopped' (refs 63, 179)",
+        "general_transition": "'Transitioning From Intravenous to Subcutaneous Insulin' subsection: 'Subcutaneous basal insulin should be given 2 h before intravenous infusion is discontinued' (ref 63 Kreider & Lien 2015)",
+        "nurse_protocol": "DKA/HHS section: nurse-driven variable-rate protocol 'no less than 1 unit/h to allow for acidosis resolution'",
+        "fig_16_1": "Fig 16.1 treatment pathway is 'Adapted from Umpierrez et al. (165)', i.e. the 2024 consensus; image only, not read",
+        "fluid_type": "The narrative text does not name a fluid type (it may be in Fig 16.1)",
+        "resolution": "No numeric resolution criteria in the narrative text; it refers readers to ref 165"
+      }
+    },
+    {
+      "id": "S04",
+      "role": "Balanced crystalloid vs saline in adult DKA: subgroup analysis of two cluster-randomized trials (SALT-ED/SMART)",
+      "citation": "Self WH, Evans CS, Jenkins CA, et al. Clinical Effects of Balanced Crystalloids vs Saline in Adults With Diabetic Ketoacidosis: A Subgroup Analysis of Cluster Randomized Clinical Trials. JAMA Netw Open. 2020;3(11):e2024596.",
+      "doi": "10.1001/jamanetworkopen.2020.24596",
+      "pmid": "33196806",
+      "pmcid": "PMC7670314",
+      "access": "fulltext-pdf",
+      "fulltext_file": "fulltext/self2020_jno_balanced_dka.pdf",
+      "parsed_file": "parsed/self2020_jno_balanced_dka.md",
+      "locators": {
+        "design": "Methods: secondary/subgroup analysis; single centre; unblinded; ED+ICU multiple-crossover; n=172 (94 balanced, 78 saline); Ringer lactate predominant",
+        "primary_outcome_definition": "Methods > Outcomes: OLD (2009) ADA criteria = glucose <200 plus 2 of (HCO3 >=15, venous pH >7.3, AG <=12); patients discharged before meeting the criteria were counted as resolved at discharge",
+        "results": "Abstract/Results/Table 3: median time to DKA resolution 13.0 h (IQR 9.5-18.8) vs 16.9 h (11.9-34.5), aHR 1.68 (95% CI 1.18-2.38); insulin-infusion discontinuation 9.8 h vs 13.4 h, aHR 1.45 (1.03-2.03)",
+        "limitations": "Discussion > Strengths and Limitations (8 listed)"
+      },
+      "accuracy_note": "Not a primary DKA RCT. Its resolution definition uses anion gap and HCO3 >=15, which differs from the 2024 consensus definition (BOHB <0.6 required; AG not to be used). No hard clinical endpoints.",
+      "retrieval": "This is an OA article, but the OA routes tried (PubMed, Unpaywall) failed; the PDF was obtained via Sci-Hub (sci-hub.ee). pdftotext confirmed the title page."
+    },
+    {
+      "id": "S05",
+      "role": "Primary RCT: Plasma-Lyte 148 vs 0.9% saline in severe DKA (ICU), phase 2",
+      "citation": "Ramanan M, Attokaran A, Murray L, et al. Sodium chloride or Plasmalyte-148 evaluation in severe diabetic ketoacidosis (SCOPE-DKA): a cluster, crossover, randomized, controlled trial. Intensive Care Med. 2021;47(11):1248-1257.",
+      "doi": "10.1007/s00134-021-06480-5",
+      "pmid": "34609547",
+      "access": "abstract-only",
+      "retrieval": "Sci-Hub failed (no embedded PDF). Crossref MCP returned an empty record; the metadata here comes from NCBI esummary/efetch.",
+      "abstract_findings": "7 hospitals, open label, n=90 mITT (PL 48, SC 42). Primary outcome = base excess >= -3 mEq/L at 48 h: 96% vs 86%, OR 3.93 (0.73-21.16), p=0.111 (not significant). At 24 h: 69% vs 36%, OR 4.24 (1.68-10.72). Ketones were not increased by acetate.",
+      "accuracy_note": "Primary endpoint not met; the 24 h result is secondary. A base-excess endpoint is not the 2024 consensus resolution definition."
+    },
+    {
+      "id": "S06",
+      "role": "Primary pilot RCT: Ringer lactate vs NS in adult ED DKA (triple-blind)",
+      "citation": "Yan JW, Slim A, Van Aarsen K, et al. Balanced crystalloids (RInger's lactate) versus normal Saline in adults with diabetic Ketoacidosis in the Emergency Department (BRISK-ED): a pilot randomised controlled trial. Emerg Med J. 2024;41(2):103-111.",
+      "doi": "10.1136/emermed-2023-213290",
+      "pmid": "38050056",
+      "access": "abstract-only",
+      "abstract_findings": "Feasibility pilot, n=52. Median time to resolution RL 15.7 h (IQR 10.4-18.8) vs NS 12.7 h (7.9-19.2), descriptive only, not powered.",
+      "accuracy_note": "Volume/pages verified via NCBI esummary. Pilot direction is opposite to Self 2020."
+    },
+    {
+      "id": "S07",
+      "role": "Phase 3 trial protocol (BEST-DKA); results not found",
+      "citation": "Ramanan M, Rajbhandari D, Koch C, et al. Buffered salt solution versus 0.9% sodium chloride ... (BEST-DKA) study protocol. Crit Care Resusc. 2025;27(1):100104.",
+      "doi": "10.1016/j.ccrj.2025.100104",
+      "pmid": "40160240",
+      "access": "abstract-only",
+      "abstract_findings": "Cluster-crossover, blinded, 20 Australian hospitals, n>=400, primary outcome days alive and out of hospital to day 28; enrolment began March 2024.",
+      "accuracy_note": "A PubMed search (sorted by date) on the compile date found no results publication."
+    },
+    {
+      "id": "S08",
+      "role": "Meta-analyses, balanced vs saline (context; conflicting)",
+      "items": [
+        {
+          "citation": "Alghamdi NA, et al. Crit Care Explor. 2022;4:e0613.",
+          "doi": "10.1097/CCE.0000000000000613",
+          "pmid": "35018349",
+          "access": "abstract-only",
+          "finding": "8 RCTs, n=482; saline probably longer time to resolution (MD 3.51 h) and LOS (0.89 d); moderate certainty"
+        },
+        {
+          "citation": "Liu Y, et al. Front Endocrinol. 2024;15:1367916.",
+          "doi": "10.3389/fendo.2024.1367916",
+          "pmid": "38836222",
+          "access": "abstract-only",
+          "finding": "11 RCTs, n=753; no significant difference in time to resolution (MD -1.49 h, 95% CI -4.29 to 1.31), MAKE or hypokalaemia; lower chloride"
+        },
+        {
+          "citation": "Szabo GV, et al. Diabetes Metab Res Rev. 2024.",
+          "doi": "10.1002/dmrr.3831",
+          "pmid": "38925619",
+          "access": "abstract-only",
+          "finding": "7 RCTs + 3 observational; BES faster resolution MD -5.36 h; low certainty"
+        },
+        {
+          "citation": "Soliman KAR, et al. J Crit Care Med (Targu Mures). 2026;12(3):328-341.",
+          "doi": "10.62838/jccm-2026-0022",
+          "pmid": "42516157",
+          "access": "abstract-only",
+          "finding": "11 RCTs (6 pooled, n=491); MD -1.50 h, 95% CI -3.79 to 0.79, NS; HCO3 +2.5 at 12 h; equipoise"
+        }
+      ]
+    },
+    {
+      "id": "S09",
+      "role": "Primary RCT: phosphate therapy in DKA",
+      "citation": "Fisher JN, Kitabchi AE. A randomized study of phosphate therapy in the treatment of diabetic ketoacidosis. J Clin Endocrinol Metab. 1983;57(1):177-180.",
+      "doi": "10.1210/jcem-57-1-177",
+      "pmid": "6406531",
+      "access": "fulltext-pdf",
+      "fulltext_file": "fulltext/fisher1983_phosphate_rct.pdf",
+      "parsed_file": "parsed/fisher1983_phosphate_rct.md",
+      "locators": {
+        "design": "Subjects and Methods (p177): n=30 (15/15); entry glucose >300, HCO3 <15, pH <7.30; 8.5 mmol/h phosphate (~6 g/24 h) as buffered K phosphate vs KCl 12.5 meq/h, both for the first 24 h",
+        "table1": "Table 1 (p178): baseline mean +/- SEM; Pi 4.21 vs 5.65 mg/dl (p<0.05); units mg/dl",
+        "table2": "Table 2 (p178): hours to glucose <=250, HCO3 >=15, pH >=7.30 not different",
+        "ionized_ca": "Results (p178-179): ionized Ca significantly lower at 24 h in the phosphate group (p<0.05), measured only where hyperlipidaemia did not interfere (7 vs 6 patients); no tetany",
+        "conclusion": "Discussion (p180): no biochemical or clinical benefit; caution because of augmented hypocalcaemia; possible benefit in anaemia, CHF, pneumonia or hypoxia"
+      },
+      "parse_caveat": "The numeric 'tables' for Fig 1 and Fig 2 in the parsed MD are LlamaParse estimates read off plotted graphs. They are NOT published data and must not be cited.",
+      "accuracy_note": "Small, 1983, insulin regimen (IV/IM) differs from modern FRIII; phosphate in mg/dl. This is ref 152 in S02.",
+      "retrieval": "Sci-Hub by PMID failed (not found); Sci-Hub by DOI succeeded (sci-hub.ee). pdftotext confirmed the title page."
+    },
+    {
+      "id": "S10",
+      "role": "Primary: sodium correction factor 1.6 (theoretical)",
+      "citation": "Katz MA. Hyperglycemia-induced hyponatremia: calculation of expected serum sodium depression. N Engl J Med. 1973;289(16):843-844.",
+      "doi": "10.1056/NEJM197310182891607",
+      "pmid": "4763428",
+      "access": "metadata-only",
+      "accuracy_note": "Letter/brief report with no PubMed abstract. The derivation is described secondarily in Hillier 1999 (S11) Introduction; it was not read directly."
+    },
+    {
+      "id": "S11",
+      "role": "Primary experimental study: sodium correction factor 2.4",
+      "citation": "Hillier TA, Abbott RD, Barrett EJ. Hyponatremia: evaluating the correction factor for hyperglycemia. Am J Med. 1999;106(4):399-403.",
+      "doi": "10.1016/S0002-9343(99)00055-8",
+      "pmid": "10225241",
+      "access": "fulltext-pdf",
+      "fulltext_file": "fulltext/hillier1999_na_correction.pdf",
+      "parsed_file": "parsed/hillier1999_na_correction.md",
+      "locators": {
+        "design": "Methods (p399-400): n=6 healthy, normal-weight volunteers; somatostatin plus 20% dextrose with 0.45% saline to glucose >600 within 1 h, then insulin; paired samples every 10 min",
+        "assay": "Analytic methods (p400): serum sodium by flame photometry, glucose by glucose oxidase",
+        "results": "Results (p400): linear slope -2.4 +/- 0.3 meq/L per 100 mg/dl (vs 1.6, p=0.02); piecewise slope -1.6 until about 440 mg/dl, then -4.0",
+        "discussion": "Discussion (p401-402): worked example at glucose 600; caveats (acute, healthy subjects, possible somatostatin-ADH effect, no dehydration); 1.6 underestimates for glucose >300 in 80% of samples"
+      },
+      "discrepancy": "The abstract says 1.6 'worked well' up to 400 mg/dl, but the Results breakpoint is 'approximately 440 mg/dl'. Case glucose 411 sits in this transition zone.",
+      "parse_caveat": "The numeric tables for Figs 1-3 in the parsed MD are LlamaParse artefacts (graph digitisation, physiologically implausible). Do not cite them.",
+      "retrieval": "Sci-Hub by DOI succeeded (sci-hub.ee). pdftotext confirmed the title page."
+    },
+    {
+      "id": "S12",
+      "role": "Primary: metabolic correction factor 1.35",
+      "citation": "Roscoe JM, Halperin ML, Rolleston FS, Goldstein MB. Hyperglycemia-induced hyponatremia: metabolic considerations in calculation of serum sodium depression. Can Med Assoc J. 1975;112:452-453.",
+      "pmid": "1111894",
+      "access": "abstract-only",
+      "abstract_findings": "Proposes 1.35 meq/L per 100 mg/dl"
+    },
+    {
+      "id": "S13",
+      "role": "Methods: sodium on a blood gas analyser (direct ISE) vs indirect ISE",
+      "citation": "Vera MA, Sutphin A, Hansen L, El-Khoury JM. Resolving Pseudohyponatremia: Validation of Plasma Sodium on Radiometer ABL800 Blood Gas Analyzers for Immediate Reflex Testing. Lab Med. 2022.",
+      "doi": "10.1093/labmed/lmab114",
+      "pmid": "35015890",
+      "access": "abstract-only",
+      "abstract_findings": "In specimens with normal protein and no lipaemia, direct ISE (ABL800) agreed with indirect ISE (Cobas 8000), mean +0.8 mmol/L; plasma is a valid matrix on the blood gas analyser."
+    },
+    {
+      "id": "S14",
+      "role": "Methods: hypertriglyceridaemia pseudohyponatraemia; TG threshold",
+      "citation": "Evenepoel A, Herroelen P, Lanckmans K, et al. Asparaginase-induced pseudohyponatremia, a case-driven working strategy in pediatric patients. Acta Clin Belg. 2022.",
+      "doi": "10.1080/17843286.2021.1992583",
+      "pmid": "34666631",
+      "access": "abstract-only",
+      "abstract_findings": "Indirect ISE pseudohyponatraemia from water displacement; direct ISE (ABL90) unaffected by high TG; local preliminary threshold 1500 mg/dL TG",
+      "accuracy_note": "The threshold is a single-laboratory working rule, not a universal cut-off."
+    },
+    {
+      "id": "S15",
+      "role": "Methods: experimental TG/protein interference, direct vs indirect ISE",
+      "citation": "Chopra P, Bharti G, Gupta A, Prakash S, Datta SK. Impact of Total Protein and Triglycerides on the comparability of Sodium and Potassium Measurements by Direct and Indirect Ion-Selective Electrodes. EJIFCC. 2026;37(4):696-709.",
+      "pmid": "42729988",
+      "access": "abstract-only",
+      "abstract_findings": "Marked indirect-ISE Na underestimation at TG >2000 mg/dL; in the multivariable model total protein was the strongest predictor and TG contributed little; K was largely unaffected",
+      "accuracy_note": "Journal and pages verified via NCBI esummary; no DOI listed. Spiked-Intralipid model."
+    },
+    {
+      "id": "S16",
+      "role": "Official label: Toujeo (insulin glargine 300 U/mL), EU SmPC",
+      "citation": "European Medicines Agency. Toujeo: EPAR - Product Information (SmPC), Sanofi. PDF modification date 2026-01-29.",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/toujeo-epar-product-information_en.pdf",
+      "access": "fulltext-pdf (pdftotext, local; not sent to LlamaParse)",
+      "fulltext_file": "fulltext/label_ema_toujeo_epar_pi.pdf",
+      "locators": {
+        "s4_2": "SmPC 4.2: 'Toujeo must not be administered intravenously ... could result in severe hypoglycaemia'; not for insulin pumps; switching from glargine U100 is unit-to-unit, but ~10-18% higher dose may be needed",
+        "s4_4": "SmPC 4.4: 'Toujeo is not the insulin of choice for the treatment of diabetic ketoacidosis. Instead, regular insulin administered intravenously is recommended'",
+        "s5_2": "SmPC 5.2: 'Steady state level within the therapeutic range is reached after 3-4 days of daily Toujeo administration'"
+      }
+    },
+    {
+      "id": "S17",
+      "role": "Official label: Toujeo, US FDA prescribing information (Sanofi set)",
+      "citation": "TOUJEO (insulin glargine injection) 300 units/mL. Full Prescribing Information. Sanofi-Aventis U.S. LLC. Revised 5/2025. DailyMed setid c9561d96-124d-48ca-982f-0aa1575bff36.",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c9561d96-124d-48ca-982f-0aa1575bff36",
+      "access": "fulltext-html",
+      "fulltext_file": "fulltext/label_us_toujeo_dailymed_c9561d96.html",
+      "locators": {
+        "s1": "1 Limitations of Use: 'not recommended for the treatment of diabetic ketoacidosis'",
+        "s2_1": "2.1: 'Do not administer TOUJEO intravenously or in an insulin pump'",
+        "s5_2": "5.2: 'The onset of action of TOUJEO develops over 6 hours following an injection. In type 1 diabetes patients treated with IV insulin, consider the longer onset of action of TOUJEO before stopping IV insulin. The full glucose lowering effect may not be apparent for at least 5 days'",
+        "s12_2": "12.2: onset 'develops over 6 hours post dose' (0.4/0.6/0.9 U/kg clamp, T1D)",
+        "s12_3": "12.3: 'Steady-state insulin concentrations are reached by at least 5 days of once-daily subcutaneous administration'"
+      },
+      "accuracy_note": "The initial peer reference was a 2023 repackager label (set 257ca17b). The relevant onset, IV-transition and steady-state statements were subsequently checked against the Sanofi manufacturer label (set c9561d96, Rev 5/2025) by the clinical reviewer; use that verified manufacturer source."
+    },
+    {
+      "id": "S18",
+      "role": "Official label: NovoRapid (insulin aspart 100 U/mL), EU SmPC",
+      "citation": "European Medicines Agency. NovoRapid: EPAR - Product Information (SmPC), Novo Nordisk. PDF modification date 2025-05-05.",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/novorapid-epar-product-information_en.pdf",
+      "access": "fulltext-pdf (pdftotext, local; not sent to LlamaParse)",
+      "fulltext_file": "fulltext/label_ema_novorapid_epar_pi.pdf",
+      "locators": {
+        "s4_2_iv": "SmPC 4.2 'NovoRapid vial > Intravenous use': 'If necessary, NovoRapid can be administered intravenously which should be carried out by physicians or other healthcare staff'; infusion systems at 0.05-1.0 unit/ml in 0.9% NaCl, 5% or 10% dextrose including 40 mmol/l KCl, in polypropylene bags, stable at room temperature for 24 h; some initial adsorption to the bag; glucose monitoring necessary",
+        "s4_2_devices": "SmPC 4.2: if IV administration is necessary, use a vial (not a pen)",
+        "s5_1": "SmPC 5.1: SC onset within 10-20 minutes"
+      },
+      "accuracy_note": "The label permits IV use but contains no DKA dosing protocol. Taiwan TFDA package insert not retrieved."
+    },
+    {
+      "id": "S19",
+      "role": "Background: 2009 ADA hyperglycemic crises consensus (ref 12 in S02)",
+      "citation": "Kitabchi AE, Umpierrez GE, Miles JM, Fisher JN. Hyperglycemic crises in adult patients with diabetes. Diabetes Care. 2009;32(7):1335-1343.",
+      "doi": "10.2337/dc09-9032",
+      "pmid": "19564476",
+      "pmcid": "PMC2699725",
+      "access": "metadata-only",
+      "accuracy_note": "Identifiers come from the S02 reference list. Not read; the phosphate threshold wording in mg/dL is unverified by this librarian."
+    },
+    {
+      "id": "S20",
+      "role": "Manufacturer product information: K-Glu potassium gluconate oral solution",
+      "citation": "Sintong. K-Glu oral solution product information. Accessed 2026-10-28.",
+      "url": "https://www.sintong.com.tw/tw/products_view/216",
+      "access": "fulltext-html",
+      "locators": {
+        "composition": "Product composition: potassium gluconate 312 mg/mL; each 15 mL contains K+ 20 mEq."
+      },
+      "accuracy_note": "Added by Codex for supplement v2 after the original librarian session completed. This verifies the listed product composition, not the actual administered dose or timing; confirm MAR and local product label.",
+      "retrieval": "Manufacturer product page opened and checked by Codex for supplement v2."
+    }
+  ],
+  "discrepancies": [
+    {
+      "id": "D1",
+      "topic": "IV-to-SC overlap",
+      "detail": "2024 consensus (S02 Transition): 1-2 h. ADA 2026 (S03) DKA section: 2-4 h; ADA 2026 general transition subsection: 2 h. ADA 2026 is internally inconsistent and cites Kreider & Lien 2015 (ref 63) for both."
+    },
+    {
+      "id": "D2",
+      "topic": "Glargine U300 transition",
+      "detail": "S02: no studies on transitioning to ultra-long-acting insulin (glargine U300). US PI (S17): onset develops over 6 h; consider the longer onset before stopping IV insulin; steady state >=5 days. EU SmPC (S16): steady state 3-4 days. US and EU steady-state wording differs."
+    },
+    {
+      "id": "D3",
+      "topic": "Potassium text vs Fig 4",
+      "detail": "Peer-reported (electrolyte-specialist): S02 text says K 10 mmol/h and 20-30 mmol/L, Fig 4 says 10-20 mmol/h and 10-20 mmol/L; resolution > vs >=. Not independently verified (image only)."
+    },
+    {
+      "id": "D4",
+      "topic": "Resolution definition in trials",
+      "detail": "Self 2020 used the 2009 criteria (AG <=12, HCO3 >=15, pH >7.3, glucose <200) and SCOPE-DKA used base excess >= -3; the 2024 consensus requires BOHB <0.6 and says not to use AG. Trial results are therefore not directly mappable to the 2024 definition."
+    },
+    {
+      "id": "D5",
+      "topic": "Balanced crystalloid evidence",
+      "detail": "Consensus text says balanced solutions give faster resolution, but the 2024 Liu and 2026 Soliman meta-analyses find no significant difference, and BRISK-ED pilot medians favour NS. No hard-endpoint phase 3 result yet (BEST-DKA ongoing)."
+    },
+    {
+      "id": "D6",
+      "topic": "Sodium correction",
+      "detail": "S02 uses 1.6 per 100 mg/dl (HHS paragraph). Hillier 2.4 overall, piecewise 4.0 above ~440 (abstract says 400). Hillier measured Na by flame photometry, which is itself susceptible to lipid/protein displacement."
+    },
+    {
+      "id": "D7",
+      "topic": "HHS acidosis threshold",
+      "detail": "ADA 2026 Table 16.1 HHS 'absence of acidosis: pH >=7.3 and bicarbonate >=15', while S02 text describes HHS as usually pH >=7.30 and HCO3 >=18. The S02 Fig 2b value was not read (image). Flagged for verification and not relevant to the DKA case."
+    }
+  ]
+}

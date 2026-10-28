@@ -1,0 +1,21 @@
+{
+  "name": "dka-teaching-rounds",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DKA 床邊判讀：PGY / Fellow 教學單頁網站（Cloudflare Workers Static Assets）",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test \"tests/*.test.mjs\"",
+    "preview": "node scripts/serve.mjs",
+    "check": "npm run build && npm test && npm run deploy:dry-run",
+    "deploy:dry-run": "wrangler deploy --dry-run",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.154.0"
+  }
+}

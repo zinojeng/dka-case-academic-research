@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "role": "case-analyst",
+  "status": "complete",
+  "attempt_id": "1798adb9fbc0",
+  "created_at": "2026-10-28T02:54:47.532968Z",
+  "summary": "Day0-2 去識別時間軸、chemistry/gas 同時配對表（Na Δ+9→+4）、單位假設（phosphate mg/dL→0.42/0.52 mmol/L 及反向情境）、估算值（corrected Na 1.6/2.4、calc osm、corrected Ca、AG 標混合來源）、提問非 MAR 清單、資料缺口 A/B/C/D 分類。來源為 docs/case-questions.md（case-brief 讀取被 permission 拒絕）。",
+  "outputs": [
+    {
+      "path": "reports/case-analyst/case-timeline.md",
+      "sha256": "ed938a139054a5c044237180d413a5f831379364a1de761ac60c6d4da5a2050a",
+      "bytes": 11579
+    },
+    {
+      "path": "reports/case-analyst/data-gaps.md",
+      "sha256": "e4ffcce27f152077e3354b19f92430bdd8b9f6ecf697e67687d37d6692630968",
+      "bytes": 6069
+    }
+  ],
+  "unresolved": [
+    ".private/case-brief.md 讀取被 permission settings 拒絕；改用 docs/case-questions.md，數值未與 case-brief 逐字比對，需有權限者核對",
+    "phosphate 單位（mg/dL vs mmol/L）未確認"
+  ]
+}

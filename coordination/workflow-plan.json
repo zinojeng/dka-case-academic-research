@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "permission_mode": "auto",
+  "session_cwd": "isolated",
+  "mcp_source": ".private/mcp.local.json",
+  "external_participants": [
+    "codex",
+    "human",
+    "workflow-builder"
+  ],
+  "native_messaging": {
+    "max_exchanges_per_peer": 2,
+    "peer_roles": [
+      "evidence-librarian",
+      "electrolyte-specialist",
+      "fluid-insulin-specialist"
+    ]
+  },
+  "roles": [
+    {
+      "name": "case-analyst",
+      "display_name": "DKA case analyst Opus55",
+      "depends_on": [],
+      "owned_outputs": [
+        "reports/case-analyst"
+      ],
+      "required_outputs": [
+        "reports/case-analyst/case-timeline.md",
+        "reports/case-analyst/data-gaps.md"
+      ],
+      "mcp_servers": [],
+      "extra_tools": [],
+      "task": "Bootstrap：只讀 .private/case-brief.md，建立去識別 Day0/1/2 時間軸、同時間點配對、單位假設與資料缺口。"
+    },
+    {
+      "name": "evidence-librarian",
+      "display_name": "evidence-librarian-fulltext-parsing",
+      "depends_on": [
+        "case-analyst"
+      ],
+      "owned_outputs": [
+        "evidence",
+        "reports/evidence-librarian",
+        "fulltext",
+        "parsed"
+      ],
+      "required_outputs": [
+        "evidence/search-log.md",
+        "evidence/source-register.json",
+        "evidence/fulltext-manifest.json"
+      ],
+      "mcp_servers": [
+        "paper-search",
+        "research_hub",
+        "scihub",
+        "llamaparse"
+      ],
+      "extra_tools": [
+        "WebSearch",
+        "WebFetch"
+      ],
+      "task": "查證 DOI 10.2337/dci24-0032、10.2337/dc26-s016 與當前 literature/label；全文下載，只把已發表 literature PDF 送 LlamaParse；記錄 query/date/DOI/PMID/fulltext vs abstract/locator/限制。"
+    },
+    {
+      "name": "electrolyte-specialist",
+      "display_name": "DKA electrolytes Opus55",
+      "depends_on": [
+        "case-analyst"
+      ],
+      "owned_outputs": [
+        "reports/electrolyte-specialist",
+        "reports/electrolytes.md"
+      ],
+      "required_outputs": [
+        "reports/electrolytes.md"
+      ],
+      "mcp_servers": [
+        "paper-search"
+      ],
+      "extra_tools": [
+        "WebSearch",
+        "WebFetch"
+      ],
+      "task": "回答 docs/case-questions.md QA1–QA3（本輪既有 legacy 輸出 reports/electrolytes.md）。"
+    },
+    {
+      "name": "fluid-insulin-specialist",
+      "display_name": "DKA fluid insulin Opus55",
+      "depends_on": [
+        "case-analyst"
+      ],
+      "owned_outputs": [
+        "reports/fluid-insulin-specialist",
+        "reports/fluid-insulin.md"
+      ],
+      "required_outputs": [
+        "reports/fluid-insulin.md"
+      ],
+      "mcp_servers": [
+        "paper-search"
+      ],
+      "extra_tools": [
+        "WebSearch",
+        "WebFetch"
+      ],
+      "task": "回答 docs/case-questions.md QA4–QA5 與延伸題。"
+    },
+    {
+      "name": "synthesis-editor",
+      "display_name": "DKA synthesis editor Opus55",
+      "depends_on": [
+        "evidence-librarian",
+        "electrolyte-specialist",
+        "fluid-insulin-specialist"
+      ],
+      "owned_outputs": [
+        "reports/clinical-summary.zh-TW.md",
+        "reports/case-timeline.md",
+        "reports/synthesis-editor",
+        "reports/reviews/clinical-review.md"
+      ],
+      "required_outputs": [
+        "reports/clinical-summary.zh-TW.md",
+        "reports/case-timeline.md",
+        "reports/reviews/clinical-review.md"
+      ],
+      "mcp_servers": [],
+      "extra_tools": [],
+      "task": "整合已完成報告為繁體中文個案研究報告；只用 evidence ledger 已驗證引用；保留爭點、裁決依據與未解決項。"
+    },
+    {
+      "name": "red-team-reviewer",
+      "display_name": "DKA independent reviewer Opus55",
+      "depends_on": [
+        "synthesis-editor"
+      ],
+      "owned_outputs": [
+        "reports/red-team-reviewer"
+      ],
+      "required_outputs": [
+        "reports/red-team-reviewer/review.md"
+      ],
+      "mcp_servers": [
+        "paper-search"
+      ],
+      "extra_tools": [
+        "WebSearch",
+        "WebFetch"
+      ],
+      "task": "獨立審查：引用真實性、數字/單位、guideline 原文、是否補造缺失資料；以具名 challenge 送 mailbox。"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "title": "DKA 床邊判讀",
+  "audience": "PGY / Fellow",
+  "updated": "2026-10-28",
+  "overview": [
+    "測試用內容：40 多歲男性，第一次 DKA，體重 104.5 kg。血糖下降不等於 DKA 已緩解 [S02]。",
+    "第二段：鉀與最新 BOHB 仍待核對。"
+  ],
+  "metrics": [
+    { "label": "Glucose", "value": "411", "unit": "mg/dL", "note": "Day 0 入院", "status": "known" },
+    { "label": "K", "value": "3.4", "unit": "mmol/L", "note": "最新值", "status": "caution" },
+    { "label": "最新 BOHB", "value": "未測", "unit": "", "note": "", "status": "unknown" }
+  ],
+  "topics": [
+    { "id": "calcium-phosphate", "title": "Calcium 與 Phosphate", "summary": "P 單位已確認 mg/dL。", "body": ["白話段落 A。"], "fellow": ["深讀段落 A。"], "takeaway": "先測 ionized Ca。", "sourceIds": ["S02", "S04"] },
+    { "id": "sodium", "title": "Sodium", "summary": "Na 122 vs 131。", "body": ["白話段落 B。"], "fellow": ["深讀段落 B。"], "takeaway": "先問測量方法。", "sourceIds": ["S02"] },
+    { "id": "potassium", "title": "Potassium", "summary": "K 3.4。", "body": ["白話段落 C。"], "fellow": ["深讀段落 C。"], "takeaway": "鉀安全優先。", "sourceIds": ["S02"] },
+    { "id": "fluids", "title": "Fluids", "summary": "I/O 片段。", "body": ["白話段落 D。"], "fellow": ["深讀段落 D。"], "takeaway": "片段不是 24 小時。", "sourceIds": ["S03"] },
+    { "id": "insulin", "title": "Insulin", "summary": "0.1 U/mL。", "body": ["白話段落 E。"], "fellow": ["深讀段落 E。"], "takeaway": "BOHB 決定緩解。", "sourceIds": ["S02", "S03"] }
+  ],
+  "timeline": [
+    { "day": "Day 0", "title": "入院", "items": ["Glucose 411 mg/dL"] },
+    { "day": "Day 1", "title": "治療中", "items": ["BOHB 4.2 mmol/L"] },
+    { "day": "Day 2", "title": "好轉", "items": ["pH 7.329"] }
+  ],
+  "medications": [
+    { "name": "Insulin infusion", "order": "50 U / 500 mL，20–30 mL/h", "evidence": "order", "teaching": "醫囑不等於已給完。" }
+  ],
+  "io": { "label": "僅貼出片段", "inputMl": 2946, "urineMl": 2050, "differenceMl": 896, "caveats": ["不是 24 小時總量。"] },
+  "known": ["體重 104.5 kg"],
+  "unknown": ["最新 BOHB"],
+  "quizzes": [
+    { "id": "q1", "question": "DKA resolution 需要？", "options": ["只看血糖", "BOHB < 0.6 加 pH 或 HCO3"], "answer": 1, "explanation": "2024 共識。", "sourceIds": ["S02"] },
+    { "id": "q2", "question": "Q2？", "options": ["甲", "乙", "丙"], "answer": 0, "explanation": "解析 2。", "sourceIds": ["S02"] },
+    { "id": "q3", "question": "Q3？", "options": ["甲", "乙"], "answer": 1, "explanation": "解析 3。", "sourceIds": ["S03"] },
+    { "id": "q4", "question": "Q4？", "options": ["甲", "乙"], "answer": 0, "explanation": "解析 4。", "sourceIds": ["S04"] },
+    { "id": "q5", "question": "Q5？", "options": ["甲", "乙", "丙", "丁"], "answer": 3, "explanation": "解析 5。", "sourceIds": ["S02"] }
+  ],
+  "references": [
+    { "id": "S02", "title": "Umpierrez GE, et al. Hyperglycaemic crises in adults with diabetes. Diabetologia 2024;67:1455–1479.", "url": "https://doi.org/10.1007/s00125-024-06183-8" },
+    { "id": "S03", "title": "ADA. Diabetes Care in the Hospital: Standards of Care—2026.", "url": "https://doi.org/10.2337/dc26-S016" },
+    { "id": "S04", "title": "Self WH, et al. JAMA Netw Open 2020;3:e2024596.", "url": "https://doi.org/10.1001/jamanetworkopen.2020.24596" }
+  ]
+}

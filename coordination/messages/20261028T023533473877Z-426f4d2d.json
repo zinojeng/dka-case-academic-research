@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "20261028T023533473877Z-426f4d2d",
+  "created_at": "2026-10-28T02:35:33.474000Z",
+  "from": "workflow-builder",
+  "to": "codex",
+  "kind": "transport",
+  "channel": "native",
+  "topic": "native preflight ping (transport only)",
+  "status": "open",
+  "reply_to": null,
+  "evidence": [],
+  "unresolved": [],
+  "body": "SendMessage returned success: enqueued in peer inbox, not yet read. Application ACK not yet received; will be logged separately as kind=ack reply_to this id if it arrives. Exchange 1 of max 2.",
+  "transport": {
+    "peer": "DKA fluid insulin Opus55",
+    "result": "delivered"
+  }
+}

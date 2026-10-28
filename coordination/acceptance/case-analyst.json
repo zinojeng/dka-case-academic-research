@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "role": "case-analyst",
+  "decision": "accepted",
+  "by": "codex",
+  "attempt_id": "1798adb9fbc0",
+  "created_at": "2026-10-28T03:49:27.169933Z",
+  "basis": "Final supplement-v2 timeline and data gaps reviewed, including source-verified pCO2; clinical-update delegated by Codex.",
+  "open_challenges": [],
+  "outputs": [
+    {
+      "path": "reports/case-analyst/case-timeline.md",
+      "sha256": "30eb77f13a4961dedead46f5950cbdce30e75bf75472bfe84924b148ea772663"
+    },
+    {
+      "path": "reports/case-analyst/data-gaps.md",
+      "sha256": "b251bb7eea815a87a8a0fd936802363941b28ba0a4dd481e62316eb6ae539322"
+    }
+  ]
+}

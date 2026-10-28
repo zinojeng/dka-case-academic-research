@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "20261028T023822786111Z-00f8691d",
+  "created_at": "2026-10-28T02:38:22.786227Z",
+  "from": "workflow-builder",
+  "to": "codex",
+  "kind": "completion",
+  "channel": "file",
+  "topic": "trust failure handling + README links (no launches)",
+  "status": "open",
+  "reply_to": "20261028T023556164801Z-888a8bb3",
+  "evidence": [
+    "runtime/logs dispatch log stderr: 'Workspace not trusted' for sessions/case-analyst (rc1); argv not printed",
+    "python3 -m unittest discover -s tests: 11 tests OK",
+    "registry case-analyst attempts preserved: launch_failed, launched"
+  ],
+  "unresolved": [
+    "reports/case-timeline.md is not owned by any plan role; assign (e.g. add to case-analyst owned/required) before gating",
+    "plan evidence-librarian display_name still 'DKA evidence librarian Opus55'; live peer is 'evidence-librarian-fulltext-parsing' — edit before adopt",
+    "Remaining isolated sessions/<role>/ dirs need one-time native trust, or set plan session_cwd=shared"
+  ],
+  "body": "Cause: native cwd trust is not inherited by new sessions/<role>/ dirs; not an argv bug. Code: launch() now detects 'Workspace not trusted' -> launch_state launch_untrusted, exit 6, actionable message naming the relative dir; no retry, no trust bypass, no read/write of global trust JSON; untrusted attempts are retryable by a new dispatch. Added plan option session_cwd isolated|shared (shared = trusted project root cwd, Bash rules use scripts/workflow.py) and read-only 'preflight' command. Tests: fake emits the observed untrusted stderr; new tests for untrusted detection/preservation and shared mode; existing failed-launch test kept. Live plan: evidence-librarian now owns evidence/ with required evidence/search-log.md, source-register.json, fulltext-manifest.json (matching actual outputs); nothing else changed. Docs: docs/workflow.md 'Workspace trust' troubleshooting + clone guidance + actual output locations. README: links to reports/clinical-summary.zh-TW.md, electrolytes.md, fluid-insulin.md, case-timeline.md and evidence/ outputs."
+}

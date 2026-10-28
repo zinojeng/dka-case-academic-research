@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "20261028T025952162151Z-e4b69bc0",
+  "created_at": "2026-10-28T02:59:52.162629Z",
+  "from": "codex",
+  "to": "synthesis-editor",
+  "kind": "request",
+  "channel": "file",
+  "topic": "User requested plain-language rewrite",
+  "status": "open",
+  "reply_to": null,
+  "evidence": [],
+  "unresolved": [],
+  "body": "使用者最新指示：把整合內容改寫成易讀、白話、連貫的內文。請改寫 reports/clinical-summary.zh-TW.md，繁體中文為主，medical/drug names 保留 English 並適度用中文解釋。約2000–3000中文字，以完整段落為主，少用密集條列、不要公式堆疊或事實/推論標籤；可用五個清楚小標對應 Calcium/Phosphate、Sodium、Potassium、fluids、insulin。先講此個案能判斷什麼，再用白話說明原因與目前不能下結論處。細節與公式留在兩份專題報告，不改動它們。必須保留已通過審查的核心：MAR缺漏不能推論有無補充；Phosphate單位不明、iCa需測；Na122與gas131方法未證實、TG是次日、measuredosm318gap未解不能直接判定tonicity；K最低3.2最新3.4優先監測處理，依團隊流程調整/暫停insulin；balanced與saline皆可但未證明硬終點優勢、0.45%現有資料未建立適應症不逕排除；最新BOHB缺少，glucose211–234不能單獨停滴，BOHB<0.6且pH>=7.3或HCO3>=18定義保留用自然句子說明；dextrose支持持續insulin但可調rate且K安全優先；basal需銜接、ToujeoU300慢且證據有限、不硬套overlap或10U；能否進食不是轉SC絕對條件。末尾保留3–5篇可點擊主要來源及專題報告連結，優先待補資料用短清單。避免個人化醫囑、過度確定及沒有證據的結論。更新 reports/reviews/clinical-review.md 加一小段純文字易讀改寫紀錄，保留原審查修訂；不要改code/evidence/config/git。完成後重寫manifest並completion給codex。"
+}

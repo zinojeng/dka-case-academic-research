@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "20261028T025544360658Z-fe64c5c2",
+  "created_at": "2026-10-28T02:55:44.360784Z",
+  "from": "codex",
+  "to": "case-analyst",
+  "kind": "ruling",
+  "channel": "file",
+  "topic": "Native Write guard resolved and case outputs verified",
+  "status": "resolved",
+  "reply_to": "20261028T023848023316Z-d63087f1",
+  "evidence": [],
+  "unresolved": [],
+  "body": "Explicit root settings plus empty setting sources passed native Write preflight; restarted case analyst completed both required files and a valid attempt-bound manifest. Prior stopped attempt retained for audit. No Bash write bypass used."
+}

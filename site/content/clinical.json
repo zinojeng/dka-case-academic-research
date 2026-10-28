@@ -1,0 +1,440 @@
+{
+  "title": "DKA 床邊判讀",
+  "audience": "PGY / Fellow",
+  "updated": "2026-10-28",
+  "overview": [
+    "這是一位 40 多歲、肥胖（體重 104.5 kg、BMI 34.1）男性第一次發生的 diabetic ketoacidosis（DKA，糖尿病酮酸中毒）。Day0 到院時血糖 411 mg/dL、血酮 5.6 mmol/L、HCO₃ 10.5 mmol/L，屬於中度 DKA，不符合高滲透壓高血糖狀態（HHS）。到 Day2 早上，血糖在 211–234 mg/dL 之間，血氣 pH 7.329、HCO₃ 21.6，最新血壓 149/86、心跳 85、呼吸 18，也已經開始進食，整體看起來好很多。",
+    "這一頁要練習的是：血糖降下來以後，還有哪些判斷不能省略。最重要的有三件事。第一，最後一次血酮是 Day1 清晨的 4.2 mmol/L，之後沒有再測，所以還不能說 DKA 已經緩解。第二，鉀最新是 3.4 mmol/L，仍低於 3.5，是調整 insulin 時的安全限制。第三，磷的單位已確認是 mg/dL，1.3→1.6 mg/dL 等於 0.42→0.52 mmol/L，是真正的低磷，不再是「單位不明」。",
+    "新補充的資料包括體重、生命徵象、部分出入量和一些藥囑。藥囑不等於已經給完：醫囑上有 calcium chloride、靜脈 KCl 和口服 potassium gluconate，但沒有給藥紀錄（MAR），就不能說一天實際給了多少。Insulin 點滴也一樣，可以精確算出每公斤每小時幾單位，但算出來比指引參考值低，不等於應該直接調高；鉀與最新血酮才是該次紀錄中的限制。",
+    "本頁是教學討論，不是個人化醫囑。所有劑量數字都是算術核對，實際處置依主治團隊、藥局與院內流程決定。"
+  ],
+  "metrics": [
+    {
+      "label": "體重 / BMI",
+      "value": "104.5",
+      "unit": "kg",
+      "note": "Day1 17:00 紀錄；身高 175 cm、BMI 34.1。用於 U/kg/h 算術。",
+      "status": "known"
+    },
+    {
+      "label": "Insulin 點滴濃度",
+      "value": "0.1",
+      "unit": "U/mL",
+      "note": "使用者確認 50 U 加入 500 mL 輸液；落在仿單 IV 濃度範圍 0.05–1.0 U/mL 內。",
+      "status": "known"
+    },
+    {
+      "label": "Day2 紀錄 insulin 速率",
+      "value": "2",
+      "unit": "U/h",
+      "note": "20 mL/h；換算 0.019 U/kg/h（曾為 30 mL/h = 3 U/h = 0.029 U/kg/h）。低於 0.05 U/kg/h 參考值不代表應直接調高。",
+      "status": "caution"
+    },
+    {
+      "label": "最新血酮",
+      "value": "未知",
+      "unit": "mmol/L",
+      "note": "最後一筆是 Day1 05:53 的 4.2；檢驗分析物很可能是 BOHB，但仍待檢驗科確認。",
+      "status": "unknown"
+    },
+    {
+      "label": "最新 K（chemistry）",
+      "value": "3.4",
+      "unit": "mmol/L",
+      "note": "Day2 04:25；同時血氣 K 3.5。最低曾到 3.2（Day1 15:03）。",
+      "status": "caution"
+    },
+    {
+      "label": "Phosphate",
+      "value": "1.6",
+      "unit": "mg/dL",
+      "note": "單位已確認；= 0.52 mmol/L（Day1 為 1.3 mg/dL = 0.42 mmol/L），中度低磷。",
+      "status": "caution"
+    },
+    {
+      "label": "Total Ca / albumin",
+      "value": "7.8 / 3.5",
+      "unit": "mg/dL / g/dL",
+      "note": "Payne 校正約 8.2；沒有 ionized Ca，無法確定是否真的低血鈣。",
+      "status": "caution"
+    },
+    {
+      "label": "最新血氣 pH / HCO₃",
+      "value": "7.329 / 21.6",
+      "unit": "— / mmol/L",
+      "note": "Day2 04:25；酸鹼部分已達緩解標準，但檢體是動脈或靜脈未記載。",
+      "status": "known"
+    },
+    {
+      "label": "Day2 POC glucose",
+      "value": "181–234",
+      "unit": "mg/dL",
+      "note": "01:00 為 181，之後 211–234；血糖本身不是停 insulin 的依據。",
+      "status": "caution"
+    },
+    {
+      "label": "最新生命徵象",
+      "value": "149/86 · 85 · 18",
+      "unit": "mmHg · /min · /min",
+      "note": "Day2 09:01，體溫 35.7°C。相對穩定，但不等於 DKA 已緩解；意識狀態沒有紀錄。",
+      "status": "known"
+    },
+    {
+      "label": "部分液體差",
+      "value": "+896",
+      "unit": "mL",
+      "note": "只就貼出的片段計算（液體 2946 − 尿 2050）；不是 24 小時淨平衡。",
+      "status": "caution"
+    }
+  ],
+  "topics": [
+    {
+      "id": "calcium-phosphate",
+      "title": "鈣與磷：低磷已確認，鈣要測游離鈣",
+      "summary": "磷 1.3→1.6 mg/dL（0.42→0.52 mmol/L）確定偏低，補不補看症狀；總鈣 7.8、白蛋白 3.5，要靠 ionized Ca 判斷。醫囑有 calcium chloride，但實際給了多少仍待核對。",
+      "body": [
+        "磷的單位已確認是 mg/dL。1.3 和 1.6 mg/dL 換算成 0.42 和 0.52 mmol/L，屬於中度低磷。DKA 治療時，insulin 會把磷帶進細胞，加上先前大量排尿流失，磷下降很常見。2024 國際共識的原則是：磷低於 1.0 mmol/L，而且有肌肉無力、呼吸或心臟受影響時才補，不是看到數字低就一定要補。所以下一步是評估肌力與呼吸狀況，並把這個評估寫下來。",
+        "總鈣從到院時的 9.3 降到 7.8 mg/dL，白蛋白 3.5 g/dL，用公式校正約 8.2，落在臨界。校正公式常常和真正有生理作用的游離鈣（ionized calcium）對不上，所以要判斷是不是真的低血鈣，最可靠的做法是直接測游離鈣。總鈣下降可能和輸液稀釋、白蛋白變化或血脂干擾有關，現有資料分不出主次。",
+        "醫囑上有 calcium chloride 400 mg/20 mL 兩支、STAT 靜脈注射。這裡的 800 mg 指的是 calcium chloride 這個鹽，不是 800 mg 的鈣元素；真正含多少鈣元素，必須由實際商品的仿單（含水合物形式）確認，這裡不做換算。醫囑存在也不代表已經打完，看不出開立的理由，因此要核對給藥紀錄，以及當時是否有游離鈣或症狀。使用者提供的藥囑裡沒有看到含磷製劑，但那只是片段，不代表完整醫囑中沒有。"
+      ],
+      "fellow": [
+        "換算：phosphate mg/dL × 0.3229 = mmol/L；1.3 → 0.42、1.6 → 0.52 mmol/L。2024 共識（S02 §4 Phosphate）的數值門檻 <1.0 mmol/L（≈3.1 mg/dL）已符合，但補充還需同時具備 muscle weakness 或 respiratory／cardiac compromise。2009 共識寫 <1.0 mg/dL（≈0.32 mmol/L），本例落在兩版門檻之間；不可推定 2024 單位寫錯，院內 protocol 應寫明採用的門檻與單位。Day1 21:01 曾有一次 RR 30（23:01 回到 20，當晚血氣 pH 7.386），單一讀值不足以判定 respiratory compromise，但補磷討論時應記錄呼吸肌力與症狀。",
+        "Fisher & Kitabchi 1983（S09，n=30）：phosphate 8.5 mmol/h 對 glucose、HCO₃、pH 恢復時間沒有差異；補磷組 24 h ionized Ca 較低（只在 lipemia 不干擾的 13 人中可測），兩組 total Ca 都下降且組間無差異。因此 total Ca 下降不能反推曾經補磷。若臨床決定補 potassium phosphate，K 負荷要和 KCl／K-gluconate 一起計算，也要依藥局相容性規範避免與 calcium 製劑同管混合。",
+        "醫囑標示的 800 mg 是 calcium chloride 製劑量，不等於 800 mg 元素鈣；元素鈣的 mg 或 mmol 必須由實際商品仿單與其水合物形式確認，交班時應寫清楚是「鹽 mg」還是「元素鈣 mmol」。CaCl₂ 對周邊靜脈刺激性高，給藥途徑與速度依院規。Payne 校正：7.8 + 0.8 ×（4.0 − 3.5）= 8.2 mg/dL；若沿用同一 albumin 套到其他時點，等於假設 albumin 不變。判讀以 ionized Ca（註明採檢 pH 與是否 pH 校正）為準。"
+      ],
+      "takeaway": "低磷已確認（0.52 mmol/L），補不補要看肌力與呼吸；鈣要測 ionized Ca；CaCl₂ 的 mg 是鹽不是元素鈣，而且 order 不等於已給。",
+      "sourceIds": ["S02", "S09"]
+    },
+    {
+      "id": "sodium",
+      "title": "鈉：同一管血的 122 與 131",
+      "summary": "到院時生化鈉 122、血氣鈉 131。高血糖造成的稀釋是真的，血脂干擾造成的假性低血鈉是合理但未證實的推論；兩台儀器的測量方法都還沒確認。",
+      "body": [
+        "Day0 同一時間，生化檢驗的鈉是 122，血氣機的鈉是 131，差了 9。高血糖會把細胞內的水拉到血管裡，讓鈉被稀釋而看起來偏低，這是真實存在的現象，但不代表身體處於低張狀態。另一個可能是血脂很高時，某些間接測量法（indirect ISE）會把鈉低估，形成「假性低血鈉」。這個解釋合理，但還沒有被證實：兩台儀器用的是哪種方法並不知道，而且 1950 mg/dL 的三酸甘油酯是 Day1 傍晚才測，不是到院同時。",
+        "若以血氣的 131 為準，每 100 mg/dL 血糖校正 1.6，校正後的鈉約 136；用較敏感的 2.4 計算約 138，大致正常。這只是推算值，前提是血氣用的是直接測量法。實測滲透壓 318 比計算值高出約 25，可能來自酮體等沒有量到的物質，也可能部分來自測量誤差，現有資料無法拆解。",
+        "之後生化鈉和血氣鈉的差距逐漸縮小，到 Day2 是 135 對 139。原因從現有資料分不出來：可能和血糖下降、血脂干擾減少有關，也可能反映體內水分與鈉的實際變化（例如輸液和尿量）；沒有同一時間的 direct ISE 鈉與三酸甘油酯，就不能把它歸給其中一個原因。也因此，單看生化鈉從 122 升到 135，不能診斷為「矯正太快」，也不能排除。現有的離散數值沒有看到有效滲透壓持續下降，但抽血間隔太疏，不能排除中間有快速變化；意識狀態也沒有紀錄。出現頭痛或意識改變時，應及早安排影像。"
+      ],
+      "fellow": [
+        "Day0 18:28（同一時點、只校正一次）：gas Na 131 → corrected Na 136.0（1.6）／138.5（2.4，Hillier 敏感度）；calculated osmolality = 2Na + glucose/18 + BUN/2.8 = 292.7，osmolal gap vs measured 318 = 25.3；effective osmolality = 2Na + glucose/18 = 284.8。若用 chem Na 122：corrected 127.0／129.5、gap 43.3、effective 266.8，僅供對照。公式基準是 (glucose − 100)/100，不用 glucose − 180；corrected Na 是推估值，不是測量真值；lipemia 的處理是改用 direct ISE 重測，不是再用公式加回。",
+        "Hillier 1999（S11）：n=6 健康受試者、急性高血糖模型、Na 以 flame photometry 測；整體斜率 2.4，約 440 mg/dL 以下接近 1.6（abstract 寫 400），本例 411 剛好在轉折區。這不是 DKA 族群，所以 2.4 只作敏感度分析。Measured osmolality 318 與 chem Na 122 不一致但並非不可能並存；高 gap 不能單獨診斷 pseudohyponatremia，也不能單獨診斷 toxic alcohol。",
+        "鑑別上要分清楚兩件事：translocational（hypertonic）hyponatremia 是真的低 Na 但不低張；pseudohyponatremia 是測量假象。ODS 的風險來自慢性真正低張低血鈉被快速矯正；本例 chem Na 122 → 135 的上升可能反映血糖下降、干擾減少，也可能包含實際的水與鈉平衡變化；沒有同時段 direct-ISE Na 與 TG，無法歸因。單憑 chem Na 上升不能診斷 rapid correction，也不能排除，需以經確認方法的同時段 Na、osmolality 與 fluid balance 判讀。確認方法：檢驗科說明 chemistry 是否 indirect ISE、血氣是否 direct ISE，提供 lipemia index，必要時同一檢體以 direct ISE 或去脂後重測。輸液方面，LR 含 Na 130、NS 含 Na 154 mmol/L，選擇會影響後續 Na 走勢。"
+      ],
+      "takeaway": "122 對 131 是方法問題加上高血糖稀釋；以經確認的 direct-ISE Na 和實測滲透壓為錨，corrected Na 只是推估值，ISE 方法仍待檢驗科確認。",
+      "sourceIds": ["S02", "S11"]
+    },
+    {
+      "id": "potassium",
+      "title": "鉀：3.4 仍是安全上的限制",
+      "summary": "鉀最低 3.2、最新 3.4。補充資料顯示有靜脈 KCl 與口服 potassium gluconate 的醫囑，但沒有給藥紀錄，不能把各筆醫囑加總成「一天已補 120 mEq」。",
+      "body": [
+        "在 Day2 紀錄中，鉀是最需要優先注意的項目。生化鉀最低到 3.2（Day1 下午），最新一次是 3.4（Day2 清晨，同時血氣 3.5），兩種方法都曾低於 3.5。Insulin 會把鉀推進細胞，所以只要 insulin 還在滴，低鉀就是安全限制。",
+        "新資料顯示團隊有補鉀的醫囑：一瓶 KCl 20 mEq 加在 500 mL 生理食鹽水的靜脈點滴（STAT），以及口服 potassium gluconate 20 mEq/15 mL，每天四次 15 mL（醫囑面每天 80 mEq），另有一次 STAT 15 mL（20 mEq）。所以不能再說「沒有證據有補充醫囑」。但醫囑不等於已經給完：每天四次可能有幾次沒吃，STAT 那次也可能就是第一次的 QID。把 QID、STAT 和靜脈那瓶全部加起來說「同一天給了 120 mEq」，沒有給藥紀錄是不成立的，也容易在交班時造成重複給藥。",
+        "病人已經在吃東西，口服鉀是合理的選項之一，口服並非禁忌；靜脈補鉀的濃度和速度依院內規範。補完之後要按時複查鉀，並同時看腎功能、尿量與心電圖。"
+      ],
+      "fellow": [
+        "2024 共識（S02 §4 Potassium）：K <5.0 開始補，目標 4–5 mmol/L；每公升輸液加 20–30 mmol 通常足夠；入院時 K <3.5（約 5–10% 的 DKA）先以 10 mmol/h 補 K，insulin 延後到 K >3.5。這句的語境是入院時、尚未開始 insulin；本例入院 K 4.0／4.4，當時不需延後。治療中 K 降到 3.2–3.4 時，同一個機轉仍然存在：應在監測下優先補 K，由主治團隊依低 K／DKA 流程決定 insulin 要調整還是暫停，不能只沿用原速率而不處理，也不能為了 ketosis 而忽略低 K。開始 insulin 後 2 h 測 K，之後每 4 h 至 resolution。",
+        "醫囑算術：KCl 20 mEq／500 mL = 40 mEq/L；K-gluconate 15 mL QID = 80 mEq/day（order 面），STAT 15 mL = 20 mEq；LR 4 瓶 × 500 mL 若全數給完約含 K 8 mEq（LR 約 4 mmol/L），不足以作為補鉀方案。任何「合計」都只是 order 上限情境，實際量以 MAR 為準。2024 估計 DKA 總體 K 缺乏 3–6 mmol/kg（以 104.5 kg 算約 310–630 mmol），這只是說明缺乏的量級，不是補充目標，也不能據此開處方。",
+        "判讀細節：Day0 有 hemolysis 紀錄，早期 chem K 可能高估；本例 gas K 多比 chem K 高 0.1–0.4，方向與一般預期相反，原因不明，應以同一方法的趨勢判讀。Mg 1.9–2.2 mg/dL，從現有數值看不像 refractory hypokalemia 的主因，但仍要追蹤。長期用藥含 ARB，會影響 K 的走向，補鉀時一併考慮。仍缺最新 Cr、ECG（U wave、QT）與 IV access 類型；部分尿量已知（片段 2050 mL）。若之後補 potassium phosphate，K 要一起算。"
+      ],
+      "takeaway": "K 3.4 是 insulin 的安全限制；補鉀醫囑存在，但 order 不等於已給，沒有 MAR 不能加總成 120 mEq/day，補後要複查。",
+      "sourceIds": ["S02", "S20"]
+    },
+    {
+      "id": "fluids",
+      "title": "輸液：把每一袋液體都算進來",
+      "summary": "0.9% saline 和 balanced crystalloid 都是可接受的初始液體。本例醫囑有 LR 與 NS，insulin 點滴本身每天也有 480–720 mL；出入量只有片段，不能當成 24 小時平衡。",
+      "body": [
+        "2024 共識認為，初期輸液可以用 0.9% saline（生理食鹽水），也可以用 Ringer's lactate、Plasma-Lyte 這類平衡液，依各院可得性選擇。平衡液在氯離子偏高、非陰離子間隙酸中毒等檢驗指標上表現較好，部分研究顯示酸中毒解除較快，但較新的整合分析結果並不一致，也沒有證據顯示能降低死亡率或急性腎損傷。",
+        "本例的醫囑有 Lactated Ringer's 500 mL 每天 4 瓶（醫囑面每天 2 L）、0.9% NaCl 500 mL 每天一袋，另有一袋 STAT 的 0.9% NaCl 和一瓶含 KCl 的生理食鹽水。容易被忽略的是 insulin 點滴本身：500 mL 的袋子以每小時 20–30 mL 滴，一天就是 480–720 mL。討論總輸液量時，要把這些都算進去，但也要小心重複計算，因為 insulin 可能就是加在其中一袋生理食鹽水裡。",
+        "使用者貼出的出入量片段（Day1 傍晚到 Day2 早晨）中，靜脈加口服液體共 2946 mL、尿量 2050 mL，片段液體差約 +896 mL。這只是部分紀錄，不是 24 小時淨平衡。另外，血糖已經低於 250，2024 共識建議此時加入 5–10% dextrose 讓 insulin 能繼續給；提供的藥囑片段沒有看到含 dextrose 的液體，而病人已在進食，需要核對完整醫囑與實際碳水化合物來源，不能直接判定有沒有給。"
+      ],
+      "fellow": [
+        "S02 §4 Fluid therapy：無 renal/cardiac compromise 的成人，前 2–4 h 以 isotonic saline 或 balanced crystalloid 500–1000 mL/h，之後依 BP、HR、I/O、Na 調整，24–48 h 補足 deficit；glucose <250 mg/dL 加 5–10% dextrose。主要比較研究：Self 2020（SALT-ED／SMART 的 DKA 次群，n=172；resolution 中位數 13.0 vs 16.9 h，但採 2009 含 anion gap 的定義）；SCOPE-DKA（primary 以 base excess 定義，未達標）；BRISK-ED pilot 中位數方向相反；2024、2026 meta-analysis 對 resolution 時間無顯著差異。現有試驗沒有硬終點（死亡、AKI／MAKE、cerebral edema）的確證。",
+        "醫囑面容量算術（上限情境，不是實際量）：LR 2000 + NS 500 = 每日排程 2.5 L；STAT NS 500 與 KCl-NS 500 為一次性；insulin vehicle 20 mL/h = 480 mL/day、30 mL/h = 720 mL/day。若全部是不同袋且都在 24 h 內給完，約 4.0–4.2 L/day；但 insulin 可能加在其中一袋 NS、各 order 起訖時間未知，所以只能用來提醒核對，不能當成實際輸入量。Insulin 的 vehicle 種類也要確認：NovoRapid 仿單 IV 穩定性只列 0.9% NaCl、5% 或 10% dextrose（含 40 mmol/L KCl）與 polypropylene 袋。",
+        "I/O 片段（若各筆為獨立區間量且無重複）：IV 177 + 1000 + 1000 + 209 = 2386 mL；口服液體 60 + 450 + 50 = 560 mL；合計 2946 mL；尿 950 + 1100 = 2050 mL；差 +896 mL。固體 243、270（單位未列）不以 mL 計入。沒有完整起訖時間、其他輸出與 insensible loss，所以不稱 24 h net，也不換算 mL/kg/h 尿量。0.45% saline：現有資料不足以建立適應症（2024 只在 HHS 中 osmolality 未下降時提到），但 Na 方法與 osmolal gap 未釐清，也不逕排除所有低張液情境。以低張液矯正張力和 glucose <250 加 dextrose 支持 insulin 是兩件不同的事。恢復期 hyperchloremic NAGMA 要有同時段 chemistry Na/Cl/HCO₃ 與血酮才能和殘餘 ketoacid 區分。"
+      ],
+      "takeaway": "NS 或平衡液都可以，差別在生化指標不在硬終點；總輸液要把 insulin vehicle 算進來，I/O 片段只是 +896 mL 的部分紀錄，dextrose 來源要核對。",
+      "sourceIds": ["S02", "S03"]
+    },
+    {
+      "id": "insulin",
+      "title": "Insulin：算術對了，不代表該調",
+      "summary": "50 U／500 mL = 0.1 U/mL；20–30 mL/h = 2–3 U/h；Day2 紀錄為 2 U/h = 0.019 U/kg/h。比 0.05 U/kg/h 參考值低，但 K 3.4、最新血酮未知，不能只憑算術調高。",
+      "body": [
+        "使用者確認 insulin 是 50 單位加入 500 mL 輸液，所以濃度是每 mL 0.1 單位。每小時 20 mL 就是 2 單位、30 mL 是 3 單位；Day2 紀錄為每小時 2 單位。以體重 104.5 kg 計算，2 單位是每公斤每小時 0.019 單位，3 單位是 0.029 單位。2024 共識在血糖低於 250 時的參考是每公斤每小時 0.05 單位，換算約 5.2 單位，該次紀錄的速率比參考值低。",
+        "但這不表示應該直接調高。該次紀錄中的限制有兩個：鉀最新 3.4，仍低於 3.5；最後一次血酮是 Day1 清晨的 4.2，之後沒有再測，不知道酮酸到底有沒有在清。血糖 211–234、病人已經在吃東西，也都會影響判斷。合理的順序是先補測血酮、在同一管血裡測鈉、氯、HCO₃、鉀、肌酸酐，處理好鉀，再由團隊決定速率。如果血酮沒有照預期下降，才回頭檢討 insulin 是否足量、管路是否通暢、dextrose 是否足夠。",
+        "DKA 緩解的定義是：血酮低於 0.6 mmol/L，而且 pH 至少 7.3 或 HCO₃ 至少 18；血糖最好低於 200，但血糖不是單獨的標準。本例酸鹼部分已達標，缺的是最新血酮，所以還不能判定已緩解，也不能只因為血糖接近 200 就停掉點滴。",
+        "還有兩個核對點。第一，醫囑顯示的是 NovoRapid FlexPen 300 單位、50 單位加入點滴瓶；但歐洲仿單寫明需要靜脈給藥時應該用 vial，FlexPen 只適用皮下注射。這要向藥局核對實際用的是哪個產品、怎麼配，可能只是電子醫囑的顯示名稱，不能光看名稱就判定是錯誤。第二，仿單的室溫 24 小時穩定性有前提：輸液必須是 0.9% 食鹽水或 5%、10% 葡萄糖（可含 40 mmol/L KCl），濃度每 mL 0.05–1.0 單位，並使用 polypropylene 輸液袋；實際輸液或袋材不在這些條件內時，不能直接套用 24 小時。在符合條件的前提下，500 mL 用每小時 20 mL 要 25 小時才滴完，所以要核對這袋實際掛了多久、院內換袋規定是什麼，而不是直接宣告已經超時。"
+      ],
+      "fellow": [
+        "算術：50 U ÷ 500 mL = 0.1 U/mL（在 S18 §4.2 的 0.05–1.0 U/mL 範圍內）；20 mL/h → 2 U/h → 2 ÷ 104.5 = 0.0191 U/kg/h；30 mL/h → 3 U/h → 0.0287 U/kg/h；0.05 U/kg/h × 104.5 = 5.225 U/h 只是指引參考算術。2024 共識（S02 §4 Insulin）：FRIII 0.1 U/kg/h，glucose <250 加 dextrose 並減到 0.05 U/kg/h，之後依 glucose（約 200 mg/dL）調整至 ketoacidosis 緩解；共識沒有禁止降低 insulin，也沒有規範肥胖時用哪一種體重。ADA 2026（S03）對 nurse-driven protocol 的下限是不低於 1 U/h。",
+        "NovoRapid（insulin aspart）EU SmPC（S18 §4.2）：必要時可 IV，由醫護人員執行；在 0.9% NaCl、5% 或 10% dextrose（含 40 mmol/L KCl）中配成 0.05–1.0 U/mL、使用 polypropylene infusion bag，室溫 24 h 穩定；起始會有部分 insulin 吸附於袋材，需監測血糖；IV 時應使用 vial，Penfill／FlexPen 只適用 SC。核對清單：實際製劑（vial vs pen 抽取）、vehicle 液體種類與袋材、配製與掛上時間、換袋規則。500 mL ÷ 20 mL/h = 25 h、÷ 30 mL/h ≈ 16.7 h；超過 24 h 的可能性需以實際 hang time 確認。Aspart 不是 regular human insulin。I/O 片段中的 IV 177 mL（欄位標 RI）與 209 mL 是輸入容量，不能換算成 insulin 單位，也不能在沒有來源與區間確認前，認定就是這袋 insulin 點滴的量。",
+        "Resolution（S02 §4）：ketone <0.6 mmol/L AND（venous pH ≥7.3 OR HCO₃ ≥18），glucose ideally <200；不用 anion gap、base excess、urine ketone。檢驗名稱為 Blood Ketone Quantitative Test、參考值 0–0.6 mmol/L，很可能是 BOHB，但要由檢驗科確認分析物，不能只靠參考範圍就當作已確認。Day1 22:39 → Day2 04:25 pH 7.386 → 7.329 但 HCO₃ 17.2 → 21.6、pCO₂ 28.4 → 40.7 mmHg，不是代謝性酸中毒惡化；檢體類型未記載。",
+        "Transition：2024 overlap 1–2 h；ADA 2026 一般段 2 h、DKA 段 2–4 h（同章不一致）。Toujeo（glargine U300）US PI（S17）：作用約在 6 h 內才逐漸出現，停 IV 前需考慮較長的 onset，steady state 至少 5 天；EU SmPC 為 3–4 天；2024 共識明言沒有轉換到 U300 的研究。QA 提到的 Toujeo 約 10 U 不是已確認的給藥；以 104.5 kg 算約 0.096 U/kg，低於仿單 insulin-naive T2D 起始 0.2 U/kg 與共識 basal 0.15–0.3 U/kg 的範圍，這只是算術對照，不是劑量建議。能否進食影響方案選擇，但不是轉 SC 的絕對條件。"
+      ],
+      "takeaway": "0.1 U/mL、2 U/h、0.019 U/kg/h 都算得出來，但調速要等 K 與最新血酮；產品名稱與 hang time 是核對事項，不是已確認的錯誤。",
+      "sourceIds": ["S02", "S03", "S18", "S17"]
+    }
+  ],
+  "timeline": [
+    {
+      "day": "Day 0",
+      "title": "到院：中度 DKA",
+      "items": [
+        "18:28 血糖 411 mg/dL；生化 Na 122、K 4.0；血氣 pH 7.316、HCO₃ 10.5、Na 131、K 4.4；血酮 5.6 mmol/L；實測滲透壓 318；BUN 22、Cr 1.31；lipase 57（正常）；有 hemolysis 紀錄。",
+        "19:46 血糖 380；生化 Na 123、K 3.9；血氣 pH 7.278、HCO₃ 11.3。",
+        "判讀：中度 DKA（依 HCO₃），不是 HHS；到院 K ≥3.5，開始 insulin 時不需延後。"
+      ]
+    },
+    {
+      "day": "Day 1",
+      "title": "鉀下降、磷偏低、血酮最後一次",
+      "items": [
+        "01:58 生化 K 3.4；血氣 pH 7.385、HCO₃ 13.4（pH 已符合 2024 OR 規則中的 pH 條件，但 HCO₃ 仍為 13.4，且沒有同時血酮，不能據此判定 DKA 緩解）。",
+        "05:53 血糖 297；血酮 4.2 mmol/L——這是紀錄中最後一筆血酮。",
+        "08:34 HbA1c 13.6%；albumin 3.5、total Ca 7.8；Mg 1.9。",
+        "15:03 生化 K 3.2（最低點），血氣 K 3.4；HCO₃ 15.2。",
+        "17:00 身高 175 cm、體重 104.5 kg、BMI 34.1；BP 137/81、HR 84、RR 14。",
+        "17:31 TG 1950 mg/dL；phosphate 1.3 mg/dL（= 0.42 mmol/L）；Ca 8.2；血氣 pH 7.401、HCO₃ 17.0。",
+        "18:00 起有固體進食紀錄；21:01 一次 BP 103/70、HR 94、RR 30，23:01 為 134/72、85、20。",
+        "21:44 尿 1100 mL；22:43–22:47 口服水 450 mL、IV 177 mL 與 1000 mL（出入量片段）。"
+      ]
+    },
+    {
+      "day": "Day 2",
+      "title": "看起來好轉，但還不能宣告緩解",
+      "items": [
+        "01:00–09:04 POC glucose 181、211、216、214、234 mg/dL。",
+        "04:25 血氣 pH 7.329、pCO₂ 40.7、HCO₃ 21.6、K 3.5；生化 Na 135、K 3.4、Ca 7.8、phosphate 1.6 mg/dL（= 0.52 mmol/L）、Mg 1.9。",
+        "06:06–07:40 IV 1000 mL 與 209 mL、尿 950 mL、稀飯進食、口服水 50 mL（出入量片段）。",
+        "09:01 BP 149/86、HR 85、RR 18、T 35.7°C。",
+        "仍缺最新血酮、最新 Cr、ionized Ca、意識狀態與完整 MAR。藥囑（insulin、K、Ca、輸液）沒有附開立時間，所以不放進任何一天的時間軸。"
+      ]
+    }
+  ],
+  "medications": [
+    {
+      "name": "Insulin aspart（NovoRapid）IV 點滴",
+      "order": "醫囑顯示 NovoRapid FlexPen 300 IU，50 IU STAT 加入點滴瓶；使用者確認 50 U／500 mL、20–30 mL/h，Day2 紀錄為 2 U/h。",
+      "evidence": "user-confirmed",
+      "teaching": "仿單 IV 用 vial、0.05–1.0 U/mL、指定輸液與 polypropylene 袋、室溫 24 h；要向藥局核對實際製劑、配製與掛上時間。顯示名稱不等於已用 pen 配 IV，也不等於錯誤。"
+    },
+    {
+      "name": "Calcium chloride 400 mg/20 mL",
+      "order": "2 amp STAT IV（calcium chloride 鹽共 800 mg）。",
+      "evidence": "order",
+      "teaching": "800 mg 是 calcium chloride 製劑量，不等於 800 mg 元素鈣；元素鈣含量須由實際商品仿單（水合物形式）確認。是否已給、開立理由與當時 ionized Ca 都需核對。"
+    },
+    {
+      "name": "KCl in 0.9% NaCl",
+      "order": "20 mEq／500 mL，1 瓶 STAT 靜脈點滴（40 mEq/L）。",
+      "evidence": "order",
+      "teaching": "濃度與速度依院內 IV potassium 規範；補後按時複查 K，並和口服 K 一起核對避免重複。"
+    },
+    {
+      "name": "Potassium gluconate 口服液（K-Glu）",
+      "order": "20 mEq/15 mL：15 mL QID（order 面 80 mEq/day），另 15 mL STAT（20 mEq 一次）。原廠產品頁載明每 15 mL 含 K⁺ 20 mEq、成分為 potassium gluconate（S20）。",
+      "evidence": "order",
+      "teaching": "可進食時口服是合理選項；QID + STAT + IV 不能沒有 MAR 就加總成「一天已給 120 mEq」。"
+    },
+    {
+      "name": "Lactated Ringer's / 0.9% NaCl",
+      "order": "LR 500 mL × 4 瓶 QD（2 L/day order）；0.9% NaCl 500 mL QD；另一袋 0.9% NaCl 500 mL STAT。",
+      "evidence": "order",
+      "teaching": "總輸液要連同 insulin vehicle（20–30 mL/h = 480–720 mL/day）一起看，但小心重複計算；提供的片段未見含 dextrose 液，需核對。"
+    },
+    {
+      "name": "I/O 欄位「RI 177 mL」",
+      "order": "Day1 22:46 IV 欄標示 RI 177 mL。",
+      "evidence": "recorded",
+      "teaching": "這是輸入容量（mL），不是 insulin 單位；RI 可能是欄位慣稱，不能逕當 regular insulin，也不能在未確認來源與區間前對應到 insulin 點滴袋。藥囑上的 insulin 是 aspart，兩者不要混寫。"
+    },
+    {
+      "name": "長期用藥中與判讀相關者",
+      "order": "β-blocker、含 ARB 的降壓複方、fibrate（長期口服 order）。",
+      "evidence": "order",
+      "teaching": "β-blocker 可能掩蓋低血糖的交感症狀，需靠規律 POC glucose；ARB 會影響 K 走向；TG 1950 恢復後要重新評估血脂治療。"
+    }
+  ],
+  "io": {
+    "label": "僅貼出片段：Day1 傍晚至 Day2 早晨的部分紀錄，不是完整 24 小時出入量",
+    "inputMl": 2946,
+    "urineMl": 2050,
+    "differenceMl": 896,
+    "caveats": [
+      "前提：每筆都是獨立區間量、沒有重複或累積值；這一點尚待護理紀錄確認。",
+      "液體輸入 = IV 177 + 1000 + 1000 + 209 = 2386 mL，加上口服液體 60 + 450 + 50 = 560 mL。",
+      "尿量 = 1100 + 950 = 2050 mL；沒有其他輸出與 insensible loss 的紀錄。",
+      "固體進食 243 與 270 沒有單位，不當作 mL 計入。",
+      "起訖時間不完整，所以不稱為 24 小時淨平衡，也不換算 mL/kg/h 尿量。",
+      "IV 的 1000 mL 等數字是輸入容量，不是每小時速率；點滴紀錄沒有數字化的 mL/h。IV 177 mL（欄位標 RI）與 209 mL 不能換算成 insulin 單位，也不能確定就是 insulin 點滴袋的量。"
+    ]
+  },
+  "known": [
+    "體重 104.5 kg、身高 175 cm、BMI 34.1（Day1 17:00）。",
+    "電解質單位：Na/K/Cl 為 mEq/L（數值同 mmol/L）；Ca 與 phosphate 為 mg/dL。",
+    "Phosphate 1.3 → 1.6 mg/dL = 0.42 → 0.52 mmol/L，確認低磷。",
+    "Insulin 50 U／500 mL = 0.1 U/mL；曾 20–30 mL/h（2–3 U/h），Day2 紀錄為 2 U/h = 0.019 U/kg/h。",
+    "有 calcium chloride、靜脈 KCl、口服 potassium gluconate、LR 與 NS 的醫囑（醫囑不等於已給完）。",
+    "Day1–Day2 有規律生命徵象紀錄；最新 BP 149/86、HR 85、RR 18。",
+    "病人已有固體進食（Day1 18:00、Day2 07:24）。",
+    "出入量片段：液體 2946 mL、尿 2050 mL、片段差 +896 mL。",
+    "最新血氣 pH 7.329、HCO₃ 21.6，酸鹼部分已達緩解標準。"
+  ],
+  "unknown": [
+    "最新血酮（最後一筆是 Day1 05:53 的 4.2），以及檢驗分析物是否確定為 BOHB。",
+    "完整給藥紀錄（MAR）：K、Ca 實際給了多少、何時給；insulin 實際起訖與 hang time。",
+    "Insulin 實際製劑（vial 或 pen）、vehicle 液體種類、袋材與藥局配製方式。",
+    "是否有含 dextrose 的液體，或其他碳水化合物來源。",
+    "最新 Cr、ionized Ca、ECG。",
+    "意識狀態。",
+    "Na 的測定方法（direct 或 indirect ISE）、lipemia index，以及血氣是動脈或靜脈。",
+    "出入量是否完整、各筆是否區間量；固體進食的單位。"
+  ],
+  "quizzes": [
+    {
+      "id": "q-phosphate-unit",
+      "question": "Phosphate 單位已確認為 mg/dL。Day2 的 1.6 mg/dL 換算成 mmol/L 約是多少？",
+      "options": ["0.52 mmol/L", "1.6 mmol/L", "4.96 mmol/L", "單位不明，無法換算"],
+      "answer": 0,
+      "explanation": "mg/dL × 0.3229 = mmol/L，所以 1.6 mg/dL ≈ 0.52 mmol/L（Day1 的 1.3 ≈ 0.42）。單位已確認，不能再寫「未知」。低於 2024 共識的 1.0 mmol/L，但是否補磷還要看有沒有肌無力、呼吸或心臟受影響。",
+      "sourceIds": ["S02"]
+    },
+    {
+      "id": "q-insulin-math",
+      "question": "Insulin 50 U 加入 500 mL，以 30 mL/h 輸注，體重 104.5 kg。每公斤每小時約多少單位？",
+      "options": ["0.029 U/kg/h", "0.05 U/kg/h", "0.29 U/kg/h", "3 U/kg/h"],
+      "answer": 0,
+      "explanation": "濃度 0.1 U/mL × 30 mL/h = 3 U/h；3 ÷ 104.5 ≈ 0.029 U/kg/h。Day2 紀錄的 20 mL/h 則是 2 U/h ≈ 0.019 U/kg/h。這是算術核對，不是劑量建議。",
+      "sourceIds": ["S02"]
+    },
+    {
+      "id": "q-rate-below-reference",
+      "question": "Day2 紀錄的 0.019 U/kg/h 低於 2024 共識 glucose <250 時的 0.05 U/kg/h 參考值。下一步最合理的是？",
+      "options": [
+        "直接把速率調到約 5.2 U/h",
+        "血糖已接近 200，可以停掉點滴",
+        "先補測血酮並處理 K 3.4，再由團隊依 K、血酮、血糖反應決定速率",
+        "改成每小時 1 U 以避免低血糖"
+      ],
+      "answer": 2,
+      "explanation": "比參考值低不等於應該調高。K 3.4 仍低於 3.5，最新血酮未知，進食與 dextrose 狀況也要核對。血糖不是停滴依據；1 U/h 是 ADA 2026 對 nurse-driven protocol 的下限，不是建議值。",
+      "sourceIds": ["S02", "S03"]
+    },
+    {
+      "id": "q-resolution",
+      "question": "Day2：POC glucose 211–234、pH 7.329、HCO₃ 21.6，最後一筆血酮是 Day1 清晨 4.2。DKA 緩解了嗎？",
+      "options": [
+        "已緩解，因為 pH ≥7.3 且 HCO₃ ≥18",
+        "無法判定，需要最新血酮 <0.6 才符合定義",
+        "未緩解，因為血糖還高於 200",
+        "已緩解，因為生命徵象穩定且已進食"
+      ],
+      "answer": 1,
+      "explanation": "2024 定義：ketone <0.6 mmol/L，而且 pH ≥7.3 或 HCO₃ ≥18；血糖最好 <200 但不是單獨標準。酸鹼部分達標，但沒有最新血酮，所以是無法判定。生命徵象穩定和進食都不是緩解標準。",
+      "sourceIds": ["S02"]
+    },
+    {
+      "id": "q-potassium-orders",
+      "question": "醫囑有 K-gluconate 20 mEq QID、另一次 STAT 20 mEq、以及 KCl 20 mEq IV。關於「今天補了多少鉀」，哪個說法正確？",
+      "options": [
+        "今天已經給了 120 mEq",
+        "完全沒有補鉀的證據",
+        "有補鉀醫囑，實際給量要看 MAR，不能直接加總成 120 mEq",
+        "口服鉀在 DKA 是禁忌，應該全部改成靜脈"
+      ],
+      "answer": 2,
+      "explanation": "醫囑證明團隊有補鉀計畫，但 order 不等於已給：QID 可能有漏服，STAT 也可能就是第一次的 QID。沒有 MAR 就加總，會高估實際補充量，也可能造成重複給藥。病人可進食時，口服鉀是合理選項之一。",
+      "sourceIds": ["S02"]
+    },
+    {
+      "id": "q-novorapid-product",
+      "question": "電子醫囑顯示 NovoRapid FlexPen 50 IU 加入點滴瓶。依 EMA 仿單，最恰當的反應是？",
+      "options": [
+        "這是用藥錯誤，應立即通報",
+        "FlexPen 和 vial 一樣，不需要核對",
+        "仿單規定 IV 用 vial，所以要向藥局核對實際製劑與配製方式",
+        "Insulin aspart 不能 IV，應改用皮下注射"
+      ],
+      "answer": 2,
+      "explanation": "EU SmPC 指出 NovoRapid 可在醫護執行下 IV 給藥（0.05–1.0 U/mL、指定輸液、polypropylene 袋、室溫 24 h），而需要 IV 時應使用 vial，FlexPen 只適用 SC。顯示名稱可能只是系統品項，要核對實際產品，不能直接判定錯誤。",
+      "sourceIds": ["S18"]
+    },
+    {
+      "id": "q-hang-time",
+      "question": "500 mL 的 insulin 點滴以 20 mL/h 輸注；仿單在指定輸液、0.05–1.0 U/mL 濃度與 polypropylene 袋的條件下，穩定性為室溫 24 小時。正確的解讀是？",
+      "options": [
+        "這袋一定已經超時，應全部丟棄重配",
+        "滴完需要 25 小時，應核對實際掛上時間與院內換袋規定",
+        "穩定性只和濃度有關，與時間無關",
+        "速率越慢越穩定，不用擔心"
+      ],
+      "answer": 1,
+      "explanation": "500 ÷ 20 = 25 小時，可能超過 24 小時的穩定性範圍，但是否真的超時要看實際配製、掛上時間與換袋紀錄，不能直接宣告。仿單也提到起始會有部分 insulin 吸附於袋材，需監測血糖。",
+      "sourceIds": ["S18"]
+    },
+    {
+      "id": "q-io",
+      "question": "出入量片段顯示液體 2946 mL、尿 2050 mL。下列哪個說法最恰當？",
+      "options": [
+        "24 小時淨平衡是 +896 mL",
+        "片段液體差約 +896 mL，不是 24 小時淨平衡，也不換算 mL/kg/h 尿量",
+        "應把固體 243 與 270 也當 mL 加進輸入",
+        "尿量 2050 mL ÷ 104.5 kg ÷ 24 h ≈ 0.8 mL/kg/h"
+      ],
+      "answer": 1,
+      "explanation": "紀錄只是片段，起訖時間不完整，也沒有其他輸出與 insensible loss；固體沒有單位不能當 mL。用片段尿量除以 24 小時會得到看似精確但沒有根據的數字。",
+      "sourceIds": ["S02"]
+    },
+    {
+      "id": "q-sodium",
+      "question": "到院同一時間生化 Na 122、血氣 Na 131、血糖 411。最恰當的解讀是？",
+      "options": [
+        "真正的慢性低張低血鈉，要小心 ODS",
+        "高血糖稀釋加上可能的血脂干擾；方法需檢驗科確認，校正值只是推估",
+        "血氣機一定錯了，以生化 122 為準",
+        "用 glucose − 180 校正後就是真正的鈉"
+      ],
+      "answer": 1,
+      "explanation": "高血糖會把水拉出細胞而稀釋鈉（translocational）；嚴重高三酸甘油酯時 indirect ISE 可能低估鈉，但本例方法未確認、TG 是隔天才測。以血氣 131 校正約 136（1.6）／138（2.4），是推估值；公式基準是 glucose − 100。",
+      "sourceIds": ["S02", "S11"]
+    }
+  ],
+  "references": [
+    {
+      "id": "S02",
+      "title": "Umpierrez GE, et al. Hyperglycaemic crises in adults with diabetes: a consensus report. Diabetologia 2024;67:1455–1479（同步刊於 Diabetes Care 2024;47:1257–1275, doi:10.2337/dci24-0032）",
+      "url": "https://doi.org/10.1007/s00125-024-06183-8"
+    },
+    {
+      "id": "S03",
+      "title": "American Diabetes Association. 16. Diabetes Care in the Hospital: Standards of Care in Diabetes—2026. Diabetes Care 2026;49(Suppl 1):S339–S355",
+      "url": "https://doi.org/10.2337/dc26-S016"
+    },
+    {
+      "id": "S09",
+      "title": "Fisher JN, Kitabchi AE. A randomized study of phosphate therapy in the treatment of diabetic ketoacidosis. J Clin Endocrinol Metab 1983;57:177–180",
+      "url": "https://doi.org/10.1210/jcem-57-1-177"
+    },
+    {
+      "id": "S11",
+      "title": "Hillier TA, Abbott RD, Barrett EJ. Hyponatremia: evaluating the correction factor for hyperglycemia. Am J Med 1999;106:399–403",
+      "url": "https://doi.org/10.1016/S0002-9343(99)00055-8"
+    },
+    {
+      "id": "S18",
+      "title": "European Medicines Agency. NovoRapid (insulin aspart): EPAR – Product Information (SmPC §4.2 Intravenous use)",
+      "url": "https://www.ema.europa.eu/en/documents/product-information/novorapid-epar-product-information_en.pdf"
+    },
+    {
+      "id": "S17",
+      "title": "TOUJEO (insulin glargine) 300 units/mL, US Prescribing Information (Sanofi), DailyMed",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c9561d96-124d-48ca-982f-0aa1575bff36"
+    },
+    {
+      "id": "S20",
+      "title": "K-Glu 口服液（potassium gluconate；每 15 mL 含 K⁺ 20 mEq）原廠產品頁",
+      "url": "https://www.sintong.com.tw/tw/products_view/216"
+    }
+  ]
+}

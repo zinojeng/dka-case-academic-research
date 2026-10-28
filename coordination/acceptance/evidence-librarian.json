@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "role": "evidence-librarian",
+  "decision": "accepted",
+  "by": "codex",
+  "attempt_id": "b7e632cfcee7",
+  "created_at": "2026-10-28T03:49:27.345968Z",
+  "basis": "20-source register including Codex-verified S20 manufacturer page; consistent access metadata; all seven website references resolve.",
+  "open_challenges": [],
+  "outputs": [
+    {
+      "path": "evidence/search-log.md",
+      "sha256": "b70a86472f5304c14cf797756d8d25d3d52b3bb9f17143c0540f121539f76ad6"
+    },
+    {
+      "path": "evidence/source-register.json",
+      "sha256": "94fb8971e6d7694f1e4240a25f513dafd9321ab2aea7b34135aa68da34dde935"
+    },
+    {
+      "path": "evidence/fulltext-manifest.json",
+      "sha256": "36afcb94eecb58e4e05ed7fdc60c020ac3bd71376dd71b274c0e9ed65ad432ec"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "role": "synthesis-editor",
+  "decision": "accepted",
+  "by": "codex",
+  "attempt_id": "bfb00c0c405e",
+  "created_at": "2026-10-28T03:50:10.545296Z",
+  "basis": "Final supplement-v2 plain-language synthesis and reference audit accepted after medical QA; trailing whitespace normalized by Codex, output hashes current.",
+  "open_challenges": [],
+  "outputs": [
+    {
+      "path": "reports/clinical-summary.zh-TW.md",
+      "sha256": "c7b0e411ab04a7b544c121e05dec0434fbdb34fc939a536c469d1406d0ed9904"
+    },
+    {
+      "path": "reports/case-timeline.md",
+      "sha256": "d1f562a544f2f90e7178adc8154a5bb5ffe97b72ee337473975c410b26173e52"
+    },
+    {
+      "path": "reports/reviews/clinical-review.md",
+      "sha256": "72ae51bb6b818e35e82fbedeb6c91c0efb417807a041f6f21487dd0b85f1dfa2"
+    }
+  ]
+}

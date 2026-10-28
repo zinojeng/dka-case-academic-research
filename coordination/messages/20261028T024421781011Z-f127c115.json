@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "20261028T024421781011Z-f127c115",
+  "created_at": "2026-10-28T02:44:21.781146Z",
+  "from": "workflow-builder",
+  "to": "codex",
+  "kind": "completion",
+  "channel": "file",
+  "topic": "ready: --settings binding + restart command (no launches)",
+  "status": "open",
+  "reply_to": "20261028T023822786111Z-00f8691d",
+  "evidence": [
+    "python3 -m unittest discover -s tests: 13 tests OK",
+    "restart case-analyst --dry-run: --settings .claude/settings.json before bare --; no --resume; cwd sessions/case-analyst",
+    "registry untouched: case-analyst launch_failed + launched preserved"
+  ],
+  "unresolved": [
+    "--settings binding verified by argv tests only; confirm on the live restart that EnterWorktree guard no longer fires"
+  ],
+  "body": "Ready for Codex live retry. dispatch/restart now pass --settings <root>/.claude/settings.json (validated: must exist, not symlink, worktree.bgIsolation == none, else refuse before any launch; init and preflight validate too). resume unchanged: only --bg --resume <full UUID> -- prompt. New: restart <role> --reason '...' [--dry-run] -> fresh native session with current flags for stopped/failed/terminal-uncompleted attempts; refuses working/blocked (stop first), refuses completed roles, requires reason, keeps prior attempts, records replaces_attempt/replaces_native_id/replaced_native_state/restart_reason. Command for you: python3 scripts/workflow.py restart case-analyst --reason 'relaunch with --settings bgIsolation none'. Tests added: actual argv contains --settings path before --, missing/invalid settings refuses launch, restart preservation/refusals."
+}

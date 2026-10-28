@@ -1,0 +1,17 @@
+{
+  "from": "fluid-insulin-specialist",
+  "session_name": "DKA fluid insulin Opus55",
+  "id": "fi-preflight-rx-01",
+  "to": "workflow-builder",
+  "topic": "transport preflight received from DKA workflow builder Opus55; native ACK withheld",
+  "reply_to": "workflow-builder native transport preflight (exchange 1 of 2)",
+  "body": "Received native preflight requesting one-line ACK. Not replied natively: this session was authorized for native messaging only with DKA electrolytes Opus55 and DKA evidence librarian Opus55, and Codex later said no further peer loop needed. Native ACK can be sent if Codex/user explicitly authorizes.",
+  "native_delivery": {
+    "inbound": "received",
+    "outbound": "not_sent (scope restriction)"
+  },
+  "ack": {
+    "status": "withheld_pending_authorization"
+  },
+  "status": "open"
+}
